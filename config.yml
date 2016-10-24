@@ -1,0 +1,22 @@
+production:
+  theme_id:
+  password: 9087ecbf5ab66c307dd04023623c1f17
+  store: little-lotus-2.myshopify.com
+staging:
+  theme_id: 159625228
+  password: alakazam
+  store: little-lotus-2-staging.myshopify.com
+development:
+  theme_id: 159625228
+  password: 9087ecbf5ab66c307dd04023623c1f17
+  store: little-lotus-2-development.myshopify.com
+  ignores:
+    - myignores
+  ignore_files:
+    - config/settings.html
+    - "*.png"
+    - "*.jpg"
+  refill_rate: 2
+  bucket_size: 40
+  concurrency: 4
+  proxy: http://localhost:8080
