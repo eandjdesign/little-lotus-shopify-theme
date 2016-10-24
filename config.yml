@@ -9,3 +9,5 @@ development:
   refill_rate: 2
   bucket_size: 40
   concurrency: 4
+  ignore_files:
+    - .git
