@@ -1,0 +1,867 @@
+/* 	CUSTOM CSS FOR Little Lotus
+*/
+
+
+/* Global */
+
+
+
+.category a .img-overlay{
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	-webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+    opacity: 0;  
+    width: 100%;  
+    height: 98.3%;
+    padding: 40px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.category:hover .img-overlay{
+	opacity: 1;
+}
+
+.rhome-inline-block{
+	font-size: 58px;
+}
+
+.full-width-container .category{
+	width: 33.33333333333%;
+	overflow: hidden;
+	max-height: 560px;
+}
+
+.full-width-container{
+	display: block;
+}
+
+.full-width-container .category img{
+	width: 100%;
+	height: auto !important;
+}
+
+.category .img-overlay .title.overlay{
+	padding-top: 38%;
+}
+
+span.strikeout{
+	text-decoration: line-through;
+	opacity: 0.8;
+}
+
+#impact_container{
+	overflow: hidden;
+}
+
+#impact{
+	display: inline-block;
+	width: 100%;
+	padding: 4% 8%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#impact_left,
+#impact_right{
+	width: 50%;
+}
+
+#impact_left{
+	float: left;
+	/*padding: 100px 160px;*/
+	max-width: 550px;
+	text-align: center;
+	margin-top: 0px;
+}
+
+/*#impact_left a{
+	text-transform: uppercase;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid #000;
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	transition: 0.3s all ease;
+	-webkit-transition: 0.3s all ease;
+} */
+
+
+
+#impact_left h5{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+#impact_right{
+	float: right;
+	text-align: center;
+}
+
+#impact_right img{
+	/*max-width: 450px;*/
+  padding: 0px 10%;
+  width: 80%;
+}
+
+#featured{
+	background: url('//cdn.shopify.com/s/files/1/0351/8285/t/9/assets/featured-artisan.png?10436554317703806736') no-repeat 0 0;
+	width: 100%;
+	min-height: 800px;
+	background-size: cover;
+}
+
+#featuredin{
+	width: 90%;
+}
+
+#footercontainer{
+	width: 90%;
+	border-top: 1px solid #999;
+	padding-top: 10px;
+}
+
+.footer_left{
+	float: left;
+}
+
+.footer_right{
+	float: right;
+	margin-bottom: 50px;
+}
+
+.footer_middle{
+  float: middle;
+}
+
+#socialicons{
+	clear:left;
+	float: right;
+}
+
+.small-logo{
+	max-width: 100% !important;
+}
+
+.small-logo i.fa{
+	font-size: 2em;
+}
+
+ul.footer_menu li:first-child{
+	padding-left: 0px !important;
+}
+
+.copyright_notice{
+	text-align: left;
+	text-transform: none;
+	display: block;
+	clip: both;
+	margin-top: 100px;
+}
+
+.copyright_notice p{
+	font-size: 12px;
+}
+
+#secondary_nav{
+	margin-left: 0px !important;
+}
+
+.left_half,
+.right_half{
+	width: 50%;
+}
+
+.left_half{
+	float: left;
+	text-align: left;
+}
+
+.right_half{
+	float: right;
+	text-align: right;
+}
+
+#impact_one,
+#impact_two,
+#impact_three,
+#impact_five,
+#impact_six{
+	padding: 4% 8%;
+	min-height: 330px;
+}
+
+#impact_four
+{
+    padding: 5% 8%;
+  min-height: 381px; }
+
+.white_bg p{
+	max-width: 100%;
+	text-align: left;
+	margin-right: 0px;
+	float: right;
+	margin-top: 20px;
+}
+
+.grey_bg p{
+	max-width: 100%;
+	text-align: left;
+	float: left;
+}
+
+.grey_bg h2{
+	margin-left: 0px;
+	font-size: 35px;
+      text-align: center;
+
+}
+
+.white_bg h2 {
+  	margin-left: 0;
+	font-size: 35px;
+      text-align: center;
+
+  
+}
+
+
+#impact_one,
+#impact_two,
+#impact_three,
+#impact_four,
+#impact_five,
+#impact_six{
+	clear: both;
+	display: block;
+}
+
+#impact_two h2,
+#impact_three h2,
+#impact_four h2,
+#impact_five h2,
+#impact_six h2{
+	border: none !important;
+}
+
+
+#impact_two img, {
+	max-width: 100%;
+}
+
+
+
+#impact_one img,
+#impact_three img,
+#impact_four img,
+#impact_five img{
+	max-width: 90%;
+}
+
+.grey_bg{
+	background: #eee;
+}
+
+.grey_bg .right_half{
+	float: right;
+	max-width: 50%;
+}
+
+.grey_bg img{
+	float: right;
+	margin-right: 50px;
+}
+
+#impact_four img{
+	max-width: 600px;
+}
+
+#impact_three p{
+	margin-top: 0px;
+}
+
+#impact_five{
+	background: url('//cdn.shopify.com/s/files/1/0351/8285/files/le_souk_artisan_feature_banner_7f70d8ac-f7b4-4b2f-8dc6-3edd22c90bbe.jpg') no-repeat 0 0;
+	background-size: cover;
+	min-height: 450px;
+}
+
+#impact_five h2{
+	color: #fff;
+	font-size: 52px;
+	margin-top: 100px;
+}
+
+#impact_six .left_half{
+	background: #eee;
+}
+
+#impact_six{
+	padding: 4% 12%;
+	display: inline-block;
+}
+
+#impact_four{
+	margin-bottom: 0px;
+}
+
+#impact_six .left_half,
+#impact_six .right_half{
+	box-sizing: border-box;
+}
+
+#impact_six .left_half{
+	margin-right: 50px;
+	padding: 40px;
+	width: 45%;
+	text-align: left;
+}
+
+#impact_six .right_half{
+	padding-left: 50px;
+}
+
+#impact_six h5{
+	font-size: 0.7em;
+	padding-bottom: 0px;
+}
+
+#impact_six .left_half img{
+	padding-right: 10px;
+}
+
+#impact_six .left_half p{
+	margin-bottom: 10px;
+	font-weight: lighter;
+}
+
+ul#impact_pointers li{
+	display: inline;
+}
+
+ul#impact_pointers{
+	columns: 4;
+	-moz-columns: 4;
+	-webkit-columns: 4;
+}
+
+ul#impact_pointers li img{
+	max-width: 100%;
+}
+
+#impact_six .left_half hr{
+	margin-top: 60px;
+}
+
+#impact_six .right_half h3{
+	border: none !important;
+}
+
+#impact_six h3{
+	font-size: 32px;
+}
+
+p.bcorp{
+	float: none;
+	text-align: center;
+	margin-left: 30px;
+}
+
+#impact_page{
+	overflow: hidden;
+}
+
+#featured_artisan_section{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/darkened-image-two.png?10590557037923453309') no-repeat center center;
+	background-size: cover;
+	min-height: 490px;
+}
+
+
+#featured_artisan_section1{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/slideshow_1.jpg?2986503607505796139') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+  	height: auto;
+}
+
+
+#featured_artisan_section2{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/embrace-baby.png?10635759370313862998') no-repeat center center;
+	background-size: cover;
+	min-height: 590px;
+}
+
+#featured_artisan_section3{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/scissor.png?13019520266043769606') no-repeat center center;
+	background-size: cover;
+	min-height: 510px;
+}
+
+.featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 85px;
+}
+
+.featured_artisan_teaser h1{
+	color: #fff;
+	font-size: 72px;
+}
+
+.featured_artisan_teaser p{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 20px;
+	font-weight: lighter;
+  	margin-left: 15% ;
+      margin-right: 15% ;
+      margin-bottom: 3% ; 
+}
+
+button#featured_artisan_btn{
+	background: rgb(78, 178, 194) none repeat scroll 0 0;
+	border: 2px solid #4eb2c2;
+	border-radius: 0;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	padding: 15px;
+	text-shadow: none;
+	text-transform: uppercase;
+}
+
+.thumbnail a img.primary [data-original='*'],
+.thumbnail a img.secondary{
+  max-width: 320px;
+  min-height: 320px;
+}
+
+
+
+
+
+/* RESPONSIVE FIXES */
+
+@media only screen and (max-width: 1200px){
+	.featured_artisan_teaser h1{
+		line-height: 80px;
+	}
+  
+}
+
+
+@media only screen and (max-width: 960px){
+  .featured_artisan_teaser{float: left;width: 100%;}
+  .full-width-container .category{
+	width: 100%;
+	overflow: hidden;
+	max-height: 560px;
+}
+
+  #impact{padding: 20px;}
+  #impact_right{
+		clear: both;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+  #impact_left{
+		float: none;
+		max-width: 100%;
+		text-align: center;
+		width: 100%;
+	}
+  #impact_right img{
+	padding: 0;
+  	width: 80%;
+	}
+
+	#impact_one, #impact_two, #impact_three, #impact_four, #impact_five, #impact_six{
+		padding: 20px;	
+	}
+
+	.grey_bg img{
+		float: none;
+		margin-right: 0px;
+	}
+
+	.right_half{
+		clear: both;
+		display: inline-block;
+		float: none;
+		text-align: center;
+	}
+
+	.left_half, .right_half{
+		width: 100%;
+	}
+
+	.left_half{
+		float: none;
+	}
+
+	.grey_bg .right_half{
+		float: none;
+	}
+ #impact_six .left_half {
+  margin-right: 0px;
+  padding: 4px;
+  width: 85%;
+  text-align: left;
+}
+  
+  ul#impact_pointers li img {
+      max-width: 80px;
+  }
+  #impact_six .right_half {
+  padding-left: 15px;
+  text-align: left;
+}
+
+}
+
+@media only screen and (max-width: 1220px){
+	#impact_six{
+		padding: 4% 12%;
+	}
+  
+  .featured_artisan_teaser p {
+    font-size: 28px;
+    
+    
+  }
+  
+    h1, .h1, h1.home, h2.title, .collection_title { font-size: 35px;  line-height: 1.5em; margin: 0 auto 15px; clear:both; font-weight: lighter;padding-top: 5%;}
+}
+
+@media only screen and (max-width: 960px){
+
+
+	#main_nav ul li a,
+	#secondary_nav ul li a,
+	#secondary_nav ul li ul li a{
+		font-size: 14px;
+	}
+
+	#impact_one .left_half p{
+		display: inline-block !important;
+		text-align: center !important;
+		float: none !important;
+		margin: 0 auto;
+	}
+
+	p.bcorp{
+		max-width: 100%;
+		margin: 0 auto;
+	}
+  
+  p.subtitle {
+   display:none; 
+  }
+
+	.grey_bg p{
+		float: none;
+		margin: 0 auto;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	#impact_two h2, #impact_three h2, #impact_four h2, #impact_five h2, #impact_six h2{
+		margin: 0 auto;
+	}
+
+	.grey_bg .right_half{
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	#impact_left{
+		margin-top: auto !important;
+	}
+
+	.white_bg p{
+		float: none;
+		max-width: 100%;
+		margin-right: auto !important;
+	}
+
+	#impact{
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+
+	.footer_left{
+		float: none;
+		text-align: center;
+	}
+
+	.copyright_notice{
+		clear: both;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	#secondary_nav_footer{
+		width: 100%;
+	}
+
+	ul.footer_menu{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.footer_right{
+		float: none;
+	}
+
+	.small-logo{
+		float: none;
+	}
+
+	#socialicons{
+		float: none;
+		clear: both;
+	}
+
+	#impact_five h2{
+		margin-top: 100px;
+	}
+
+	#impact_six .left_half{
+		width: 100%;
+		padding: 24px;
+		margin-bottom: 40px;
+	}
+
+	.featured-artisan-video-holder{
+		text-align: center;
+	}
+}
+
+
+
+
+@media only screen and (min-width: 960px){
+	#impact_four .left_half{
+		width: 60% !important;
+	}
+
+	#impact_four .right_half{
+		width: 40% !important;
+	}
+}
+
+@media only screen and (max-width: 768px){
+  .top_bar_search{
+    text-align: center;
+  }
+    
+  .momvideo {
+    display:none;}
+  
+    #featured_artisan_section {
+          background-size: cover;
+    min-height: 300px;
+    max-width: 100%;
+    
+  }
+  
+  #featured_artisan_section2 {
+  background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/embrace-baby.png?10635759370313862998') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    max-width: 100%;
+    
+  }
+  
+  
+
+#featured_artisan_section3{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/scissor.png?13019520266043769606') no-repeat center center;
+	background-size: cover;
+    min-height: 300px;
+    max-width: 100%;
+}
+  
+  
+  h1, .h1, h1.home, h2.title, .collection_title {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 auto 15px;
+    clear: both;
+    font-weight: lighter;
+    padding-top: 3%;
+}
+  
+  .featured_artisan_teaser h1 {
+    color: #fff;
+    font-size: 57px;
+}
+  
+  .featured_artisan_teaser {
+    float: right;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+  
+  .top_bar ul{
+    display: inline-block;
+  }
+  
+  .mission-quote{
+    width: 90%;
+  }
+  
+  ul#tag_list{
+    display: none;
+  }
+  
+  .slicknav_menu li.tag_category_filter_heading{
+    display: none;
+  }
+  
+  #tFilter{
+    text-align: center;
+  }
+  
+  .paginate span.page a, .paginate span.current, .paginate span.deco, .paginate span.next a, .paginate span.prev a{
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px)
+{
+	#impact_one img, #impact_two img, #impact_three img, #impact_four img, #impact_five img, #impact_right img{
+		max-width: 100%;
+	}
+
+  
+  .momvideo {
+    display:none;}
+    
+	#impact_six{
+		display: block !important;
+	}
+
+	.featured-artisan-video-holder img{
+		max-width: 100%;
+	}
+
+	.featured_artisan_teaser{
+		margin-top: 70px;
+	}
+  
+
+  .rhome-inline-block {
+  font-size: 31px; }
+  
+  .logo { padding-bottom:20px;}
+
+  .shipping {
+  
+      font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 11px;
+  
+}
+  
+  .featured_artisan_teaser h1 {
+    color: #fff;
+    font-size: 34px;
+}
+   #featured_artisan_section {
+          background-size: cover;
+    min-height: 200px;
+    max-width: 100%;
+    
+  }
+  
+  #featured_artisan_section2 {
+  background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/embrace-baby.png?10635759370313862998') no-repeat center center;
+    background-size: cover;
+    min-height: 200px;
+    max-width: 100%;
+    
+  }
+  
+  #featured_artisan_section3{
+	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/scissor.png?13019520266043769606') no-repeat center center;
+	background-size: cover;
+    min-height: 200px;
+    max-width: 100%;
+}
+  
+  
+  
+  h1, .h1, h1.home, h2.title, .collection_title {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 auto 15px;
+    clear: both;
+    font-weight: lighter;
+    padding-top: 3%;
+}
+  
+  div.content {
+    padding-top: 0px;
+}
+  
+  .featured_artisan_teaser h1 {
+    color: #fff;
+    font-size: 30px;
+}
+  
+  .featured_artisan_teaser {
+    float: right;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+  
+  
+  .featured_artisan_teaser p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px; }
+  
+  h1, .h1, h1.home, h2.title, .title a { margin: 0 auto 5px;}
+
+  div.section {
+     margin: 5px 0;
+  }
+  
+.action_button:hover, input.action_button[type="submit"]:hover, input.action_button[type="button"]:hover, .action_button:focus {
+    background: #685452;
+    border-color: #685452 !important;
+    outline: none;
+}
+}
+
+.collection-review {font-size: 15px; color: rgb(225,84,134);}
+
+/* add class="jumptarget" to all targets. for anchor tags to work with fixed header*/
+
+.jumptarget::before {
+  content:"";
+  display:block;
+  height:82px; /* fixed header height*/
+  margin:-82px 0 0; /* negative fixed header height */
+}

@@ -1,0 +1,325 @@
+</div>
+<!-- Hero Photo Split -->
+<div class="container content herodiv" style="padding-top: 5px; margin-top: 5px;">
+<div class="herodiv-eight eight columns alpha">
+<a href="/pages/products/swaddle" class="image-link">
+<div class="hero-image hero-alpha">
+<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Luke_Hero.jpg?16828696895647101188" alt="">
+<div class="hero-overlay">
+      <h1>Little Lotus Swaddle</h1>
+      <p>Designed to specifically protect your baby from newborn to 3 months, using NASA inspired fabric to regulate your baby’s temperature so they can sleep better</p>
+      <span class="rbutton">Shop Now &rarr;</span>
+</div></div></a></div>
+
+<div class="herodiv-eight eight columns omega">
+<a href="/pages/about-us" class="image-link">
+<div class="hero-image hero-omega">
+<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/LL_Tech_White_bg.jpg?16828696895647101188" alt="">
+<div class="hero-overlay">
+      <h1>Little Lotus Sleeping Bag</h1>
+  		<p>Temperature regulating sleeping bag for babies aged 3-18 months, designed for comfort and practicality</p>
+  		<span class="rbutton">View Range &rarr;</span>
+</div></div></a></div></div>
+
+
+<div class="blue_bar" style="margin-top: 20px;">
+  <h1>What's unique about Little Lotus?</h1>
+    <div class="container">{% include 'homepage-featured' %}</div>
+</div>
+ 
+<div class="container content" style="padding-top: 30px; padding-bottom: 30px"> 
+
+<!-- 3 Feature Images (Template -->  
+<div class="container content" style="padding-top: 20px">
+{% if settings.featured_links %}
+  <div class="sixteen columns featured_links">
+    <div class="section clearfix">
+      <div class="one-third column alpha">
+        <a href="{{ settings.feature1_link }}">
+          <div class="image_container">
+            <img src="{{ 'feature1.jpg' | asset_url }}" alt="{{ settings.feature1_text }}" />
+            {% if settings.feature1_text != blank %}<span class="feature-text">{{ settings.feature1_text }}</span>{% endif %}
+          </div>
+        </a>
+      </div>
+
+      <div class="one-third column">
+        <a href="{{ settings.feature2_link }}">
+          <div class="image_container">
+            <img src="{{ 'feature2.jpg' | asset_url }}" alt="{{ settings.feature2_text }}" />
+            {% if settings.feature2_text != blank %}<span class="feature-text">{{ settings.feature2_text }}</span>{% endif %}
+          </div>
+        </a>
+      </div>
+
+      <div class="one-third column omega">
+        <a href="{{ settings.feature3_link }}">
+          <div class="image_container">
+            <img src="{{ 'feature3.jpg' | asset_url }}" alt="{{ settings.feature3_text }}" />
+            {% if settings.feature3_text != blank %}<span class="feature-text">{{ settings.feature3_text }}</span>{% endif %}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+</div>
+
+<div class="container content"  style="padding-top: 0px; padding-bottom: 0px">
+<div class="sixteen columns">
+<div class="section clearfix">
+  <H4 style="text-align: center">Watch our video</H4>
+<!-- <div class="embed-container"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>  -->
+<div class="desktop_only_block" style="text-align: center; width: 100%;"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+<div class="mobile_only_block" style="text-align: center; width: 100%;"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" width="300" height="168" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+  
+<!-- Product Range -->
+{% if settings.frontpage_collection != blank %}
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+    <div name="products" class="sixteen columns">
+  		<div class="section clearfix">
+   			<h4 class="title" style="text-align: center; margin: 0;">View our product range</h4>
+          <p class="mobile_only_block" style="text-align: center;  color: #ff6666;">&larr; swipe to see more &rarr;</p>
+          <p class="desktop_only_block" style="text-align: center;  color: #ff6666;">&larr; see more &rarr;</p>
+      </div>
+    </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+  <div class="responsive_slick">
+    {% assign collection = '' %}
+    {% assign products = collections[settings.frontpage_collection].products %}
+    {% assign products_per_row = settings.frontpage_products_per_row %}
+    {% include 'lw-product-loop' with settings.homepage_sidebar %}
+  </div>
+  </div>  
+<script>
+$(document).ready(function(){
+  $('.responsive_slick').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+});
+  </script>
+{% endif %} 
+
+
+<!-- Injected Page content -->
+{% if settings.homepage2 != blank %}
+  </div>  
+  <div class="homepage_content clearfix">
+    <div class="container">
+      <div class="sixteen columns">
+        <div class="section clearfix">
+          {{ pages[settings.homepage2].content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container content" style="padding-top: 20px">
+{% endif %}
+
+<!-- Reviews Widget -->
+<div class="container content" style="padding-top:0 ;padding-top:0;margin-top: 20px;margin-bottom: 20px;" >
+<h4 style="text-align:center; margin: 0;">What people are saying</h4>
+  <p class="mobile_only_block" style="text-align: center;  color: #ff6666;">&larr; swipe to see more &rarr;</p>
+  <p class="desktop_only_block" style="text-align: center;  color: #ff6666;">&larr; see more &rarr;</p>
+<div class="responsive_slick">
+<div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/HarveyKarp.jpg?3140755961130202174" /><br>
+  <p style="width: 90%; padding-left: 10%;">"Little Lotus helps to regulate a baby’s temperature, which is something that can disturb sleep"
+  <br><strong style="color:#ee5555;">Dr Harvey Karp, author of Happiest Baby on the Block</strong></p>
+</div>
+<div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_1.png?2684358863475992551" /><br>
+  <p style="width: 90%; padding-left: 10%;">“I am on my third baby and this swaddle is the best! I love that the fabric is breathable, yet keeps my son warm. It also maintains its shape and does not bunch up or stretch”<br>
+    <strong style="color:#ee5555;">Wendy</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_2.png?5581746742390898225" /><br>
+  <p style="width: 90%; padding-left: 10%;">“When he is in his Little Lotus swaddle he stays asleep the entire night! Which means both baby and mommy get a good night's rest”<br>
+ <strong style="color:#ee5555;">Malia</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_3.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“I'm a believer! It really seems to control her temperature super well. We've experienced increased hours of rest since putting Little Hailey in it”<br>
+  <strong style="color:#ee5555;">Jessica</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_4.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“Knowing the fabric will help keep her at the right temperature while I'm sleeping gives me great peace of mind”<br>
+ <strong style="color:#ee5555;">Angela</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_5.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“It feels good knowing that by supporting Little Lotus, I am supporting their mission to save babies in developing countries”<br>
+ <strong style="color:#ee5555;">Janet</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_6.png?12040314176578082965"
+ /><br>
+  <p style="width: 90%; padding-left: 10%;">“In her Little Lotus, she now rarely wakes up at night and is already sleeping eight to nine hours straight almost every night”<br>
+  <strong style="color:#ee5555;">Christine</strong></p>
+</div>
+  <div><p style="width: 90%; padding-left: 10%; margin-top: 20%;">“My little one loves her Little Lotus Sleep Sac! Gorgeous print, so well made and so easy to use. She settles down as soon as I wrap her in it and sleeps so peacefully. Happiness for baby and mommy!”<br>
+  <strong style="color:#ee5555;">Diana &amp; Baby Esme</strong></p>
+</div>
+  
+  
+  
+  
+  
+
+</div>
+</div>
+  
+<!-- Reviews Stripe
+<H4 style="text-align: center;"><a href="/pages/moms-feedback"><span class="spr-badge" id="spr_badge_4080629574" data-rating="5.0">
+  <span style="color: #ff6666" class="spr-starrating spr-badge-starrating">
+    <i class="spr-icon spr-icon-star" style=""></i>
+    <i class="spr-icon spr-icon-star" style=""></i>
+    <i class="spr-icon spr-icon-star" style=""></i>
+    <i class="spr-icon spr-icon-star" style=""></i>
+    <i class="spr-icon spr-icon-star" style=""></i></span>
+  <span class="spr-badge-caption">View our Reviews</span>
+  </span></a></H4>    
+-->
+
+<!-- Community Section -->
+<div class="container content" style="padding-top:0 ;padding-top:0;margin-top: 40px;margin-bottom: 40px;" >
+	<h4 style="text-align:center;">Join our community</h4>
+  	<p style="text-align:center; padding-left: 10px; padding-right: 10px;">Follow Little Lotus to get recommendations and advice from other Little Lotus Parents</p>
+    <div class="two columns community offset-by-four ">
+   		<a href="https://www.facebook.com/lotusbaby" target="_blank">   
+     	<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-one.png?11232755633868861340">
+    	<div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/fb.png?11743834068282923941"></div>
+      	</a></div>
+    <div class="two columns community">
+    	<a href="http://instagram.com/littlelotusbaby" target="_blank">   
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-two.png?1130064062019156062">
+        <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/ig.png?11743834068282923941"></div>
+        </a></div>
+    <div class="two columns community">
+      	<a href="https://www.pinterest.com/littlelotusbaby/" target="_blank">   
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-three.png?1608571264368976440">
+        <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/pin.png?11743834068282923941"></div>
+        </a></div>
+    <div class="two columns community ">
+    	<a href="https://twitter.com/littlelotusbaby" target="_blank">   
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-four.png?8389418677596590910">
+        <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/twet.png?11743834068282923941"></div>
+      	</a></div>
+</div>
+  
+ 
+  
+</div>
+  
+
+</div>
+       
+<!-- Press references -->
+<div class="crafted">
+  <div class="container content" style="padding-top:0">
+    <div class="sixteen columns">
+      <a href="/pages/press">
+        <img style="width:100%; margin-top:0px;" src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logos-blue.png?3499379542569309172"></a>
+ <!-- <a href="/pages/press">    <img style="width:100%; margin-top:0px;" src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logos-press.png?11993907158453839486"></a> -->
+	</div>
+  </div>
+</div>
+
+
+<!-- Blog Widget -->
+<div class="section clearfix">
+  {% if settings.blog_widget %}
+    <div class="{% if settings.twitter_widget != blank %}eight{% else %}sixteen{% endif %} columns">
+      <h4 class="title">
+        <a href="{{ blogs[settings.blog_widget_select].url }}">{{ blogs[settings.blog_widget_select].title }}</a>
+      </h4>
+
+      {% for article in blogs[settings.blog_widget_select].articles limit: settings.home_page_articles %}
+        <div class="section clearfix article">
+          <h5 class="sub_title">
+            <a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title }}</a>
+          </h5>
+          <p class="meta"><span class="label">{{ article.published_at | date: "%B %d, %Y" }}</span></p>
+            
+          {% if article.excerpt != blank %}
+            {{ article.excerpt }}
+          {% else %}
+            <p>
+              {{ article.content | strip_html | truncatewords: 120 }} <a href="{{ article.url }}" title="{{ article.title | escape }}">Continue Reading &rarr;</a>
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+      </div>
+  {% endif %}
+
+  {% if settings.twitter_widget != blank %}
+    <div class="{% if settings.blog_widget %}eight{% else %}sixteen{% endif %} columns">
+       <h4 class="title"><a href="https://twitter.com/{{ settings.twitter_username }}" target="_blank">Tweets</a></h4>
+        <a class="twitter-timeline" href="https://twitter.com/{{ settings.twitter_username }}" data-widget-id="319998048782647298" data-tweet-limit="{{ settings.tweet_count }}" data-screen-name="{{ settings.twitter_username }}" data-chrome="noheader nofooter noborders transparent" data-link-color="{{ settings.link_color }}" data-heading-style="color:{{ settings.link_color }};font-size:{{ settings.regular_font_size }}px;{% if settings.regular_typeface_method == "google_webfonts" %}font-family: {{ settings.regular_google_webfont_font | replace: '+', ' ' }};{% else %}font-family: {{ settings.regular_websafe_font | replace: '+', ' ' }};{% endif %}"></a>
+        <script defer>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Insta Widget -->
+{% if settings.instagram_widget %}
+<div class="section clearfix">
+    <div class="sixteen columns">
+      <h4 class="title">
+        {% if settings.instagram_link != blank %}
+          <a href="{{ settings.instagram_link }}" target="_blank">
+        {% endif %}
+        {{ settings.instagram_title }}
+        {% if settings.instagram_link != blank %}
+          </a>
+        {% endif %}
+      </h4>
+    </div>
+    
+    <div id="instafeed" data-tag-name="{{ settings.instagram_tag_name }}" data-client-id="{{ settings.instagram_client_id }}" data-count="{{ settings.instagram_count }}">
+      <em>Tag your Instagram photos with #{{ settings.instagram_tag_name }}</em>
+    </div>
+</div>
+{% endif %}
+
+<style>
+  .info .price {display: none;}
+  .product_image img{padding-bottom: 0px; margin-bottom: 0px;}
+  .info .title {margin-top: 0px; padding-top: 0px; padding-bottom: 0px;}
+  .slick-dots {margin-left: 0px;}
+  .slick-next:before, .slick-prev:before {color: #ff6666;}
+  .review-home-slick {width: 200px; border-radius: 100%; margin-left: auto; margin-right: auto; padding: 2px;}
+</style>

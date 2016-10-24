@@ -1,0 +1,266 @@
+</div>
+
+<!-- Tagline -->
+<!-- Business week logo, text from newsletter, with link to Article -->
+<!-- Mom = picture of mom -->
+<!-- Product -->
+<!-- Reviews -->
+<!-- Video -->
+
+<div class="container content header-box">
+<h2 class="header-title">Perfect temperature, better sleep</h2>
+<p style="text-align: center;"><strong>Little Lotus swaddles &amp; sleeping bags help your baby sleep better by using a NASA-inspired technology to keep them at the ideal temperature.<br>
+  Each purchase helps to save a baby in need through our 1:1 model</strong></p>
+  </div>
+  
+<div class="full_width_container" id="impact_page">
+
+<!-- Section 01 -->
+ <section id="impact">          
+   <div id="impact_left" class="white_bg">
+     <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/bloombergbusinessweek_logo_black.jpg?7886049231348679985">
+     <p>We're excited to share that Bloomberg Businessweek just gave Little Lotus a thumbs up in their most recent issue!<br>Here's a peek at what's in the article</p>
+     <blockquote style="font-weight: 600; background-color: rgb(78, 178, 194); color: #fff;">
+       "We had been using swaddles and had just switched over to sleep sacks, and that transition was really hard...I was skeptical. I put the Little Lotus sleeping bag on her, and I kid you not, she took a three-hour nap. She had been taking 30 to 60-minute naps.
+       <br><br>I gave a Little Lotus to my cousin at her baby shower, and I told her the story of how [with the Little Lotus 1:1 model], Embrace incubators are literally saving the lives of babies around the world. All of these moms and grandmas and aunts and uncles were so touched.
+       <br><br>It’s an amazing way to connect with other moms around the world."</blockquote>
+	<a href="http://www.bloomberg.com/features/2016-design/a/jane-chen/" target="_blank"><button id="featured_artisan_btn">Read the article here</button></a>
+   </div>
+    <div id="impact_right">
+    <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/LL_Tech_White_bg.jpg?6406020648235510214">
+    </div>
+ </section>
+
+<!-- Product Range -->
+{% if settings.frontpage_collection != blank %}
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+    <div name="products" class="sixteen columns">
+  		<div class="section clearfix">
+   			<h4 class="title" style="text-align: center; margin: 0;">View our product range</h4>
+          <p class="mobile_only_block" style="text-align: center;  color: #ff6666;">&larr; swipe to see more &rarr;</p>
+          <p class="desktop_only_block" style="text-align: center;  color: #ff6666;">&larr; see more &rarr;</p>
+      </div>
+    </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+  <div class="responsive_slick">
+    {% assign collection = '' %}
+    {% assign products = collections[settings.frontpage_collection].products %}
+    {% assign products_per_row = settings.frontpage_products_per_row %}
+    {% include 'lw-product-loop' with settings.homepage_sidebar %}
+  </div>
+  </div>  
+<script>
+$(document).ready(function(){
+  $('.responsive_slick').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+});
+  </script>
+{% endif %} 
+
+<!-- Our Video -->
+<div class="container content"  style="padding-top: 0px; padding-bottom: 0px">
+<div class="sixteen columns">
+<div class="section clearfix">
+  <H4 style="text-align: center">Watch our video</H4>
+<!-- <div class="embed-container"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>  -->
+<div class="desktop_only_block" style="text-align: center; width: 100%;"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+<div class="mobile_only_block" style="text-align: center; width: 100%;"><iframe src="https://player.vimeo.com/video/149678109?title=0&amp;byline=0&amp;portrait=0" width="300" height="168" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+
+  
+  
+  
+<!-- Reviews Widget -->
+<div class="container content" style="padding-top:0 ;padding-top:0;margin-top: 20px;margin-bottom: 20px;" >
+<h4 style="text-align:center; margin: 0;">What people are saying</h4>
+  <p class="mobile_only_block" style="text-align: center;  color: #ff6666;">&larr; swipe to see more &rarr;</p>
+  <p class="desktop_only_block" style="text-align: center;  color: #ff6666;">&larr; see more &rarr;</p>
+<div class="responsive_slick">
+<div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/HarveyKarp.jpg?3140755961130202174" /><br>
+  <p style="width: 90%; padding-left: 10%;">"Little Lotus helps to regulate a baby’s temperature, which is something that can disturb sleep"
+  <br><strong style="color:#ee5555;">Dr Harvey Karp, author of Happiest Baby on the Block</strong></p>
+</div>
+<div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_1.png?2684358863475992551" /><br>
+  <p style="width: 90%; padding-left: 10%;">“I am on my third baby and this swaddle is the best! I love that the fabric is breathable, yet keeps my son warm. It also maintains its shape and does not bunch up or stretch”<br>
+    <strong style="color:#ee5555;">Wendy</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_2.png?5581746742390898225" /><br>
+  <p style="width: 90%; padding-left: 10%;">“When he is in his Little Lotus swaddle he stays asleep the entire night! Which means both baby and mommy get a good night's rest”<br>
+ <strong style="color:#ee5555;">Malia</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_3.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“I'm a believer! It really seems to control her temperature super well. We've experienced increased hours of rest since putting Little Hailey in it”<br>
+  <strong style="color:#ee5555;">Jessica</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_4.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“Knowing the fabric will help keep her at the right temperature while I'm sleeping gives me great peace of mind”<br>
+ <strong style="color:#ee5555;">Angela</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_5.png?12040314176578082965" /><br>
+  <p style="width: 90%; padding-left: 10%;">“It feels good knowing that by supporting Little Lotus, I am supporting their mission to save babies in developing countries”<br>
+ <strong style="color:#ee5555;">Janet</strong></p>
+</div>
+  <div><img class="review-home-slick" src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_6.png?12040314176578082965"
+ /><br>
+  <p style="width: 90%; padding-left: 10%;">“In her Little Lotus, she now rarely wakes up at night and is already sleeping eight to nine hours straight almost every night”<br>
+  <strong style="color:#ee5555;">Christine</strong></p>
+</div>
+  <div><p style="width: 90%; padding-left: 10%; margin-top: 20%;">“My little one loves her Little Lotus Sleep Sac! Gorgeous print, so well made and so easy to use. She settles down as soon as I wrap her in it and sleeps so peacefully. Happiness for baby and mommy!”<br>
+  <strong style="color:#ee5555;">Diana &amp; Baby Esme</strong></p>
+</div>
+    
+
+  
+  
+</div>
+
+<style>
+  
+  .info .price {display: none;}
+  .product_image img{padding-bottom: 0px; margin-bottom: 0px;}
+  .info .title {margin-top: 0px; padding-top: 0px; padding-bottom: 0px;}
+  .slick-dots {margin-left: 0px;}
+  .slick-next:before, .slick-prev:before {color: #ff6666;}
+  .review-home-slick {width: 200px; border-radius: 100%; margin-left: auto; margin-right: auto; padding: 2px;}
+  p {margin: 0 0 20px; font-style: normal; font-size: 18px;}
+  
+  button#featured_artisan_btn{ background-color: rgb(241, 136, 136); border-color: rgb(241, 136, 136); margin-bottom: 0px; padding: 10px;}
+  
+  .quotename {margin-left: 40px;}
+  .quotename a {color: #fff;}
+  
+  .header-title {text-align: center; color: #fff; font-size: 34px; margin-bottom: 10px;}
+  .header-box {
+    color: #fff;
+    background-color: rgb(78, 178, 194);
+    padding: 3% !important;
+    width: 90%;
+    margin-left: 2%;
+    margin-top: 20px;
+  }
+  
+  .hide960{display: inherit;}
+  .show960{display: none;}
+  .flex-caption .headline {font-size: 50px; line-height: 60px;}
+  .flexslider {margin-top: 0px;}
+  #impact_right img {width: 100%; padding: 0;}
+  
+@media only screen and (max-width: 1220px){
+  .flex-caption .headline {font-size: 44px; line-height: 54px;}
+  #impact_right img {width: 400px;}
+  .flexslider {margin-top: 0px;}
+  .flex-caption {top: 15%;}
+}
+@media only screen and (max-width: 960px){
+  div.content {padding-top: 35px;} 
+  .hide960{display: none;}
+  .show960{display: inherit;}
+  .flex-caption .headline {font-size: 38px; line-height: 44px;}
+  .flex-caption {top: 8%;}
+  #impact_right img {width: 70%;}
+  .flexslider {margin-top: 80px;}
+   .flex-caption .container {width: 80%;}
+  .flex-caption .container .columns.sixteen {width: 100%;}
+  .header-title {text-align: center; color: #fff; font-size: 30px;}
+  .header-box {margin-top: 90px !important;}
+}
+
+@media only screen and (max-width: 768px){
+  div.content {padding-top: 0px;}
+  div.container.main.content {display: none;}
+  .flex-caption .headline {font-size: 34px; line-height: 40px;}
+  .flex-caption {top: 4%;}
+  #impact_right img {width: 90%;}
+  .flexslider {margin-top: 0px;}
+  .flex-caption .container {width: 80%;}
+  .flex-caption .container .columns.sixteen {width: 100%;}
+  .header-title {text-align: center; color: #fff; font-size: 24px;}
+  .header-box {margin-top: 0px !important;}
+}
+  
+@media only screen and (max-width: 650px){
+  div.content {padding-top: 0px;}
+  div.container.main.content {display: none;}
+  .flex-caption .headline {padding-top: 1%; font-size: 26px; line-height: 32px;}
+  .flex-caption {top: 2%;}
+  #impact_right img {width: 100%;}
+  #impact_three .right_half {display: none;}
+  .flex-caption .container {width: 85%;}
+  .flex-caption .container .columns.sixteen {width: 100%;}
+}  
+  
+@media only screen and (max-width: 480px){
+  .flex-caption .headline {font-size: 18px; line-height: 24px;} 
+  .hide480 {display: none;}
+  .flex-caption {top: 2%;}
+  #impact {padding: 3% 4%;}
+  .flex-caption .container {width: 90%; padding-top: 15px;}
+  .flex-caption .container .columns.sixteen {width: 100%;}
+  .header-title {text-align: center; color: #fff; font-size: 18px;}
+}
+  
+@media only screen and (max-width: 320px){
+  .flex-caption .headline {font-size: 16px; line-height: 22px;} 
+  .hide480 {display: none;}
+  .flex-caption {top: 0px;}
+  #impact {padding: 3% 4%;}
+  .flex-caption .container {width: 95%; padding-top: 10px;}
+  .flex-caption .container .columns.sixteen {width: 100%;}
+  .header-title {text-align: center; color: #fff; font-size: 16px;}
+  .header-box p {font-size: 14px;}
+}    
+
+</style>
+
+<script>// <![CDATA[
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+|| location.hostname == this.hostname) {
+
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+// ]]></script>

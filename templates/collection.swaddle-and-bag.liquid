@@ -1,0 +1,173 @@
+</div>
+
+<section id="featured_artisan_section" itemscope itemtype="http://data-vocabulary.org/CollectionPage">
+      <!-- <img style="max-width:100%;" src="https://cdn.shopify.com/s/files/1/0351/8285/files/FeatureArtisanBanner_NoText_10_12_15.jpeg?7252394168028587196"> -->
+  		<div class="featured_artisan_teaser">
+          <meta itemprop="image" src="https:{{ collection.image.src | img_url: 'medium' }}" alt="{{ collection.title}} | Little Lotus Baby Swaddles and Sleep Sacks" />
+       
+      <h1 itemprop="name">{{ collection.title }}</h1>
+	  	<!--	<p>
+Little Lotus was founded by Embrace Innovations with a lofty goal: offer well-designed baby products and in the process, give 1,000,000 premature and underweight babies in the developing world a better chance at life.</p>
+	  		<button id="featured_artisan_btn">Shop Now</button> -->
+	  	</div>
+  </section>
+
+<!--<div id="homepage_slider" class="flexslider">
+    <ul class="slides">
+      
+	    	<li style="display: list-item;">
+	    		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/baby-light.png?3727558721543932243" alt="Shopify Themes by Out of the Sandbox">
+	    		
+	    		  <div class="flex-caption">
+              <div class="container">
+                <div class="columns  align_left ten ">
+               
+                  
+                </div>
+              </div>
+            </div>
+	    		
+	    	</li>
+	    
+      
+      
+      
+      
+      
+    </ul>
+	</div> -->
+<div class="container">
+{% paginate collection.products by settings.pagination_limit %}
+
+      {% if settings.display_collection_title %}
+    {% endif %}
+
+    <div class="sixteen columns">
+
+
+
+
+      
+    
+    {% if collection.description != blank %}
+      <div itemprop="description" class="section clearfix collection_description">    
+        {{ collection.description }}
+      </div>
+    {% endif %}
+        
+        
+        
+        
+      </div>
+
+      <div class="sixteen columns">
+          {% if collection.products.size == 0 %}
+      <div class="section clearfix">     
+        <p class="quote">No products found in this collection.</p>
+      </div>
+    {% else %}        <h4>SHOP OUR PRODUCTS</h4>
+
+      {% assign products = collection.products %}
+      {% assign products_per_row = settings.products_per_row %}
+      {% include 'product-loop' with settings.collection_sidebar %}
+    {% endif %}
+        
+       </div>
+  
+      
+
+    {% include 'pagination' with settings.collection_sidebar %}
+
+{% endpaginate %}
+
+      
+      <style>
+        
+        .flexslider .slides {
+    zoom: 1;
+    padding-top: 0px;
+}
+        
+
+        
+          h4, .h4, h4.title a, h6.title { font-size: 18px; line-height: 32px; margin: 0 0 1em 0; padding: 0; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; padding: 7px 0; color: #615d5d;}
+
+        .featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 160px;
+}
+        
+      .featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 10%;
+}
+  
+  @media only screen and (max-width: 1220px){
+
+        .featured_artisan_teaser h1{
+	margin-top: 0%;
+}
+    
+      .featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+  }
+
+  
+  
+  
+  
+@media only screen and (max-width: 960px){
+    .featured_artisan_teaser{
+	margin-top: 13%;
+}
+  
+  div.content {
+    padding-top: 35px;
+}
+}
+
+  
+@media only screen and (max-width: 768px){
+    .featured_artisan_teaser{
+	margin-top: 95px;
+}
+  
+  .featured_artisan_teaser h1 {
+    color: #fff;
+    font-size: 35px;
+}
+  
+   div.content {
+    padding-top: 0px;
+}
+
+  div.container.main.content {
+        display: none;
+
+  }
+  
+  }
+  
+@media only screen and (max-width: 480px){
+      .featured_artisan_teaser{
+        margin-top: 40px; }
+  
+    .featured_artisan_teaser h1 {
+    color: #fff;
+    font-size: 25px;
+}
+}  
+  
+  
+        
+      </style>

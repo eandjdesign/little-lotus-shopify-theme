@@ -1,0 +1,186 @@
+<!--<div class="sixteen columns">
+  <div class="section clearfix">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+
+<div class="sixteen columns">
+  <div class="section clearfix">  
+    {{ page.content }}
+  </div>
+</div> -->
+</div>
+<div class="full_width_container" id="impact_page"> <!-- Begin Full width container -->
+
+<!-- Section 01 -->
+
+<section id="featured_artisan_section2">
+<!-- <img style="max-width:100%;" src="https://cdn.shopify.com/s/files/1/0351/8285/files/FeatureArtisanBanner_NoText_10_12_15.jpeg?7252394168028587196"> -->
+<div class="featured_artisan_teaser">
+	<h1>Help a baby in need</h1>
+    <p> Your Little Lotus purchase will help a baby in need</p>
+	<!--<button id="featured_artisan_btn">Shop Now</button> -->
+</div>
+</section>
+
+<section id="impact">
+	<div id="impact_left" class="white_bg">
+    <!--  <h2>Help a baby in need</h2> -->
+    <p style="margin-top: 0px;"><strong>With each purchase of the Little Lotus products, a baby will be helped by the Embrace Infant Warmer</strong></p>
+      <p>Little Lotus was founded by Embrace Innovations with a lofty goal: create well-designed baby products and in the process, give 1,000,000 premature and underweight babies in the developing world <strong style="color:#ff6666">a better chance at life</strong>.</p>
+	<p>The award-winning Embrace Infant Warmer was created to help premature and underweight babies in the developing world. The product doesn’t require constant electricity and is portable, reusable and a fraction of the cost of traditional incubators. Over 200,000 babies have already been helped around the world. We hope to reach 1,000,000 babies with the help of the Little Lotus 1:1 model.</p>
+	</div>
+    <div id="impact_right">
+    <img class="desktop" src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/yawn.png?15505151176303941067">
+    </div>
+</section>
+
+<!-- Product Range -->
+{% if settings.frontpage_collection != blank %}
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+    <div name="products" class="sixteen columns">
+  		<div class="section clearfix">
+   			<h4 class="title" style="text-align: center; margin: 0;">View our product range</h4>
+          <p class="mobile_only_block" style="text-align: center;  color: #ff6666;">&larr; swipe to see more &rarr;</p>
+  <p class="desktop_only_block" style="text-align: center;  color: #ff6666;">&larr; see more &rarr;</p>
+      </div>
+    </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+  <div class="responsive_slick">
+    {% assign collection = '' %}
+    {% assign products = collections[settings.frontpage_collection].products %}
+    {% assign products_per_row = settings.frontpage_products_per_row %}
+    {% include 'lw-product-loop' with settings.homepage_sidebar %}
+  </div>
+  </div>  
+<script>
+$(document).ready(function(){
+  $('.responsive_slick').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+});
+  </script>
+{% endif %}   
+  
+<!-- Section 02 -->
+<section id="impact_two" class="grey_bg">
+	<div class="left_half">
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/holding-baby.png?6932962828146904969">
+	</div>
+	<div name="warmer" class="right_half">
+		      		<h2>History of Little Lotus </h2>
+
+		<p>
+Our history started in 2008, in a class at Stanford University, where we were challenged to come up with an incubator that costs less than 1% the cost of a traditional incubator. After extensive research, we developed the Embrace infant warmer and have spent the last 8 years distributing these around the world. Little Lotus, our newest product line, uses similar technology as the Embrace warmers to ensure babies sleep at the perfect temperature.  Through our 1:1 model, we hope to help 1 million babies around the world. 
+</p>
+	</div>
+</section>
+
+<!-- Section 03 -->
+<section id="impact_three" class="white_bg">
+	<div class="left_half">
+		<h2>The Little Lotus Name</h2>
+      <p>A lotus is associated with purity, beauty, divine birth and enlightenment. The lotus flower represents birth, both in a figurative and a literal sense. The flower’s first and most literal meaning: rising and blooming to achieve enlightenment.</p>
+	
+	</div>
+	<div class="right_half">
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Screen_Shot_2015-04-12_at_10.40.32_AM.png?12162892021070894519">
+	</div>
+</section>
+
+<!-- Section 04 
+<section id="impact_four" class="grey_bg">
+	<div class="left_half">
+		<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Screen_Shot_2015-04-12_at_10.40.32_AM.png?12162892021070894519">
+	</div>
+	<div class="right_half">
+		<h2>The Little Lotus Name</h2>
+      <p>A lotus is associated with purity, beauty, divine birth and enlightenment. The lotus flower represents birth, both in a figurative and a literal sense. The flower’s first and most literal meaning: rising and blooming to achieve enlightenment.</p>
+	</div>
+</section>
+
+</div>--> <!-- End Full width Container-->
+
+<style>
+  p {margin: 0 0 20px; font-style: normal; font-size: 18px;}
+  
+  .featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 10%;
+}
+
+  .desktop {display: inline;}
+  .featured_artisan_teaser p{font-size: 28px;}
+  .slick-next:before, .slick-prev:before {color: #ff6666;}
+      
+  
+@media only screen and (max-width: 1220px){
+
+	.featured_artisan_teaser h1{margin-top: 0%;}
+    .featured_artisan_teaser p{font-size: 28px;}
+	
+  .featured_artisan_teaser{
+	float: right;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	}
+}
+  
+@media only screen and (max-width: 960px){
+    .featured_artisan_teaser{margin-top: 13%;}
+	div.content {padding-top: 35px;}
+}
+  
+@media only screen and (max-width: 768px){
+  .featured_artisan_teaser{margin-top: 95px;}
+  .featured_artisan_teaser h1 {color: #fff; font-size: 35px;}
+  .desktop {display: none;}
+  div.content {padding-top: 0px;}
+  div.container.main.content {display: none;}
+  .featured_artisan_teaser p{display: none;}
+}
+  
+@media only screen and (max-width: 480px){
+	.featured_artisan_teaser{margin-top: 40px; }
+  	.featured_artisan_teaser h1 {color: #fff; font-size: 25px;}
+	.featured_artisan_teaser p{display: none;}  
+}  
+
+</style>

@@ -1,0 +1,622 @@
+  <!DOCTYPE html>
+  <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+  <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+  <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+      <meta property="fb:pages" content="916660465024450" />
+      <meta name="google-site-verification" content="xs5qDZxL-xrKn6V26F3RRrX-kykNtyksqUd1v0IjY-c" />
+      <meta charset="utf-8">
+      <meta http-equiv="cleartype" content="on">
+      <meta name="robots" content="index,follow">
+      <meta name="google-site-verification" content="OvUW8nHZzkzT9nPlw3fE8mdRlg8rWfAe5rLqSJSFAvA" />
+      <meta name="keywords" content="swaddle, sleep sack, sleepsack, sleeping bag, baby gift, baby gifts, SIDS, muslin, swaddling, baby swaddles, baby sleep sacks, temperature, baby sleep, infant sleep, newborn, sleep sack baby">
+      <title>{% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }} {% if current_tags %}tagged"{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %}Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %}| {{ shop.name }}{% endunless %}{% endif %}</title>
+
+
+      {% if template contains 'list-collections' %}
+        <meta name="description" content="Product collections from {{ shop.name }} - Page {{ current_page }}" />
+      {% elsif page_description != '' %}
+        <meta name="description" content="{{ page_description | escape }}" />
+      {% endif %}
+
+      {% include 'social-meta-info' %}
+
+      {% if collection.previous_product %}
+        <link rel="prev" href="{{ collection.previous_product }}">
+      {% endif %}
+      {% if collection.next_product %}
+        <link rel="next" href="{{ collection.next_product }}">
+      {% endif %}
+
+      <!-- Mobile Specific Metas -->
+      <meta name="HandheldFriendly" content="True">
+      <meta name="MobileOptimized" content="320">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <!-- Stylesheets -->
+      {{ 'styles.css' | asset_url | stylesheet_tag }}
+          {{ 'custom.css' | asset_url | stylesheet_tag }}
+
+      <!--[if lte IE 9]>
+        {{ 'ie.css' | asset_url | stylesheet_tag }}
+      <![endif]-->
+      <!--[if lte IE 7]>
+        {{ 'lte-ie7.js' | asset_url | script_tags }}
+      <![endif]-->
+
+      <!-- Icons -->
+      <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
+      <link rel="canonical" href="{{ canonical_url }}" />
+
+      <!-- Custom Fonts -->
+      <link href='//fonts.googleapis.com/css?family=.|{% if settings.logo_typeface_method == "google_webfonts" %}{{ settings.logo_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.headline_typeface_method == "google_webfonts" %}{{ settings.headline_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.nav_typeface_method == "google_webfonts" %}{{ settings.nav_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.regular_typeface_method == "google_webfonts" %}{{ settings.regular_google_webfont_font }}:light,normal,bold{% endif %}' rel='stylesheet' type='text/css'>
+
+      {% if template contains 'customer' %}
+        {{ "shopify_common.js" | shopify_asset_url | script_tag }}
+        {{ "customer_area.js"  | shopify_asset_url | script_tag }}
+        <!--[if lt IE 7]>
+          {{ 'json2.js' | shopify_asset_url | script_tag }}
+        <![endif]-->
+      {% endif %}
+
+      <script src="//www.google-analytics.com/cx/api.js?experiment=v_9IJrk-SeuwYm_VfsNDSA"></script>
+
+      <!-- jQuery and jQuery fallback -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <script>window.jQuery || document.write("<script src='{{ "jquery.min.js" | asset_url }}'>\x3C/script>")</script>
+      {{ 'app.js' | asset_url | script_tag }}
+      {% if settings.product_slideshow_animation == 'zoom' %}{{ "cloudzoom.js" | asset_url | script_tag }}{% endif %}
+      {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+      {{ content_for_header }}
+
+
+      <!-- MailChimp Single opt in -->
+      <script src="{{'mc-submit.js' | asset_url}}"></script>
+
+      <!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com -->
+      <script>
+        var om580459a6dc0e6,om580459a6dc0e6_poll=function(){
+          var r=0;return function(n,l){
+            clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){
+              if(e.getElementById(n)){
+                om580459a6dc0e6_poll(function(){
+                  if(window['om_loaded']){
+                    if(!om580459a6dc0e6){
+                      om580459a6dc0e6=new OptinMonsterApp();
+                      return om580459a6dc0e6.init({"s":"24167.580459a6dc0e6","staging":0,"dev":0,"beta":0});
+                    }
+                  }
+                },25);return;
+              }
+              var d=false,o=e.createElement(t);
+              o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",
+                o.onload=o.onreadystatechange=function(){
+                if(!d){
+                  if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){
+                    try{d=om_loaded=true;om580459a6dc0e6=new OptinMonsterApp();
+                        om580459a6dc0e6.init({
+                          "s":"24167.580459a6dc0e6","staging":0,"dev":0,"beta":0
+                        });
+                        o.onload=o.onreadystatechange=null;
+                       }catch(t){}
+                  }
+                }
+              };
+              (document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}
+            (document,"script","omapi-script");
+      </script>
+      <!-- / OptinMonster -->
+
+
+
+  <!-- Facebook Pixel Code
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1498421600461552');
+  fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1498421600461552&ev=PageView&noscript=1"
+  /></noscript>
+  End Facebook Pixel Code -->
+
+
+      <script>
+      window['friendbuy'] = window['friendbuy'] || [];
+      window['friendbuy'].push(['site', 'site-ad223c75-host']);
+      window['friendbuy'].push(['track', 'customer',
+          {
+              id: '{{customer.id}}',
+              email: '{{customer.email}}'
+          }
+      ]);
+      (function (f, r, n, d, b, y) {
+          b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
+      })(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
+  </script>
+
+      <script>
+
+(function() {
+     /* Begin Discount Autofill Code */
+/* Read the Query String value from the URL */
+/* Link: http://stackoverflow.com/a/2880929 - Notes: No clue how this regex stuff works. Probably fairy magic.  */
+    var urlParams;
+    (window.onpopstate = function () {
+        var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+    urlParams[decode(match[1])] = decode(match[2]);
+    })();
+
+/* If the value of the hidden discount input field is blank, undefined or null then set the contents of localstorage discount to be the result of our Query String function above */
+    if ($("#discount_input").val() == ('' || undefined || null || 'undefined')) {
+    /* Set sessionStorage variable "discount" to the result of our Query string function above */
+       sessionStorage.setItem("discount", urlParams["discount"]);
+    }
+
+/* If the value in our hidden input field doesn’t match the result of our Query String function above then clear the current sessionStorage value for "discount" and replace it with the new one */
+/* Link: http://stackoverflow.com/q/19844750 */
+    else if ($("#discount_input").val() != urlParams["discount"]) {
+       sessionStorage.removeItem("discount");
+       sessionStorage.setItem("discount", urlParams["discount"]);
+    }
+/* End Discount Autofill Code */
+
+}());
+
+</script>
+
+<!-- Hits Analytics tracking code -->
+{% if shop.customer_accounts_enabled %}
+  {% if customer %}
+    <script type="text/javascript">
+        function hitsReady() {
+            if (typeof hits != 'undefined')
+                hits('user','identify', {'id' : '{{ customer.id }}'});
+            else
+                setTimeout(hitsReady,500);
+        }
+        window.attachEvent ? window.attachEvent('onload', hitsReady) : window.addEventListener('load', hitsReady, false);
+    </script>
+  {% endif %}
+{% endif %}
+<!-- end of Hits Analytics code -->
+
+
+
+<!-- Google AB Testing:: Ask Google Analytics which variation to show the user -->
+<script>
+	var chosenVariation = cxApi.chooseVariation();
+</script>
+<!-- End of Google AB Testing -- ID = cxApi.chooseVariation();   -->
+
+
+</head>
+    <body class="{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+
+      <!-- Our hidden input that stores the discount code value -->
+<input id="discount_input" type="hidden" name="discount" value="">
+<!-- Set the value of our hidden input field #discount-input to the value of our sessionStorage "discount" Variable -->
+<script>
+(function() {
+  document.getElementById("discount_input").value = sessionStorage.getItem("discount");
+}());
+      </script>
+
+      <div>
+        <div id="header" class="mm-fixed-top">
+          <a href="/" class="mobile_only_inline" style="padding: 0px;"><img style="clear: both; margin-bottom: 2px; margin-left: 35%; margin-right: 35%; width: 30%;" src="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo.png?12158272014175685991" alt="Little Lotus" data-src="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo.png?12158272014175685991" data-src-home="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo_home.png?12158272014175685991"></a>
+
+          <a href="#nav" class="icon-menu"> <span>Menu</span></a>
+
+
+          <!-- <a style="left: 120px; font-size: 18px; line-height: 26px; color: #444;" href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a>
+          <a style="left: 150px; font-size: 20px; line-height: 26px; color: #444;" href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a> -->
+          <a href="/cart" class="icon-cart right">
+            {% if cart.item_count > 0 %}<div class="cart_count">{{ cart.item_count }}</div>{% endif %} <span>Cart</span></a>
+        </div>
+
+        <div class="hidden">
+          <div id="nav">
+            <ul>
+              {% for link in linklists[settings.main_linklist].links %}
+                {% if linklists[link.handle] == empty %}
+                  <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                {% else %}
+                  <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                    <ul>
+                      {% for link in linklists[link.handle].links %}
+                        {% if linklists[link.handle] == empty %}
+                          <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                        {% else %}
+                        <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                          <ul>
+                            {% for link in linklists[link.handle].links %}
+                              <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% endif %}
+              {% endfor %}
+              {% if shop.customer_accounts_enabled %}
+                <li>
+                  <a href="/account" title="My Account {% if customer %}({{ customer.email }}){% endif %}">My Account</a>
+                </li>
+                {% if customer %}
+                  <li>
+                    {{ "Logout" | customer_logout_link }}
+                  </li>
+                {% endif %}
+              {% endif %}
+            </ul>
+          </div>
+
+          <div id="cart">
+            <ul>
+              <li class="mm-subtitle"><a class="mm-subclose continue" href="#cart">Continue Shopping</a></li>
+
+              {% if cart.item_count == 0 %}
+                <li class="Label">Your Cart is Empty</li>
+              {% else %}
+                {% if settings.side_cart_button_position == "top" %}
+                  <li class="mm-selected">
+                    <em class="mm-counter">{{ cart.total_price | money_with_currency }}</em>
+                    <a href="/cart">
+                      <strong>Subtotal</strong>
+                    </a>
+                  </li>
+
+                  <li class="mm-subtitle clearfix">
+                    <a href="/checkout" class="action_button right">Checkout</a>
+                    <a href="/cart" class="action_button edit_cart left">Edit Cart</a>
+                    <br class="clear" />
+                    <br class="clear" />
+                  </li>
+                {% endif %}
+                {% for item in cart.items %}
+                  <li class="cart_item">
+                    <a href="{{ item.url }}">
+                      <div class="cart_image">
+                        <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}" />
+                      </div>
+                      <div><strong>{{ item.quantity }} x</strong> {{ item.title }}</div>
+                      <strong class="price">{{ item.price | money }}</strong>
+                    </a>
+                  </li>
+                {% endfor %}
+                {% if settings.side_cart_button_position == "bottom" %}
+                  <li class="mm-selected">
+                    <em class="mm-counter">{{ cart.total_price | money_with_currency }}</em>
+                    <a href="/cart">
+                      <strong>Subtotal</strong>
+                    </a>
+                  </li>
+
+                  <li class="mm-subtitle clearfix">
+                    <a href="/checkout" class="action_button right">Checkout</a>
+                    <a href="/cart" class="action_button edit_cart left">Edit Cart</a>
+                  </li>
+                {% endif %}
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="header mm-fixed-top {% unless template contains "index" %}header_bar{% endunless %}">
+          <div class="container">
+            <div class="four columns logo desktop_only_inline">
+              <a href="{{ shop.url }}" title="{{ shop.name }}">
+                {% if settings.use_logo %}
+                  <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" data-src="{{ 'logo.png' | asset_url }}" {% if settings.use_logo_home %}data-src-home="{{ 'logo_home.png' | asset_url }}"{% endif %} />
+                {% else %}
+                  {{ shop.name }}
+                {% endif %}
+              </a>
+            </div>
+
+
+            <div class="twelve columns nav mobile_hidden">
+              <ul class="menu">
+                {% for link in linklists[settings.main_linklist].links %}
+                  {% if linklists[link.handle] == empty %}
+                    <li><a href="{{ link.url }}" title="{{ link.title }}" class="top-link {% if link.active %}active{% endif %}">{{ link.title }}</a></li>
+                  {% else %}
+
+                    {% comment %}
+                      Find out how many sub-links there are total in order to determine if the drop down should be split.
+                    {% endcomment %}
+                    {% assign count = 0 %}
+                    {% for link in linklists[link.handle].links %}
+                      {% capture count %}{{ count }}*{% endcapture %}
+                      {% if linklists[link.handle] != empty %}
+                        {% for link in linklists[link.handle].links %}
+                          {% capture count %}{{ count }}*{% endcapture %}
+                        {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                    {% assign column_threshold = settings.dropdown_column_links | minus: 0 %}
+
+                    <li><a href="{{ link.url }}" title="{{ link.title }}" class="sub-menu {% if link.active %}active{% endif %} {% for link in linklists[link.handle].links %}{% for l in linklists[link.handle].links %} {% if l.active %}active{% endif %}{% endfor %}{% if link.active %}active{% endif %}{% endfor %}">{{ link.title }}
+                      <span class="arrow">▾</span></a>
+                      <div class="dropdown {% if count.size > column_threshold %}dropdown-wide{% endif %}">
+                        <ul>
+                          {% assign count = 0 %}
+                          {% assign split = false %}
+                          {% for link in linklists[link.handle].links %}
+                            {% capture count %}{{ count }}*{% endcapture %}
+                            <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                            {% if linklists[link.handle] != empty %}
+                              {% for link in linklists[link.handle].links %}
+                                {% capture count %}{{ count }}*{% endcapture %}
+                                <li>
+                                  <a class="sub-link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                                </li>
+                              {% endfor %}
+                            {% endif %}
+
+                            {% if count.size > column_threshold and split == false %}
+                              {% assign split = true %}
+                              </ul>
+                              <ul>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+
+                {% if settings.social_icons_enabled %}
+                  {% if settings.twitter_link != '' %}
+                    <li><a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" rel="me" target="_blank" class="icon-twitter"></a></li>
+                  {% endif %}
+
+                  {% if settings.facebook_link != '' %}
+                    <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
+                  {% endif %}
+
+                  {% if settings.google_link != '' %}
+                    <li><a href="{{ settings.google_link }}" title="{{ shop.name }} on Google+" rel="publisher" target="_blank" class="icon-google-plus"></a></li>
+                  {% endif %}
+
+                  {% if settings.youtube_link != '' %}
+                    <li><a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank" class="icon-youtube"></a></li>
+                  {% endif %}
+
+                  {% if settings.vimeo_link != '' %}
+                    <li><a href="{{ settings.vimeo_link }}" title="{{ shop.name }} on Vimeo" rel="me" target="_blank" class="icon-vimeo-2"></a></li>
+                  {% endif %}
+
+                  {% if settings.pinterest_link != '' %}
+                    <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest"></a></li>
+                  {% endif %}
+
+                  {% if settings.tumblr_link != '' %}
+                    <li><a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" rel="me" target="_blank" class="icon-tumblr"></a></li>
+                  {% endif %}
+
+                  {% if settings.linkedin_link != '' %}
+                    <li><a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank" class="icon-linkedin"></a></li>
+                  {% endif %}
+
+                  {% if settings.flickr_link != '' %}
+                    <li><a href="{{ settings.flickr_link }}" title="{{ shop.name }} on Flickr" rel="me" target="_blank" class="icon-flickr"></a></li>
+                  {% endif %}
+
+                  {% if settings.instagram_link != '' %}
+                    <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
+                  {% endif %}
+
+                  {% if settings.email_link != '' %}
+                    <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" target="_blank" class="icon-mail"></a></li>
+                  {% endif %}
+                {% endif %}
+
+                <!--
+				<li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
+                <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
+				-->
+
+                {% if shop.customer_accounts_enabled %}
+                  <li>
+                    <a href="/account" title="My Account {% if customer %}({{ customer.email }}){% endif %}" class="icon-user"></a>
+                  </li>
+                {% endif %}
+                {% if settings.search_enabled %}
+                  <li>
+                    <a href="/search" title="Search" class="icon-search" id="search-toggle"></a>
+                  </li>
+                {% endif %}
+                {% if settings.show_multiple_currencies %}
+                  <li>
+                    {% include 'currencies-switcher' %}
+                  </li>
+                {% endif %}
+                <li>
+                  <a href="#cart" class="icon-cart cart-button">{% if cart.item_count > 0 %}<div class="cart_count">{{ cart.item_count }}</div>{% endif %} <span>Cart</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        {% unless template contains "index" and settings.slideshow_enabled %}
+          <div class="container main content">
+        {% endunless %}
+
+        {% unless settings.featured_content_page == blank or template contains "index" %}
+          <div class="sixteen columns">
+            <div class="section clearfix featured_content">
+              {{ pages[settings.featured_content_page].content }}
+            </div>
+          </div>
+        {% endunless %}
+
+        {% if template contains 'list-collections' %}
+          {% include 'collection-listing' %}
+        {% else %}
+          {{ content_for_layout }}
+        {% endif %}
+
+        </div>
+        <div class="sub-footer">
+          <div class="container">
+
+            <div class="four columns">
+              {% if settings.footer_linklist_1 != blank %}
+                <h6 class="title">{{ linklists[settings.footer_linklist_1].title }}</h6>
+                <ul class="footer_menu">
+                  {% for link in linklists[settings.footer_linklist_1].links %}
+                    <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="four columns">
+              {% if settings.footer_linklist_2 != blank %}
+                <h6 class="title">{{ linklists[settings.footer_linklist_2].title }}</h6>
+                <ul class="footer_menu">
+                  {% for link in linklists[settings.footer_linklist_2].links %}
+                    <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="four columns">
+              {% if settings.footer_content_page != blank %}
+                <h6 class="title">{{ pages[settings.footer_content_page].title }}</h6>
+                {{ pages[settings.footer_content_page].content }}
+              {% endif %}
+
+              {% if settings.social_icons_footer %}
+              <h6 class="title">
+              <ul class="social_icons">
+                {% if settings.twitter_link != '' %}
+                  <li><a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" rel="me" target="_blank" class="icon-twitter"></a></li>
+                {% endif %}
+
+                {% if settings.facebook_link != '' %}
+                  <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
+                {% endif %}
+
+                {% if settings.google_link != '' %}
+                  <li><a href="{{ settings.google_link }}" title="{{ shop.name }} on Google+" rel="publisher" target="_blank" class="icon-google-plus"></a></li>
+                {% endif %}
+
+                {% if settings.youtube_link != '' %}
+                  <li><a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank" class="icon-youtube"></a></li>
+                {% endif %}
+
+                {% if settings.vimeo_link != '' %}
+                  <li><a href="{{ settings.vimeo_link }}" title="{{ shop.name }} on Vimeo" rel="me" target="_blank" class="icon-vimeo-2"></a></li>
+                {% endif %}
+
+                {% if settings.pinterest_link != '' %}
+                  <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest"></a></li>
+                {% endif %}
+
+                {% if settings.tumblr_link != '' %}
+                  <li><a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" rel="me" target="_blank" class="icon-tumblr"></a></li>
+                {% endif %}
+
+                {% if settings.linkedin_link != '' %}
+                  <li><a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank" class="icon-linkedin"></a></li>
+                {% endif %}
+
+                {% if settings.flickr_link != '' %}
+                  <li><a href="{{ settings.flickr_link }}" title="{{ shop.name }} on Flickr" rel="me" target="_blank" class="icon-flickr"></a></li>
+                {% endif %}
+
+                {% if settings.instagram_link != '' %}
+                  <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
+                {% endif %}
+
+                {% if settings.email_link != '' %}
+                  <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" target="_blank" class="icon-mail"></a></li>
+                {% endif %}
+              </ul>
+              </h6>
+              {% endif %}
+            </div>
+
+            <div class="four columns">
+              {% if settings.newsletter_enabled %}
+                <h6 class="title">{{ settings.newsletter_text }}</h6>
+                {% comment %}{% if settings.newsletter_description != blank %}
+                  <p>{{ settings.newsletter_description }}</p>
+                {% endif %}{% endcomment %}
+              <!-- OptInMonster -->
+              <div id="om-fly1wfpp1vtyfx8x-holder"></div>
+
+              {% comment %}
+                {% include 'newsletter' %}{% endcomment %}
+              {% endif %}
+            </div>
+
+            <div class="sixteen columns mobile_only">
+              <p class="mobile_only">
+                {% if settings.show_multiple_currencies %}
+                  <label for="currencies">Pick a currency: </label>
+                  {% include 'currencies-switcher' %}
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="search">
+          <div class="container">
+            <div class="ten columns offset-by-three center">
+              <div class="right search-close">
+                  X
+              </div>
+              <form action="/search">
+                {% if settings.search_option != 'everything' %}
+                  <input type="hidden" name="type" value="product" />
+                {% endif %}
+                <span class="icon-search search-submit"></span>
+                <input type="text" name="q" placeholder="Search {{ shop.name }}..." value="{% if search and search.results.first.price %}{{ search.terms }}{% endif %}" autocapitalize="off" autocomplete="off" autocorrect="off" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include 'newsletter-popup' %}
+      {% include 'currencies' %}
+
+
+    <!-- BEEKETINGSCRIPT CODE START -->
+      {% include 'bk-tracking' %}
+    <!-- BEEKETINGSCRIPT CODE END --></body>
+  </html>
+
+
+
+
+  <style>
+
+    h4, .h4, h4.title a, h6.title { font-size: 22px; line-height: 32px; margin: 0 0 1em 0; padding: 0; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; padding: 7px 0; color: #42a4b4 ;}
+
+
+  </style>

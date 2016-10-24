@@ -1,0 +1,599 @@
+{{ 'review-reset.css' | asset_url | stylesheet_tag }}
+{{ 'review-style.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'jquery.flexslider-min.js' | asset_url | script_tags }}"></script>
+<script src="{{ 'masonry.pkgd.min.js' | asset_url | script_tags }}"></script>
+
+<div class="cd-testimonials-all">
+  	<!-- <p class="exit-bar">See Less (Hit Escape to close)</p> -->
+	<div class="cd-testimonials-all-wrapper">
+		<ul>
+
+          {% unless product.type == "Swaddle" %}
+          <!-- Sleeping Bag Reviews #1 - 3 & 22-23-->
+          <li class="cd-testimonials-item">
+          <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/DianaM.JPG?3019082762700384234" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Diana M</li>
+					<li>Little Lotus Sleeping Bag</li>
+                  	<li class="date">Sept 11, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+            <p>I just want to thank you for your great products. I live in Mexico so I was afraid to try them since the weather is hot. We sleep with air conditioner at 22 degrees Celsius. <b> My baby uses only a long sleeve bodysuit and the sleeping bag. He is 4 months old and sleeps 10 hours at night.</b> </p>
+			</li>
+          <li class="cd-testimonials-item">
+          <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/LaurenD.JPG?1787282461642124269" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Lauren D</li>
+					<li>Little Lotus Sleeping Bag</li>
+                  	<li class="date">Sept 9, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+            <p>The Little Lotus Sleeping Bag is perfect for both my 2.5 year old daughter and 3 month old son. <b>Not only do my children sleep comfortably through the night, but my husband and I sleep better knowing the innovative technology is keeping them at the perfect temperature even as the seasons change. </b>
+                I don’t want my daughter to grow out of it!  </p>
+			</li>
+      		<li class="cd-testimonials-item">
+          <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/ChrisAllain_ec984297-0ec6-4daa-bbbe-9c00eb362cf9.JPG?3766102407348826884" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Christopher A</li>
+					<li>Little Lotus Sleeping Bag</li>
+                  	<li class="date">Aug 24, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+              <p>Last weekend, with the help of the fire department, we evacuated our flooded home in south Louisiana. We awoke to two feet of water on the street in front of our house, and the situation got steadily worse. <b> My wife and I packed bags for evacuation; only the things we could carry above our heads came with us. </b>
+
+                Today, we wanted to tell you that <b>our Lotus came with us. In retrospect, it says a lot about a product like this when it cross into that essential group of items in your house. </b>Our last week has been turbulent to say the least, and there are hard times ahead, but <b>our 11 month old child continues to sleep comfortably through the night. </b>
+
+                Thank you to your entire team. <b>5/5 stars. Would buy again.</b>  </p>
+			</li>
+          <li class="cd-testimonials-item">
+          <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/review_molly.JPG?13573323196775496392" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Molly A</li>
+					<li>Little Lotus Sleeping Bag</li>
+                  	<li class="date">Apr 21, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+            <p>I love my Little Lotus sleep sack!<b> The fabric keeps my baby comfortable in our all of our crazy Colorado weather </b> and I feel great knowing that not only my baby is happy, but we are helping other babies in the developing world.</p>
+			</li>
+          <li class="cd-testimonials-item">
+			<div class="cd-author">
+				<ul class="cd-author-info">
+					<li>June L</li>
+					<li>Little Lotus Sleeping Bag</li>
+                  	<li class="date">Apr 21, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+            <p>I love how Little Lotus is saving babies around the world. I also like that I don't have to worry about my baby being too cold or hot in the middle of his sleep.
+            Even when he wakes up and falls asleep in a sitting position, I don't worry about the sleepsack falling off. I often put Elliot in the sleep sack after he's done nursing and asleep and it's so easy to transition him in the sleep sack if I just lay him in the crib over the sleep sack.
+              <b>It's brilliant by design for easy access</b>.</p>
+			</li>
+          	<li class="cd-testimonials-item">
+			<div class="cd-author">
+				<ul class="cd-author-info">
+					<li>Beth S</li>
+					<li>Little Lotus Sleeping Bag</li>
+                    <li class="date">Apr 21, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+              <p>Oh my gosh, I LOVE my lotus sleeping bags.<b>The very first night I used them by little 2 month old doubled his sleeping hours between feedings.</b>
+            The material is so soft and cozy and I never worry now if he’s too hot or cold which is a huge relief for me being a first time mom.</p>
+			</li>
+          
+          {% endunless %}
+          
+          {% unless product.type == "Sleeping Bag"%}
+          <!-- Swaddles #1-3 -->
+          	<li class="cd-testimonials-item">
+          
+			<div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_Vanesa.JPG?7783995062350763848" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Vanesa M</li>
+					<li>Little Lotus Swaddle</li>
+                    <li class="date">Apr 21, 2016</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+              <p>We have loved our Lotus swaddle. Our son Asher has always loved to be snuggled up tight so the Lotus was a perfect way to keep him cozy during naps and at night.
+            I love the ease of putting him in, the double zipper for diaper changes, and the adjustable snaps at the shoulders (they grow fast!).
+                I also love the technology behind the temperature control. <b>This gives my husband and I peace of mind with the ever changing Bay Area weather this year.</b>
+            We look forward to transitioning him to the next size shortly. I have also recommended this to my moms group and a few moms have recently purchased them. Overall the feedback has been great.</p>
+			</li>
+      	<li class="cd-testimonials-item">
+			<div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review3.png?10758026367646340742" alt="Author image">
+            	<ul class="cd-author-info">
+					<li>Melissa M</li>
+					<li>Little Lotus Swaddle</li>
+                 	<li class="date">Dec 31, 2015</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+          <p>This swaddle is meticulously designed, they have thought of everything! First of all, baby is always comfy at the right temperature, never hot or cold. The wings are the easiest design for swaddling, I can get her arms out for breastfeeding and get them back in for sleeping without waking her. The shoulder closures are brilliant for when baby falls asleep outside the swaddle and you need to sneak it back on. The zipper at the bottom is great for diaper changes, she's not too exposed and cold as she would be with a vertical zipper running from neck to feet.  The fabric is soft and the Velcro is quiet. <b>When the name of the game is don't wake a sleepy baby, no other swaddle works as well as this one.</b> That each one contributes to an infant warmer for a preemie somewhere else in the world is an incredible, heartwarming bonus.</p>
+			</li>
+          <li class="cd-testimonials-item">
+			<div class="cd-author">
+					<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_6.png?12040314176578082965">
+					<ul class="cd-author-info">
+                      	<li>Christine H</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Jan 06, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>We have primarily been using swaddles at night to help our eight-week old baby girl sleep. We love little lotus for many reasons but primarily because Claire sleeps better in it than the others weve tried. <b>In her little lotus, she now rarely wakes up at night and is already sleeping eight to nine hours straight almost every night. </b>We also love it because of the design. Its ridiculously easy to put on which makes a big difference because she gets exponentially fussier the longer it takes. Overall, it's much more user-friendly than most of the swaddles that we used so far, and we highly recommend little lotus to all our friends with babies!</p>
+			</li>
+          {% endunless %}
+            
+          {% if product.title contains "Sleeping Bag" or product.title contains "Swaddle" %}
+          {% else %}
+          	<li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Kelsey</li>
+                      	<li>Little Lotus Blanket</li>
+                      	<li class="date">Apr 21, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p>I absolutely love our Little Lotus blanket! <b>My son was a year old, and during the night, he would habitually wake. Since the first use of the blanket, he began to sleep soundly and much longer than before.</b>
+                  I am impressed with the quality and softness of the fabric and like that it gives me peace of mind that he will not be cold nor overheated during the night.
+                  I would be thrilled if Little Lotus made the blanket in an adult size!</p>
+			</li>
+          {% endif %}
+          
+          {% unless  product.type == "Swaddle" %}
+          <!-- Sleeping Bags #4-6 -->
+          	<li class="cd-testimonials-item">
+		  <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review2.png?10758026367646340742" alt="Author image">
+            	<ul class="cd-author-info">
+					<li>Sarah B</li>
+					<li>Little Lotus Sleeping Bag</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+              <p>Now that I've had my third child in four-and-a-half years, I'm feeling pretty confident in my baby gear knowledge: which jogging stroller is the best, which brand of onesie is softest, and which sleep sack will keep my baby the warmest. <b>When I tried the Little Lotus sleeping bag I felt like I had discovered a natural winner.</b></p>
+			</li>
+			<li class="cd-testimonials-item">
+			<div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review4.png?10758026367646340742" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Tanya A</li>
+					<li>Little Lotus Sleeping Bag</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+              <p>As a pediatrician and mom of three boys I have tried every swaddle and sleep sack on the market. The little lotus swaddle is unique with its high tech fabric that uses a baby's own body heat to help maintain an optimal temperature and ensure a good nights sleep. <b>I love knowing that while my baby is sleeping warm and snug, Little Lotus is helping keep other babies warm and safe in developing countries around the world.</b></p>
+			</li>
+          <li class="cd-testimonials-item">
+            <div class="cd-author">
+				<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review1.png?10758026367646340742" alt="Author image">
+              	<ul class="cd-author-info">
+					<li>Elizabeth B</li>
+					<li>Little Lotus Sleeping Bag</li>
+                    <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+				</ul>
+			</div>
+            <p>When she wears the Little Lotus her whole body feels perfect to the touch. The fabric is made of the highest quality and is the gentlest material. It allows easy access for middle of the night diaper changes with a zipper closure along the bottom.
+              The best feature for my sleepy daughter at bedtime is that it is easy on/ easy off. There is no need to pull anything over her head, just a few snaps and a zip.
+              Beyond its utility for my own baby, <b>this product provides me with a connection to countless other mothers throughout the world who are worried about their own babies' warmth at a far more fragile time in their child's life. I love and recommend Little Lotus and its mission. </b></p>
+			</li>
+          	
+          {% endunless %}
+          
+          {% unless product.type == "Sleeping Bag"%}
+          <!-- Swaddle #4-6 -->
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_2.png?5581746742390898225">
+					<ul class="cd-author-info">
+						<li>Malia</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Feb 19, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>Baby Edwin loves sleeping in his Little Lotus swaddle. He's almost too big for it, but he enjoys it so much we make it work!
+                I had major life threatening complications after his birth and as I am still trying to recover. It can be difficult for me to get out of bed multiple times a night when my firefighter husband is at work and the baby needs help into/out of other swaddles we were given.
+              <b>When he is in his Little Lotus swaddle he stays asleep the entire night! Which means both baby and mommy get a good night's rest. </b>Whether we're at home in chilly weather or braving 80+ degree evenings visiting grandparents in Hawaii, we know he will be comfortable.</p>
+			</li>
+
+			<li class="cd-testimonials-item">
+				<div class="cd-author">
+					<ul class="cd-author-info">
+						<li>Stephanie &amp; her twins</li>
+                      	<li>Little Lotus Swaddle</li>
+                     	<li class="date">Feb 13, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p><b>As new parents to premature twin boys, we were very concerned about maintaining the proper body temperature and also keeping them secure in their sleeping environment. The Little Lotus Swaddle achieved both of these for us! </b>The swaddles helped the babies maintain their body temperature and keep them warm. 
+                The fabric is so soft, especially the unique fabric inside the swaddle! This swaddle is the easiest swaddle to use from the various ones we have tried. It is quick, easy, and quiet to get them in to! I love the easy access to change their diapers with the bottom zipper! The Velcro flaps keeps their arms secure and ensures nothing obstructs their ability to breathe. The babies seem very happy and content in the swaddles and seem to fall asleep quicker and stay asleep longer! A parents dream!! The mission to help other premature babies around the world is close to our hearts, and we are glad to do our part!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Deborah W</li>
+                      	<li>Little Lotus Swaddle</li>
+                        <li class="date">Apr 27, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p><b>These swaddles have been our saving grace.  My twins have been sleeping through the night since they were 3 months old. </b> Thank you for creating such a quality product. 
+                  I'm proud to help support Jane and her team continue their mission.</p>
+			</li>
+          {% endunless %}
+            
+          
+          
+          {% unless product.type == "Swaddle" %}
+          <!-- Sleeping Bag #7-9 -->
+          
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+					<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_3.png?12040314176578082965">	
+                    <ul class="cd-author-info">
+					  <li>Jessica D</li>
+                      <li>Little Lotus Sleeping Bag</li>
+                      <li class="date">Jan 06, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>Thank you so much for the sleep sack! <b>I'm a believer! It really seems to control her temperature super well.
+              We've experienced increased hours of rest since putting Little Hailey in it and I can't thank Little Lotus enough for this--this mama loves her sleep!</b> I also really like the zipper on the bottoms got middle of the night diaper changes. It makes changing so fast and efficient when time is of the essence.</p>
+			</li>
+			<li class="cd-testimonials-item">
+				<div class="cd-author">
+					<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/TheresaL.JPG?17686819164195516417">	
+                    <ul class="cd-author-info">
+					  <li>Theresa L</li>
+                      <li>Little Lotus Sleeping Bag</li>
+                      <li class="date">May 06, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p>Wow! I am so impressed with the quality of your product. <b>We just started sleep training my second son, and the first night we put him in a traditional muslin swaddle. He  cried 2 hours straight, slept for approximately 30 minutes then woke up again and cried for another hour until I finally caved and went into his room. 
+                Needless to say, it was a sleepless night for me. The next night I decided to try out the Lotus Baby blanket and he slept soundly for a straight 10 hours!</b> I couldn't believe it. He's been sleeping this well for a week now! I'm definitely buying a few more and recommending to friends. NASA fabric magic! Happy to support a company that also gives back.</p>
+			</li>
+
+			<li class="cd-testimonials-item">
+				<div class="cd-author">
+					<ul class="cd-author-info">
+						<li>Julia</li>
+						<li>Little Lotus Sleeping bag</li>
+                        <li class="date">Jan 11, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p>Our almost five month old sleeps in the sleeping bag every night. <b>She started sleeping 8+ hour stretches for the first time once we started using the Little Lotus sleeping bag.</b> It keeps her nice and warm yet is still lightweight. We love it!</p>
+			</li>
+ 			
+          {% endunless %}
+          
+          {% unless product.type == "Sleeping Bag" %}
+          <!-- Swaddle #7-9 -->
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_1.png?2684358863475992551">
+					<ul class="cd-author-info">
+						<li>Wendy C</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Mar 16, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>The Little Lotus swaddle is now my go to swaddle for my newborn. I am on my third baby and this swaddle is the best! Wish I had it for my first two.
+              <b>The zipper design makes diaper changes a cinch, which is a must for middle of the night changes. I love that the fabric is breathable, yet keeps my son warm. It also maintains its shape and does not bunch up or stretch out much, which helps keep his arms in and makes him feel snug longer.</b>
+                  Thanks Little Lotus!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/DeannaP_review.jpg?7177253459381149104">
+                  	<ul class="cd-author-info">
+						<li>Deanna P</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Apr 18, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>It's helped my baby transition from swaddle to sleep sack all while keeping her at a comfortable temperature</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Alexa S</li>
+                      	<li>Little Lotus Swaddle</li>
+                      <li class="date">Apr 21, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>We loved our little lotus swaddle for as long as it fit our baby boy, Sam. The quality was fantastic, the fabric had that awesome temperature regulating function, so sam kept comfortable, and it was simple to use.
+                  The zipper opening from both ends was my favorite! <b>I've had friends use swaddles with elaborate wraps, only to find their baby with the swaddle wrapped around his/her neck in the middle of the night! So scary.
+              It was a huge comfort knowing that that would never happen with your product.</b></p>
+			</li>
+          {% endunless %}
+            
+          
+         {% unless product.title contains "Blanket" %}
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Lisa</li>
+                      	<li>Little Lotus Swaddle and 2x Sleeping Bags</li>
+                        <li class="date">Apr 24, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>We bought the little Lotus while expecting our first baby. First of all we found the idea of donating to an portable incubator amazing - that the Little Lotus turned out to be the best baby item we got, we did not know at the time.
+              <b> Our baby is now 12 weeks and we absolutely love the two sleeping bags we got him. We live in Califonia and have some very hot days and cold nights and it feels great knowing that we don't have to worry about him getting too hot or cold!</b>
+                  Every expecting couple we know will get one of these from us!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+					<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_4.png?12040314176578082965">
+					<ul class="cd-author-info">
+                      	<li>Angela</li>
+                      	<li>Swaddle and Sleeping Bag</li>
+                      	<li class="date">Jan 05, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>I love waking up to find my little one happy and cosy in her little lotus swaddle! <b>She sleeps so well in it, even now she's 'graduated' to arms-out mode! Knowing the fabric will help keep her at the right temperature while I'm sleeping gives me great peace of mind</b></p>	
+			</li>
+          {% endunless %}
+          
+          {% unless product.type == "Swaddle" %}
+          <!-- Sleeping Bag #10-12 -->	
+			<li class="cd-testimonials-item">
+				<div class="cd-author">
+					<ul class="cd-author-info">
+						<li>Jarrod</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      	<li class="date">Feb 05, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p>Before the sleeping bag we were using a zipadeezip. It's that sleeping back that we all saw on shark tank. It worked well at keeping his arms and legs from flying around at night but he had to wear two onesies and a night gown under it, which made changing diapers at night, half asleep, a nightmare. <b>So far, we also love the dual zipper for making midnight changes, the fabric is really soft and cozy, the medium size fits his length perfectly, and all night he seems to be at the right temperature.</b></p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+					<img src="https://cdn.shopify.com/s/files/1/1039/4208/files/mili.jpg?13270935751718365681" alt="Baby Natasha in her Little Lotus Sleeping Bag">
+                  	<ul class="cd-author-info">
+						<li>Mili</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>Natasha loves her Little Lotus sleep sack! <b>As a mom, I get a lot of comfort knowing that Natasha's temperature in always stable at night time which lets her sleep longer and comfortably. </b>It means less checking the monitor for me, either to see if she is awake or to check the temperature in her room!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+					<ul class="cd-author-info">
+						<li>Sabrina G</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      	<li class="date">Mar 25, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p><b>This has got to be one of the best baby products out there. I was given the sleep sack as a gift when my son was about 3 months old and i haven't used any other one since.</b>
+                  My problem with other sleep sacks were that he either got too hot or too cold or felt too restricted. He never liked to be swaddled and his lotus sleep sack allows him to move around freely and safely.
+                  I love the zipper which makes night changes very easy and fast.</p>
+			</li>
+          {% endunless %}
+          
+          {% unless product.type == "Sleeping Bag" %}
+          <!-- Swaddle #10-16 -->
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Quinn</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Apr 26, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>I purchased two of the Little Lotus wraps for newborns.  They were a gift for a grandchild.  I've heard that the baby really likes being swaddled with them.
+              I was attracted to your program to get temperature regulating sleep sacks to babies around the world.  <b>Thank you for thinking beyond the familiar.</b></p>
+			</li>
+          
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Mary Catherine</li>
+                      	<li>Little Lotus Swaddle</li>
+                        <li class="date">Apr 24, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>I love how Little Lotus gives back to those in need. <b>So many babies benefit from your generous donation.</b>
+                  Not to mention how incredibly soft and comfortable your product is to babies across the world.</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Ellen_review.jpeg?14306331823124937242">
+                  	<ul class="cd-author-info">
+						<li>Ellen M</li>
+                      	<li>Little Lotus Swaddle</li>
+                        <li class="date">Apr 24, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>The zipper design of the Litle Lotus swaddle made changing diapers for newborn Eva so much easier.
+              <b>As first time parents in San Francisco, my daughter and son-in-law used the Little Lotus swaddle constantly.</b> I felt good about my contribution to Embrace and giving my new grandchild a really well designed and useful garment.</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+					<ul class="cd-author-info">
+                      	<li>Lee</li>
+                      	<li>Little Lotus Swaddle</li>
+                      	<li class="date">Jan 05, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>We received our Little Lotus swaddle and we love it! <b>It's definitely the best swaddle I've used! </b>Liam doesn't sleep through the night but he sleeps much better and when I take him out of the swaddle he is not sweating or too cold - it's great.</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/BeccaW.JPG?9744009464405505255">
+                  	<ul class="cd-author-info">
+						<li>Kevin and Becca W</li>
+                      	<li>Little Lotus Swaddle</li>
+                        <li class="date">Apr 29, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>The Little Lotus swaddle has been our go-to garment for sleep.  <b>It's like having a little bubble of balmy 72-degree weather wrapped around our baby when she sleeps!  It's been so successful in promoting peaceful sleep patterns that we don't know what we would have done without it. </b> And the great work that Little Lotus does with children in need just really completes the package.
+                  A responsible company with great products doing great deeds—what more could anyone ask for?  Thank you for all of it.</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/baby_Ellis.png?14190526272438939396">
+                  	<ul class="cd-author-info">
+						<li>Jay H</li>
+                      	<li>Little Lotus Swaddle</li>
+                        <li class="date">June 27, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>Lotus swaddle work great. Baby Ellis and his parents are relived with the ease of use.  <b>Unlike other swaddles which require tons of steps to get to the right fit, Lotus does it all in three steps with easy velcro system. </b>
+				We cannot be more pleased with the purchase of our Louts. We will be recommending your product to many of our soon to be parents.friends.
+				Thank you for Little Lotus for such innovating idea and helping new parents as we go through baby care and learning.</p>
+			</li>
+          
+          {% endunless %}
+          
+          {% unless product.type == "Swaddle" %}
+          <!-- Sleeping Bag 13-21 -->
+          
+         	
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/Review_5.png?12040314176578082965">
+					<ul class="cd-author-info">
+						<li>Janet W</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      	<li class="date">Jan 19, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+              <p> I started using the Little Lotus Sleeping Bag and I am so glad I found out about this product. I can tell she is warm enough at night but I dont have to worry about her overheating. The fabric is not bulky at all even though it keeps her warm. It is very light and soft. She just seems so comfortable in it! 
+                <b>The fact that it maintains my baby at a constant temperature all night means that I no longer have to check in on her multiple times a night to make sure shes not getting too hot. Yay for more sleep! And it feels good knowing that by supporting Little Lotus, I am supporting their mission to save babies in developing countries by keeping them warm. </b>What a great cause! I just wish Little Lotus was around when I had my first!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/MichelleY_review.jpg?8498322957112974754">
+                	<ul class="cd-author-info">
+						<li>Michelle Y</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      	<li class="date">Apr 13, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>This is no doubt the best sleep sac/bag out there for babies. I wish I had knew about these with my first two children. <b>Baby Everett loves everything about his LL sleep bag.
+              The material is so soft and the dual zipper makes night diaper changes a breeze.</b> Another great feature is the button tops along the shoulder which make it so easy for me to get him in and out of it.
+                  I'm inspired after reading more about LL and there focus on helping babies in developing countries. Fabulous products and what an awesome company.</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/BeverlyT_review.jpg?13075285304673462100">
+                  	<ul class="cd-author-info">
+						<li>Beverly T</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      	<li class="date">Apr 18, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>The little lotus gives me peace of mind knowing she is not too hot or not too cold. <b>It really works! On a cold SF night, I check her body and it's nice and warm.  On a hot SF night, I check her body and again it's nice and warm. </b>
+                  Her sleep pattern remains the same at 9 months but I would definitely use and recommend this for newborns that still love to be swaddled as the material of the swaddle sleeves are the same and can keep baby at a perfect temp to sleep all night! 
+                  I only wish there's a way to add sleeves to the sleep sack!</p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/LeahD_review.jpg?10687066573147475823">
+                  	<ul class="cd-author-info">
+						<li>Leah</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      <li class="date">Apr 23, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>Peace of mind for mama and peaceful sleep for baby! I had been using a basic sleep sack from another brand and found the fleece to be too hot and the cotton too cool. <b>This material is amazing and the quality of the sleeping bag is top notch! 
+              Best of all, it really seems to help my son sleep better, which means I can sleep better!</b></p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/TiffanyV.JPG?3819410747979935003">
+                  	<ul class="cd-author-info">
+						<li>Tiffany V</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      <li class="date">May 11, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p><b>The Little Lotus baby sleep sack has been a great investment.  I was always concerned about our daughters temperature and this sleep sack keeps Frankie comfortable and gives me peace of mind. </b> I also love knowing that our purchase is keeping another little one warm. </p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Christine</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      <li class="date">May 31, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>I love this product!  My son sleeps so much better when he is in his sleep sack. <b>I have piece of mind that he isn't going too be too cold or hot.  Also when he has a fever I put him in his sack and I swear it helps bring his fever down faster!  This is such a great product! Worth every penny! </b>  </p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/BriEberle.JPG?2640356493037292780">
+                  	<ul class="cd-author-info">
+						<li>Bri E</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      <li class="date">June 15, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p><b>My son's body is at a higher temperature naturally so buying this sleep sack to try was a must. The fabric cools his body temperature down during sleep times perfectly.</b> </p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  	<ul class="cd-author-info">
+						<li>Deven M</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                      <li class="date">June 19, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>I tried every type of swaddler sleepsack out there and got varying results. The Halo sack swaddlers had him burning up right around his tummy. The zipadee zip was too large for a newborn and once it did fit he hated the restrictions on his Arms, and every other type of swaddle blanket was either too cold, too hot, and/or he wiggled out of them. All of this was stressing me out even more. <b>I stumbled across an ad for the little lotus and thought it'd be perfect, and honestly it was. When I checked his body temperature in the middle of the night it was neither too hot or too cold. </b>I could change his bum without waking him up with loud Velcro or a complete disassembly of his blankets and His hands were free so he could self soothe and move himself around. <b>I slept much better once he had the little lotus because I trusted he was comfortable.</b></p>
+			</li>
+          <li class="cd-testimonials-item">
+				<div class="cd-author">
+                  <img src="https://cdn.shopify.com/s/files/1/1039/4208/files/LindsayB.JPG?8423403352755459634">
+                  	<ul class="cd-author-info">
+						<li>Lindsay B</li>
+                      	<li>Little Lotus Sleeping Bag</li>
+                        <li class="date">July 7, 2016</li>
+                        <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i><i class="spr-icon spr-icon-star" style=""></i></span>
+					</ul>
+				</div> <!-- cd-author -->
+            <p>We love the Little Lotus sleeping bag! We have tried others, but the Little Lotus is the one that I always reach for and the only brand I ordered in the next size up when our daughter grew to to the next size. The double zippers make middle of the night diaper changes a breeze, and I am comforted knowing the fabric will keep her at a comfortable temperature all night. <b>These are the only sleeping bags I will use, and the quality means I can keep them for our future children.</b></p>
+			</li>
+          {% endunless %}    
+          
+		</ul>
+	</div>	<!-- cd-testimonials-all-wrapper -->
+
+	<a href="#0" class="close-btn">Close</a>
+</div> <!-- cd-testimonials-all -->

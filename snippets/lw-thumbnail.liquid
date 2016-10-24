@@ -1,0 +1,42 @@
+<div>
+  {% if product.featured_image.alt contains 'youtube' or image.alt contains 'vimeo' %}
+    {% assign alt_text = product.title %}
+  {% else %}
+    {% assign alt_text = product.featured_image.alt %}
+  {% endif %}
+
+  <a href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
+    <div class="relative product_image">
+      <img class="loop_img" src="{{ product.featured_image | product_img_url: 'large' }}"  alt="{{ alt_text | escape }}" />
+      </div>
+
+    <div class="info" style="text-align: center;">            
+      <span class="title" style="font-weight: 400; color: #111;">{{ product.title }}</span></br>
+      <!-- <a class="collection-review" href="{{ product.url | within: collection }}#shopify-product-reviews"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></a> -->
+	  <span class="price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
+        {% if product.available %}
+          {% if product.price_varies %}
+            <small><em>from</em></small>
+          {% endif %}
+          {{ product.price_min | money }}
+        {% else %}
+          <span class="sold_out">{{ settings.sold_out_text }} - </span>{{ product.price_min | money }}
+        {% endif %}
+        {% if product.compare_at_price_max > product.price %}
+          <span class="was_price">{{ product.compare_at_price_max | money }}</span>
+        {% endif %}
+        
+        
+        
+      </span>      
+    </div>
+    {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+      <div class="sale_banner">Sale</div>
+    {% endif %}
+    {% for col in product.collections %}
+      {% if col.handle == 'new' %}
+        <div class="new_banner">New</div>
+      {% endif %}
+    {% endfor %}
+  </a>
+</div>

@@ -1,5 +1,5 @@
 production:
-  theme_id:
+  theme_id: "live"
   password: 9087ecbf5ab66c307dd04023623c1f17
   store: little-lotus-2.myshopify.com
 staging:
