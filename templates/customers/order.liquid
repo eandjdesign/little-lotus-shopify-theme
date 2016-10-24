@@ -16,10 +16,10 @@
   </div>
 </div>
 
-<div class="section clearfix">  
+<div class="section clearfix">
   <div class="sixteen columns">
 
-  
+
     {% if order.cancelled %}
     <div id="order_cancelled" class="flash notice">
       <h4 id="order_cancelled_title">Order Cancelled <span class="note">on {{ order.cancelled_at | date: "%B %d, %Y %I:%M%p" }}</span></h4>
@@ -74,7 +74,7 @@
         {% for line_item in order.line_items %}
         <tr id="{{ line_item.id }}" class="{% cycle 'odd', 'even' %}">
           <td class="product">
-            {{ line_item.title | link_to: line_item.product.url }} 
+            {{ line_item.title | link_to: line_item.product.url }}
             {% if line_item.fulfillment %}
               <div class="note">
                 Fulfilled {{ line_item.fulfillment.created_at | date: "%b %d" }}
@@ -90,19 +90,19 @@
           <td class="">{{ line_item.quantity | times: line_item.price | money }}</td>
         </tr>
         {% endfor %}
-      </tbody>  
+      </tbody>
       <tfoot>
       {% for discount in order.discounts %}
         <tr class="order_summary discount">
           <td class="label" colspan="4">{{ discount.code }} Discount:</td>
           <td class="total">{{ discount.savings | money }}</td>
-        </tr>   
+        </tr>
       {% endfor %}
-      
+
         <tr class="order_summary note">
           <td class="label" colspan="4">Subtotal:</td>
           <td class="total">{{ order.subtotal_price | money }}</td>
-        </tr>   
+        </tr>
 
         {% for shipping_method in order.shipping_methods %}
         <tr class="order_summary note">
@@ -116,14 +116,14 @@
             <td class="label" colspan="4">Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%):</td>
             <td class="total">{{ tax_line.price | money }}</td>
           </tr>
-        {% endfor %}    
+        {% endfor %}
 
         <tr class="order_summary order_total">
           <td class="label" colspan="4">Total:</td>
           <td class="total">{{ order.total_price | money }} {{ order.currency }}</td>
-        </tr>   
-      </tfoot>  
+        </tr>
+      </tfoot>
     </table>
-    
+
   </div>
 </div>

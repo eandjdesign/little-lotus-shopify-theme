@@ -39,26 +39,26 @@
         {% endif %}
 
         <hr />
-       
+
         {% include "social-buttons" with "article" %}
 
       </div>
 
       <div class="ten columns alpha blog_content">
         <h2><a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title }}</a></h2>
-          
+
         {% if article.excerpt != blank %}
           {{ article.excerpt }}
-          <a href="{{ article.url }}" title="{{ article.title | escape }}">View full article &rarr;</a>          
+          <a href="{{ article.url }}" title="{{ article.title | escape }}">View full article &rarr;</a>
         {% else %}
-          {{ article.content }} 
-        {% endif %}        
+          {{ article.content }}
+        {% endif %}
       </div>
     </div>
   {% endfor %}
-  
+
   <div class="sixteen columns">
-    {% include 'pagination' %} 
-  </div>   
-  
+    {% include 'pagination' %}
+  </div>
+
 {% endpaginate %}

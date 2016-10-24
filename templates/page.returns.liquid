@@ -16,7 +16,7 @@
   <div class="sixteen columns page">
     {{ page.content }}
   </div>
-  
+
   {% if settings.contact_address != blank %}
     <br class="clear" />
     <br class="clear" />
@@ -41,7 +41,7 @@
     <input type="text" id="contact_form_phone" name="contact[phone]" value="{{ contact.fields.phone }}" />
     -->
 
-   <label for="contact_message">Message</label>       
+   <label for="contact_message">Message</label>
    <textarea id="contact_message" name="contact[body]" required rows="5">{{ contact.fields.body }}</textarea>
 
     <input type='submit' class="submit action_button add_to_cart" value="Send" />
@@ -51,4 +51,3 @@
   <br class="clear" />
 
 {% endform %}
-  

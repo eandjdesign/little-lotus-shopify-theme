@@ -21,7 +21,7 @@
       {% assign src = src[1] | split: '"' | first %}
       <meta property="og:video" content="{{ src }}">
     {% endif %}
-  {% endfor %}  
+  {% endfor %}
 {% elsif template contains 'article' %}
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{ article.title | strip_html | escape }}">

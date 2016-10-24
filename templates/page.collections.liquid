@@ -6,7 +6,7 @@
 
 {% if page.content != blank %}
   <div class="sixteen columns page">
-    <div class="section clearfix">    
+    <div class="section clearfix">
       {{ page.content }}
     </div>
   </div>
@@ -26,7 +26,7 @@
   Below, you'll need to replace "linklist-handle" with the desired handle of your link list. You can find the handle of your link list when you're editing it.
 {% endcomment %}
 
-  
+
   {% assign linklist = linklists["linklist-handle"] %}
   {% assign collections_per_row = settings.frontpage_collections_per_row %}
   {% include 'collection-loop' with settings.collection_sidebar %}

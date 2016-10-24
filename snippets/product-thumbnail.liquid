@@ -21,7 +21,7 @@
       {% endif %}
     </div>
 
-    <div class="info">            
+    <div class="info">
       <span class="title">{{ product.title }}</span>
       <!-- <a class="collection-review" href="{{ product.url | within: collection }}#shopify-product-reviews"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></a> -->
 	  <span class="price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
@@ -36,13 +36,13 @@
         {% if product.compare_at_price_max > product.price %}
           <span class="was_price">{{ product.compare_at_price_max | money }}</span>
         {% endif %}
-        
-        
-        
+
+
+
       </span>
-      
-      
-      
+
+
+
     </div>
     {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
       <div class="sale_banner">Sale</div>
@@ -58,11 +58,11 @@
 {% if settings.quick_shop_enabled %}
   <div id="product-{{ product.id }}" class="modal">
     <div class="container section" style="width: inherit">
-      
+
       <div class="eight columns" style="padding-left: 15px">
         {% include 'product-images' with 'modal' %}
       </div>
-      
+
       <div class="six columns">
         <h3>{{ product.title }}</h3>
 
@@ -73,7 +73,7 @@
           </span>
           <span class="was_price">
             {% if product.price < product.compare_at_price_max %}
-              {{ product.compare_at_price | money }} 
+              {{ product.compare_at_price | money }}
             {% endif %}
           </span>
         </p>
@@ -93,7 +93,7 @@
           </p>
           <hr />
         {% endif %}
-        
+
         {% include 'product-form' %}
 
         {% if settings.product_description_position == "bottom" %}

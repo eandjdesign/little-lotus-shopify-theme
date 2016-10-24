@@ -1,7 +1,7 @@
 {% assign collections_per_row = settings.frontpage_collections_per_row %}
 
 <div class="sixteen columns clearfix collection_nav">
-  <h1 class="collection_title">Collections</h1>       
+  <h1 class="collection_title">Collections</h1>
 </div>
 
 {% capture new_row %}
@@ -31,21 +31,21 @@
       {% else %}
         {{ collection.products.first.featured_image | product_img_url: 'grande' | img_tag: collection_title }}
       {% endif %}
-      
-        <div class="info">                                              
+
+        <div class="info">
           <span class="title">{{ collection.title }}</span>
         </div>
       </a>
     </div>
-  
+
     {% if collections_per_row == "2" %}
       {% cycle '', new_row %}
     {% elsif collections_per_row == "3" %}
-      {% cycle '', '', new_row %}    
-    {% elsif collections_per_row == "4" %}  
+      {% cycle '', '', new_row %}
+    {% elsif collections_per_row == "4" %}
       {% cycle '', '', '', new_row %}
-    {% endif %}  
-  {% endunless %}  
+    {% endif %}
+  {% endunless %}
 {% endfor %}
 
 </div>

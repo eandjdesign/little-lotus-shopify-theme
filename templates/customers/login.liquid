@@ -4,7 +4,7 @@
   <h1 class="collection_title">Customer Login</h1>
 </div>
 
-<div class="clearfix" id="customer">  
+<div class="clearfix" id="customer">
   <br class="clear" />
   <br class="clear" />
   <div class="one-third column">
@@ -46,10 +46,10 @@
       {% endform %}
     {% endif %}
   </div>
-    
+
     <div id="recover-password" style='display:none'>
       <div class="six columns">
-    
+
         <h4>Reset Password</h4>
 
         {% form 'recover_customer_password' %}
@@ -59,11 +59,11 @@
             <label for="email" class="large">Email Address</label>
             <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
           </div>
-          
+
           <p>
             <em class="note">We will send you an email to reset your password.</em>
           </p>
-          
+
           <p class="action_bottom">
             <input class="btn action_button" type="submit" value="Submit" />
             <span class="note">or <a href="#" onclick="hideRecoverPasswordForm()">Cancel</a></span>

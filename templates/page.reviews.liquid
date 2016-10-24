@@ -6,8 +6,8 @@
 	<div class="desktop_only_block" style="text-align: center;"><iframe src="https://player.vimeo.com/video/124890858?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
 	<div class="mobile_only_block" style="text-align: center;"><iframe src="https://player.vimeo.com/video/124890858?title=0&amp;byline=0&amp;portrait=0" width="300" height="168" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
 	<div class="desktop_only_block" style="text-align: center;"><iframe src="https://player.vimeo.com/video/149731488?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
-	<div class="mobile_only_block" style="text-align: center;"><iframe src="https://player.vimeo.com/video/149731488?title=0&amp;byline=0&amp;portrait=0" width="300" height="168" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>  
-</div> 
+	<div class="mobile_only_block" style="text-align: center;"><iframe src="https://player.vimeo.com/video/149731488?title=0&amp;byline=0&amp;portrait=0" width="300" height="168" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+</div>
 </div>
 
 <h4 style="text-align: center;">Product reviews</h4>
@@ -99,14 +99,14 @@
 	</ul> <!-- cd-testimonials -->
 
 	<a href="#0" class="cd-see-all" style="color: #fff;">See all</a>
-</div> <!-- cd-testimonials-wrapper -->  
+</div> <!-- cd-testimonials-wrapper -->
 
-{% include 'reviews-all' %}  
-  
-  
-  
-  
-  
+{% include 'reviews-all' %}
+
+
+
+
+
 <div class="sixteen columns page">
     {{ page.content }}
 </div>
@@ -131,18 +131,18 @@ jQuery(document).ready(function($){
 	//open the testimonials modal page
 	$('.cd-see-all').on('click', function(){
 		$('.cd-testimonials-all').addClass('is-visible');
-        
+
       if (screen.width > 400) {$('.header_bar').hide();}
 		else {$('.mm-fixed-top').hide();}
 	});
 
   	$('.review-see-all').on('click', function(){
 		$('.cd-testimonials-all').addClass('is-visible');
-        
+
       if (screen.width > 400) {$('.header_bar').hide();}
 		else {$('.mm-fixed-top').hide();}
 	});
-  
+
 	//close the testimonials modal page
 	$('.cd-testimonials-all .close-btn').on('click', function(){
 		$('.cd-testimonials-all').removeClass('is-visible');
@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
 		else {$('.mm-fixed-top').show();}
 	    }
     });
-    
+
 	//build the grid for the testimonials modal page
 	$('.cd-testimonials-all-wrapper').children('ul').masonry({
   		itemSelector: '.cd-testimonials-item'

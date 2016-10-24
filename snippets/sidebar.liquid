@@ -10,10 +10,10 @@
       {% for link in linklists[settings.collection_sidebar_linklist].links %}
         <li>
           <a {% if link.active %}class="active"{% endif %} href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
-          
+
           {% if linklists[link.handle] != empty %}
             {% assign display_sublinks = false %}
-          
+
             {% for link in linklists[link.handle].links %}
               {% if link.active %}
                 {% assign display_sublinks = true %}
@@ -41,10 +41,10 @@
       {% for link in linklists[settings.collection_sidebar_linklist2].links %}
         <li>
           <a {% if link.active %}class="active"{% endif %} href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
-          
+
           {% if linklists[link.handle] != empty %}
             {% assign display_sublinks = false %}
-          
+
             {% for link in linklists[link.handle].links %}
               {% if link.active %}
                 {% assign display_sublinks = true %}
@@ -65,7 +65,7 @@
       {% endfor %}
     </ul>
   {% endif %}
-  
+
   {% assign tag_count = collection.all_tags | size %}
   {% if settings.filter_by_tag and tag_count > 0 %}
     <h4 class="toggle"><span>+</span>{{ settings.tags_text }}</h4>
@@ -80,7 +80,7 @@
           </li>
         {% endunless %}
       {% endfor %}
-    </ul>    
+    </ul>
   {% endif %}
 
 

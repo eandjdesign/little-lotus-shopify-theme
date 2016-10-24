@@ -2,7 +2,7 @@
 
 {% capture buttons %}
 <span class="social_buttons">
-  Share: 
+  Share:
 
   <a href="https://twitter.com/intent/tweet?text=Check out {% if social-buttons == 'article' %}{{ article.title | escape }}{% else %}{{ product.title | escape }}{% endif %} from {% if settings.twitter_username != '' %}@{{ settings.twitter_username }}{% else %}{{ shop.name | escape }}{% endif %}: {{ current_url }}" target="_blank" class="icon-twitter" title="Share this on Twitter"></a>
 
@@ -21,7 +21,7 @@
   <div class="social_buttons">
     {{ buttons }}
   </div>
-{% elsif social-buttons == 'global' and settings.header_share_button %}  
+{% elsif social-buttons == 'global' and settings.header_share_button %}
   <div class="social_buttons right">
     {{ buttons }}
   </div>

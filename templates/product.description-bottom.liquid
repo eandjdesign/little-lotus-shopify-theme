@@ -12,16 +12,16 @@
     </div>
 
     <div class="breadcrumb_text">
-      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
+      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span>
       &nbsp; / &nbsp;
       <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         {% if collection %}
           <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }}</a>
         {% else %}
-          <a href="/collections/all" title="{{ collections.all.title }}">{{ collections.all.title }}</a>     
+          <a href="/collections/all" title="{{ collections.all.title }}">{{ collections.all.title }}</a>
         {% endif %}
       </span>
-      &nbsp; / &nbsp; 
+      &nbsp; / &nbsp;
       {{ product.title }}
     </div>
   </div>
@@ -37,8 +37,8 @@
 {% endif %}
 
   <div class="section product_section clearfix">
-    
-     {% if settings.product_images_position == 'left' %}             
+
+     {% if settings.product_images_position == 'left' %}
        <div class="{% if settings.product_sidebar %}seven{% else %}nine{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">
          {% include 'product-images' %}
         </div>
@@ -58,7 +58,7 @@
          <meta itemprop="currency" content="{{ shop.currency }}" />
          <meta itemprop="seller" content="{{ shop.name | escape }}" />
          <meta itemprop="availability" content="{% if product.available %}in_stock{% else %}out_of_stock{% endif %}" />
-         
+
          <span class="sold_out">{% if variant.available == false %}{{ settings.sold_out_text }}{% endif %}</span>
          <span itemprop="price" content="{{ variant.price | money_without_currency }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
             <span class="current_price">
@@ -73,44 +73,44 @@
           {% endif %}
          </span>
       </p>
-     
+
       {% include 'product-notify-me' %}
       {% include 'product-form' with 'product' %}
 
       {% if settings.display_collections or settings.display_tags or settings.display_type %}
        <hr />
       {% endif %}
-     
+
        <div class="meta">
          {% if settings.display_collections %}
            <p>
-             <span class="label">Collections:</span> 
+             <span class="label">Collections:</span>
              <span>
               {% for col in product.collections %}
                 {% if col.handle != "all" %}
-                  <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %} 
+                  <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
                 {% endif %}
               {% endfor %}
             </span>
           </p>
          {% endif %}
-       
+
          {% if settings.display_tags %}
             <p>
               {% for tag in product.tags %}
                 {% if forloop.first %}
-                  <span class="label">Category:</span> 
+                  <span class="label">Category:</span>
                 {% endif %}
 
                 {% unless tag contains 'meta-related-collection-' %}
                   <span>
                       <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="Products tagged {{ tag | escape}}">{{ tag }}</a>
                   </span>
-                {% endunless %} 
+                {% endunless %}
               {% endfor %}
             </p>
          {% endif %}
-       
+
         {% if settings.display_type %}
            <p>
              <span class="label">Type:</span> <span itemprop="category">{{ product.type | link_to_type }}</span>
@@ -118,11 +118,11 @@
         {% endif %}
        </div>
 
-      {% include "social-buttons" with "product" %}     
+      {% include "social-buttons" with "product" %}
     </div>
-    
-    {% if settings.product_images_position == 'right' %}   
-      <div class="{% if settings.product_sidebar %}six{% else %}eight{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">          
+
+    {% if settings.product_images_position == 'right' %}
+      <div class="{% if settings.product_sidebar %}six{% else %}eight{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">
         {% include 'product-images' %}
         {% include "social-buttons" with "product" %}
       </div>
@@ -152,7 +152,7 @@
         {% capture limit %}{{ collection.products_count | plus: 1 }}{% endcapture %}
       {% endif %}
     {% endfor %}
-      
+
     {% if col and collections[col].all_products_count > 0 %}
       <br class="clear" />
       <br class="clear" />
@@ -163,6 +163,6 @@
       {% assign products_per_row = settings.products_per_row %}
       {% include 'product-loop' with settings.product_sidebar %}
     {% endif %}
-    
+
   {% endif %}
 </div>

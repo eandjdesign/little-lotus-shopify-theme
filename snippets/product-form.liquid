@@ -1,7 +1,7 @@
 <span style="display:none;">test-form</span>
 {% if product.available %}
   <form action="/cart/add" method="post" class="clearfix product_form" data-money-format="{{ shop.money_format }}" data-shop-currency="{{ shop.currency }}" id="product-form-{{ product.id }}">
-    
+
     {% if settings.display_inventory_left %}
       <div class="items_left">
         {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
@@ -9,7 +9,7 @@
         {% endif %}
       </div>
     {% endif %}
-    
+
     {% if product.options.size > 1 %}
       <div class="select">
         <select id="product-select-{{ product.id }}" name='id'>
@@ -30,7 +30,7 @@
     {% else %}
       <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
     {% endif %}
- 
+
     {% if settings.display_product_quantity %}
       <div class="left">
         <label for="quantity">Quantity:</label>
@@ -42,21 +42,21 @@
         <input type="hidden" name="return_to" value="back" />
       {% endif %}
       <input onclick="return calledAddToCart();" type="submit" name="add" value="{{ settings.add_to_cart_text | escape }}" class="action_button add_to_cart" />
-    </div>  
+    </div>
   </form>
 <script>
 	function calledAddToCart() {
       fbq('track', 'AddToCart');
 	}
-</script> 
+</script>
 
 
   {% if product.variants.size > 1 or product.options.size > 1 %}
     <script type="text/javascript">
-      // <![CDATA[  
-        $(function() {    
+      // <![CDATA[
+        $(function() {
           $product = $('#product-' + {{ product.id }});
-          new Shopify.OptionSelectors("product-select-{{ product.id }}", { product: {{ product | json }}, onVariantSelected: selectCallback{% if product-form == 'product' %}, enableHistoryState: true{% endif %} });          
+          new Shopify.OptionSelectors("product-select-{{ product.id }}", { product: {{ product | json }}, onVariantSelected: selectCallback{% if product-form == 'product' %}, enableHistoryState: true{% endif %} });
         });
       // ]]>
     </script>
