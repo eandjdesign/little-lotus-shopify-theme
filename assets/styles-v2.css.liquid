@@ -1,3 +1,6 @@
+/**
+ * promo banners!
+ */
 .promo-banner {
   background-color: rgba(135, 209, 210, 1);
   padding: 5px 10px;
@@ -9,3 +12,58 @@
   font-weight: normal;
   text-transform: uppercase;
 }
+
+/**
+ * Homepage - Helping Hand
+ */
+
+.container.section-homepage--helping_hand {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section-homepage--helping_hand .section-image {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  max-width: 520px;
+  max-height: 214px;
+  z-index: 10;
+}
+.section-homepage--helping_hand .section-image:before,
+.section-homepage--helping_hand .section-image:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 60%;
+  height: 100%;
+  border: 1px dotted red;
+  z-index: -1;
+}
+.section-homepage--helping_hand .section-image:before {
+  top: -25px;
+  left: -25px;
+}
+.section-homepage--helping_hand .section-image:after {
+  right: -25px;
+  bottom: -25px;
+}
+
+
+
+/**
+ * Homepage - Testimonials!
+ */
+
+.section-homepage--testimonials {
+  text-align: center;
+  background-color: rgba(255,153,153,.25) /* #ff9999 */
+}
+.section-homepage--testimonials .testimonial-quote {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.section-homepage--testimonials .testimonial-title,
+.section-homepage--testimonials .testimonial-title span { display, block; }
