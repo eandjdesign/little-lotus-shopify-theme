@@ -1,0 +1,13 @@
+
+<div id="header" class="mm-fixed-top">
+  <a href="/" class="mobile_only_inline" style="padding: 0px;"><img style="clear: both; margin-bottom: 2px; margin-left: 35%; margin-right: 35%; width: 30%;" src="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo.png?12158272014175685991" alt="Little Lotus" data-src="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo.png?12158272014175685991" data-src-home="//cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logo_home.png?12158272014175685991"></a>
+
+  <a href="#nav" class="icon-menu"> <span>Menu</span></a>
+
+
+  <!-- <a style="left: 120px; font-size: 18px; line-height: 26px; color: #444;" href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a>
+  <a style="left: 150px; font-size: 20px; line-height: 26px; color: #444;" href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a> -->
+  <a href="/cart" class="icon-cart right">
+    {% if cart.item_count > 0 %}<div class="cart_count">{{ cart.item_count }}</div>{% endif %} <span>Cart</span>
+  </a>
+</div>

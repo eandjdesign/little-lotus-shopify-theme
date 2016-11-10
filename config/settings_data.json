@@ -1130,12 +1130,12 @@
 		"instagram_title": "Instagram #littlelotusbaby",
 		"instagram_tag_name": "LittleLotusBaby",
 		"instagram_count": "5",
-		"slideshow_enabled": false,
+		"slideshow_enabled": true,
 		"slideshow_animation": "slide",
 		"slideshow_menu": true,
 		"slideshow_stretch": true,
 		"slideshow_width_narrow": false,
-		"slideshow_arrows": false,
+		"slideshow_arrows": true,
 		"slideshow_speed": "6",
 		"slideshow_headline_size": "40",
 		"slideshow_headline_weight": "lighter",
@@ -1310,6 +1310,7 @@
 		"checkout_error_color": "#ff6d6d",
 		"customer_layout": "theme",
 		"headline_sub_footer_text_color": "#404040",
-		"option_to_match": ""
+		"option_to_match": "",
+		"content_for_index": []
 	}
 }
