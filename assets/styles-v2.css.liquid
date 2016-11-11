@@ -9,16 +9,39 @@
 
 
 /**
+ * Typography helpers
+ */
+.section-title--hed {
+  text-transform: uppercase;
+  font-size: 24px;
+  padding-top: 0;
+}
+
+.section-homepage--helping_hand .section-title--hed,
+.section-homepage--testimonials .section-title--hed,
+.section-homepage--testimonials .section-title--dek,
+.section-homepage--testimonials .testimonial-quote,
+.section-homepage--testimonials .testimonial-title {
+  color: #8a8c8f;
+}
+
+.section-homepage--testimonials .testimonial-author,
+.section-homepage--helping_hand .section-title--hed span {
+  font-family: 'blackjack';
+  color: #ff8b81;
+}
+
+
+/**
  * Font Families
  */
 @font-face {
     font-family: 'blackjack';
-    src: url('/assets/fonts/blackjack-webfont.eot');
-    src: url('/assets/fonts/blackjack-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/blackjack-webfont.woff2') format('woff2'),
-         url('/assets/fonts/blackjack-webfont.woff') format('woff'),
-         url('/assets/fonts/blackjack-webfont.ttf') format('truetype'),
-         url('/assets/fonts/blackjack-webfont.svg#black_jackregular') format('svg');
+    src: url('blackjack-webfont.eot');
+    src: url('blackjack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('blackjack-webfont.woff') format('woff'),
+         url('blackjack-webfont.ttf') format('truetype'),
+         url('blackjack-webfont.svg#black_jackregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -47,8 +70,26 @@
  */
 
 .container.section-homepage--helping_hand {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section-homepage--helping_hand .section-title--hed {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-homepage--helping_hand .section-title--hed span {
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  text-transform: capitalize;
+  font-size: 105px;
+  line-height: 1;
+  top: -2px;
+  left: 48px
 }
 
 .section-homepage--helping_hand .section-image {
@@ -79,20 +120,41 @@
 }
 
 
-
 /**
  * Homepage - Testimonials!
  */
 
 .section-homepage--testimonials {
+  padding-bottom: 80px;
   text-align: center;
   background-color: rgba(255,153,153,.25) /* #ff9999 */
 }
+
+.section-homepage--testimonials .testimonials-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+.section-homepage--testimonials .testimonial {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
 .section-homepage--testimonials .testimonial-quote {
   background-color: transparent;
-  margin: 0;
+  margin: 0 0 30px;
   padding: 0;
+  text-align: center;
 }
 
 .section-homepage--testimonials .testimonial-title,
-.section-homepage--testimonials .testimonial-title span { display, block; }
+.section-homepage--testimonials .testimonial-title span {
+  display: block;
+}
+
+.section-homepage--testimonials .testimonial-author {
+  font-size: 32px;
+}
