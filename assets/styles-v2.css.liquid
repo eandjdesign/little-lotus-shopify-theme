@@ -77,19 +77,19 @@
 .section-homepage--helping_hand .section-title--hed {
   text-transform: uppercase;
   position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .section-homepage--helping_hand .section-title--hed span {
   padding: 0;
-  margin: 0;
+  margin: -16px 0 0 50px;
   display: block;
-  position: absolute;
+  position: relative;
   z-index: -1;
   text-transform: capitalize;
   font-size: 105px;
   line-height: 1;
-  top: -2px;
-  left: 48px
 }
 
 .section-homepage--helping_hand .section-image {
@@ -103,20 +103,26 @@
 .section-homepage--helping_hand .section-image:before,
 .section-homepage--helping_hand .section-image:after {
   position: absolute;
-  display: block;
-  content: "";
+  max-width: 360px;
+  max-height: 200px;
   width: 60%;
   height: 100%;
-  border: 1px dotted red;
+  display: block;
+  content: "";
   z-index: -1;
+  border: 5px solid transparent;
+  -webkit-border-image: url('svg-icon--x_border.svg?20161113') 60 round;
+  -o-border-image: url('svg-icon--x_border.svg?20161113') 60 round;
+  border-image: url('svg-icon--x_border.svg?20161113') 60 round;
+  opacity: .75;
 }
 .section-homepage--helping_hand .section-image:before {
-  top: -25px;
-  left: -25px;
+  top: -15px;
+  left: -15px;
 }
 .section-homepage--helping_hand .section-image:after {
-  right: -25px;
-  bottom: -25px;
+  right: -15px;
+  bottom: -15px;
 }
 
 
