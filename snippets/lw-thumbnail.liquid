@@ -1,4 +1,4 @@
-<div>
+<div class="product">
   {% if product.featured_image.alt contains 'youtube' or image.alt contains 'vimeo' %}
     {% assign alt_text = product.title %}
   {% else %}
@@ -11,7 +11,7 @@
       </div>
 
     <div class="info" style="text-align: center;">
-      <span class="title" style="font-weight: 400; color: #111;">{{ product.title }}</span></br>
+      <span class="title">{{ product.title }}</span></br>
       <!-- <a class="collection-review" href="{{ product.url | within: collection }}#shopify-product-reviews"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></a> -->
 	  <span class="price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
         {% if product.available %}

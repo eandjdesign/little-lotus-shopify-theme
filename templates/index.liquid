@@ -188,7 +188,9 @@
 
 {% include 'snippet-homepage--testimonials' %}
 
+{% include 'snippet-homepage--products' %}
 
+{% comment %}
 <!-- Hero Photo Split -->
 <div class="container content herodiv" style="padding-top: 5px; margin-top: 5px;">
 <div class="herodiv-eight eight columns alpha">
@@ -210,6 +212,7 @@
   		<p id="Hero2_P"></p>
   		<span id="Hero2_Button" class="rbutton"></span>
 </div></div></a></div></div>
+{% endcomment %}
 
 <script>
 // Define JavaScript for each page variation of this experiment.
@@ -260,6 +263,7 @@ var pageVariations = [
 );
 </script>
 
+{% comment %}
 <!-- ********************
      Blue Bar *********** -->
 <!--
@@ -268,7 +272,9 @@ var pageVariations = [
     <div class="container">{% include 'homepage-featured' %}</div>
 </div>
 -->
+{% endcomment %}
 
+{% comment %}
 <div class="container content" style="padding-top: 30px; padding-bottom: 30px">
 
 <!-- 3 Feature Images (Template -->
@@ -334,14 +340,14 @@ var pageVariations = [
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-  <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
+<div class="container content" style="padding-top: 0px; padding-bottom: 0px">
   <div class="responsive_slick">
     {% assign collection = '' %}
     {% assign products = collections[settings.frontpage_collection].products %}
     {% assign products_per_row = settings.frontpage_products_per_row %}
     {% include 'lw-product-loop' with settings.homepage_sidebar %}
   </div>
-  </div>
+</div>
 <script>
 $(document).ready(function(){
   $('.responsive_slick').slick({
@@ -379,7 +385,6 @@ $(document).ready(function(){
 });
   </script>
 {% endif %}
-
 
 <!-- Injected Page content -->
 {% if settings.homepage2 != blank %}
@@ -498,15 +503,16 @@ $(document).ready(function(){
 
 
 </div>
+{% endcomment %}
 
 <!-- Press references -->
 <div class="crafted">
   <div class="container content" style="padding-top:0">
     <div class="sixteen columns">
       <a href="/pages/press">
-        <img style="width:100%; margin-top:0px;" src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logos-blue.png?3499379542569309172"></a>
- <!-- <a href="/pages/press">    <img style="width:100%; margin-top:0px;" src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/logos-press.png?11993907158453839486"></a> -->
-	</div>
+        {{ 'logos.png' | asset_url | img_tag }}
+      </a>
+ 	</div>
   </div>
 </div>
 
