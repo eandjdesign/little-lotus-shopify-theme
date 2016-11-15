@@ -1,0 +1,13 @@
+<div class="section-homepage--products">
+  <h1 class="section-title--hed"><span>Better Sleep Starts Here</span></h1>
+  <div class="container content">
+    <div class="products-row">
+      {% assign collection = '' %}
+      {% assign products = collections[settings.frontpage_collection].products %}
+      {% assign products_per_row = settings.frontpage_products_per_row %}
+      {% include 'lw-product-loop' with settings.homepage_sidebar %}
+    </div>
+  </div>
+
+  <a href="#" class="btn-primary" title="Shop all Little Lotus products">Shop All</a>
+</div>
