@@ -237,9 +237,9 @@ var pageVariations = [
 </script>
 
 
-
-<!-- Blog Widget -->
-<div class="section clearfix">
+{% if settings.blog_widget or settings.twitter_widget != blank %}
+  <!-- Blog Widget -->
+  <div class="section clearfix">
   {% if settings.blog_widget %}
     <div class="{% if settings.twitter_widget != blank %}eight{% else %}sixteen{% endif %} columns">
       <h4 class="title">
@@ -276,30 +276,21 @@ var pageVariations = [
 
 <!-- Insta Widget -->
 {% if settings.instagram_widget %}
-<div class="section clearfix">
-    <div class="sixteen columns">
-      <h4 class="title">
-        {% if settings.instagram_link != blank %}
-          <a href="{{ settings.instagram_link }}" target="_blank">
-        {% endif %}
-        {{ settings.instagram_title }}
-        {% if settings.instagram_link != blank %}
-          </a>
-        {% endif %}
-      </h4>
-    </div>
+  <div class="section clearfix">
+  <div class="sixteen columns">
+    <h4 class="title">
+      {% if settings.instagram_link != blank %}
+        <a href="{{ settings.instagram_link }}" target="_blank">
+      {% endif %}
+      {{ settings.instagram_title }}
+      {% if settings.instagram_link != blank %}
+        </a>
+      {% endif %}
+    </h4>
+  </div>
 
-    <div id="instafeed" data-tag-name="{{ settings.instagram_tag_name }}" data-client-id="{{ settings.instagram_client_id }}" data-count="{{ settings.instagram_count }}">
-      <em>Tag your Instagram photos with #{{ settings.instagram_tag_name }}</em>
-    </div>
+  <div id="instafeed" data-tag-name="{{ settings.instagram_tag_name }}" data-client-id="{{ settings.instagram_client_id }}" data-count="{{ settings.instagram_count }}">
+    <em>Tag your Instagram photos with #{{ settings.instagram_tag_name }}</em>
+  </div>
 </div>
 {% endif %}
-
-<style>
-  .info .price {display: none;}
-  .product_image img{padding-bottom: 0px; margin-bottom: 0px;}
-  .info .title {margin-top: 0px; padding-top: 0px; padding-bottom: 0px;}
-  .slick-dots {margin-left: 0px;}
-  .slick-next:before, .slick-prev:before {color: #ff6666;}
-  .review-home-slick {width: 200px; border-radius: 100%; margin-left: auto; margin-right: auto; padding: 2px;}
-</style>
