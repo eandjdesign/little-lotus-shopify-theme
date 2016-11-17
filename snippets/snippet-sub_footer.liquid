@@ -1,0 +1,106 @@
+<div class="sub-footer">
+  <div class="container">
+
+    <div class="four columns">
+      {% if settings.footer_linklist_1 != blank %}
+        <h6 class="section-title--lede">{{ linklists[settings.footer_linklist_1].title }}</h6>
+        <ul class="section-footer--menu">
+          {% for link in linklists[settings.footer_linklist_1].links %}
+            <li class="section-footer--menu_list"><a href="{{ link.url }}" title="{{ link.title }}" class="section-footer--menu_link">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="four columns">
+      {% if settings.footer_linklist_2 != blank %}
+        <h6 class="section-title--lede">{{ linklists[settings.footer_linklist_2].title }}</h6>
+        <ul class="section-footer--menu">
+          {% for link in linklists[settings.footer_linklist_2].links %}
+            <li class="section-footer--menu_list"><a href="{{ link.url }}" title="{{ link.title }}" class="section-footer--menu_link">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="four columns">a
+      {% if settings.footer_content_page != blank %}
+        <h6 class="section-title--lede">{{ pages[settings.footer_content_page].title }}</h6>
+        {{ pages[settings.footer_content_page].content }}
+      {% endif %}
+
+      {% if settings.social_icons_footer %}
+      <h6 class="section-title--lede">
+      <ul class="social_icons">
+        {% if settings.twitter_link != '' %}
+          <li><a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" rel="me" target="_blank" class="icon-twitter"></a></li>
+        {% endif %}
+
+        {% if settings.facebook_link != '' %}
+          <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
+        {% endif %}
+
+        {% if settings.google_link != '' %}
+          <li><a href="{{ settings.google_link }}" title="{{ shop.name }} on Google+" rel="publisher" target="_blank" class="icon-google-plus"></a></li>
+        {% endif %}
+
+        {% if settings.youtube_link != '' %}
+          <li><a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank" class="icon-youtube"></a></li>
+        {% endif %}
+
+        {% if settings.vimeo_link != '' %}
+          <li><a href="{{ settings.vimeo_link }}" title="{{ shop.name }} on Vimeo" rel="me" target="_blank" class="icon-vimeo-2"></a></li>
+        {% endif %}
+
+        {% if settings.pinterest_link != '' %}
+          <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest"></a></li>
+        {% endif %}
+
+        {% if settings.tumblr_link != '' %}
+          <li><a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" rel="me" target="_blank" class="icon-tumblr"></a></li>
+        {% endif %}
+
+        {% if settings.linkedin_link != '' %}
+          <li><a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank" class="icon-linkedin"></a></li>
+        {% endif %}
+
+        {% if settings.flickr_link != '' %}
+          <li><a href="{{ settings.flickr_link }}" title="{{ shop.name }} on Flickr" rel="me" target="_blank" class="icon-flickr"></a></li>
+        {% endif %}
+
+        {% if settings.instagram_link != '' %}
+          <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
+        {% endif %}
+
+        {% if settings.email_link != '' %}
+          <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" target="_blank" class="icon-mail"></a></li>
+        {% endif %}
+      </ul>
+      </h6>
+      {% endif %}
+    </div>
+
+    <div class="four columns">
+      {% if settings.newsletter_enabled %}
+        <h6 class="section-title--hed">{{ settings.newsletter_text }}</h6>
+        {% comment %}{% if settings.newsletter_description != blank %}
+          <p>{{ settings.newsletter_description }}</p>
+        {% endif %}{% endcomment %}
+      <!-- OptInMonster -->
+      <div id="om-fly1wfpp1vtyfx8x-holder"></div>
+
+      {% comment %}
+        {% include 'newsletter' %}{% endcomment %}
+      {% endif %}
+    </div>
+
+    <div class="sixteen columns mobile_only">
+      <p class="mobile_only">
+        {% if settings.show_multiple_currencies %}
+          <label for="currencies">Pick a currency: </label>
+          {% include 'currencies-switcher' %}
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,262 +1,135 @@
-  <!DOCTYPE html>
-  <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-  <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-  <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-  <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-    <head>
-      <meta property="fb:pages" content="916660465024450" />
-      <meta name="google-site-verification" content="xs5qDZxL-xrKn6V26F3RRrX-kykNtyksqUd1v0IjY-c" />
-      <meta charset="utf-8">
-      <meta http-equiv="cleartype" content="on">
-      <meta name="robots" content="index,follow">
-      <meta name="google-site-verification" content="OvUW8nHZzkzT9nPlw3fE8mdRlg8rWfAe5rLqSJSFAvA" />
-      <meta name="keywords" content="swaddle, sleep sack, sleepsack, sleeping bag, baby gift, baby gifts, SIDS, muslin, swaddling, baby swaddles, baby sleep sacks, temperature, baby sleep, infant sleep, newborn, sleep sack baby">
-      <title>{% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }} {% if current_tags %}tagged"{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %}Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %}| {{ shop.name }}{% endunless %}{% endif %}</title>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+  <head>
+    <meta property="fb:pages" content="916660465024450" />
+    <meta name="google-site-verification" content="xs5qDZxL-xrKn6V26F3RRrX-kykNtyksqUd1v0IjY-c" />
+    <meta charset="utf-8">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="OvUW8nHZzkzT9nPlw3fE8mdRlg8rWfAe5rLqSJSFAvA" />
+    <meta name="keywords" content="swaddle, sleep sack, sleepsack, sleeping bag, baby gift, baby gifts, SIDS, muslin, swaddling, baby swaddles, baby sleep sacks, temperature, baby sleep, infant sleep, newborn, sleep sack baby">
+    <title>{% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }} {% if current_tags %}tagged"{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %}Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %}| {{ shop.name }}{% endunless %}{% endif %}</title>
 
 
-      {% if template contains 'list-collections' %}
-        <meta name="description" content="Product collections from {{ shop.name }} - Page {{ current_page }}" />
-      {% elsif page_description != '' %}
-        <meta name="description" content="{{ page_description | escape }}" />
-      {% endif %}
+    {% if template contains 'list-collections' %}
+      <meta name="description" content="Product collections from {{ shop.name }} - Page {{ current_page }}" />
+    {% elsif page_description != '' %}
+      <meta name="description" content="{{ page_description | escape }}" />
+    {% endif %}
 
-      {% include 'social-meta-info' %}
+    {% include 'social-meta-info' %}
 
-      {% if collection.previous_product %}
-        <link rel="prev" href="{{ collection.previous_product }}">
-      {% endif %}
-      {% if collection.next_product %}
-        <link rel="next" href="{{ collection.next_product }}">
-      {% endif %}
+    {% if collection.previous_product %}
+      <link rel="prev" href="{{ collection.previous_product }}">
+    {% endif %}
+    {% if collection.next_product %}
+      <link rel="next" href="{{ collection.next_product }}">
+    {% endif %}
 
-      <!-- Mobile Specific Metas -->
-      <meta name="HandheldFriendly" content="True">
-      <meta name="MobileOptimized" content="320">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Specific Metas -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-      <!-- Stylesheets -->
-      {{ 'styles.css' | asset_url | stylesheet_tag }}
-      {{ 'custom.css' | asset_url | stylesheet_tag }}
-      {{ 'styles-v2.css' | asset_url | stylesheet_tag }}
+    <!-- Stylesheets -->
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'styles-v2.css' | asset_url | stylesheet_tag }}
 
-      <!--[if lte IE 9]>
-        {{ 'ie.css' | asset_url | stylesheet_tag }}
+    <!--[if lte IE 9]>
+      {{ 'ie.css' | asset_url | stylesheet_tag }}
+    <![endif]-->
+    <!--[if lte IE 7]>
+      {{ 'lte-ie7.js' | asset_url | script_tags }}
+    <![endif]-->
+
+    <!-- Icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
+    <link rel="canonical" href="{{ canonical_url }}" />
+
+    <!-- Custom Fonts -->
+    <link href='//fonts.googleapis.com/css?family=.|{% if settings.logo_typeface_method == "google_webfonts" %}{{ settings.logo_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.headline_typeface_method == "google_webfonts" %}{{ settings.headline_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.nav_typeface_method == "google_webfonts" %}{{ settings.nav_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.regular_typeface_method == "google_webfonts" %}{{ settings.regular_google_webfont_font }}:light,normal,bold{% endif %}' rel='stylesheet' type='text/css'>
+
+    {% if template contains 'customer' %}
+      {{ "shopify_common.js" | shopify_asset_url | script_tag }}
+      {{ "customer_area.js"  | shopify_asset_url | script_tag }}
+      <!--[if lt IE 7]>
+        {{ 'json2.js' | shopify_asset_url | script_tag }}
       <![endif]-->
-      <!--[if lte IE 7]>
-        {{ 'lte-ie7.js' | asset_url | script_tags }}
-      <![endif]-->
+    {% endif %}
 
-      <!-- Icons -->
-      <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
-      <link rel="canonical" href="{{ canonical_url }}" />
+    {{ content_for_header }}
 
-      <!-- Custom Fonts -->
-      <link href='//fonts.googleapis.com/css?family=.|{% if settings.logo_typeface_method == "google_webfonts" %}{{ settings.logo_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.headline_typeface_method == "google_webfonts" %}{{ settings.headline_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.nav_typeface_method == "google_webfonts" %}{{ settings.nav_google_webfont_font }}:light,normal,bold|{% endif %}{% if settings.regular_typeface_method == "google_webfonts" %}{{ settings.regular_google_webfont_font }}:light,normal,bold{% endif %}' rel='stylesheet' type='text/css'>
-
-      {% if template contains 'customer' %}
-        {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-        {{ "customer_area.js"  | shopify_asset_url | script_tag }}
-        <!--[if lt IE 7]>
-          {{ 'json2.js' | shopify_asset_url | script_tag }}
-        <![endif]-->
-      {% endif %}
-
-      {{ content_for_header }}
-
-      {% include 'custom-scripts' %}
+    {% include 'custom-scripts' %}
 
 
 </head>
 <body class="{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
-  <!-- Our hidden input that stores the discount code value -->
-  <input id="discount_input" type="hidden" name="discount" value="">
-  <!-- Set the value of our hidden input field #discount-input to the value of our sessionStorage "discount" Variable -->
-  <script>
-    (function() {document.getElementById("discount_input").value = sessionStorage.getItem("discount");}());
-  </script>
+<!-- Our hidden input that stores the discount code value -->
+<input id="discount_input" type="hidden" name="discount" value="">
+<!-- Set the value of our hidden input field #discount-input to the value of our sessionStorage "discount" Variable -->
+<script>
+  (function() {document.getElementById("discount_input").value = sessionStorage.getItem("discount");}());
+</script>
 
-      <div>
-
-
-        {%include 'header-main' %}
-
-        {%include 'header-navigation-mobile' %}
-
-        <div class="header mm-fixed-top {% unless template contains "index" %}header_bar{% endunless %}">
-
-          {% include 'snippet-banner--promo' %}
-
-          <div class="container">
+    <div>
 
 
-            {% include 'header-logo' %}
+      {%include 'header-main' %}
 
-            {% include 'header-navigation' %}
+      {%include 'header-navigation-mobile' %}
 
-          </div>
-        </div>
+      <div class="header mm-fixed-top {% unless template contains "index" %}header_bar{% endunless %}">
 
+        {% include 'snippet-banner--promo' %}
 
-        {% unless template contains "index" and settings.slideshow_enabled %}
-          <div class="container main content">
-        {% endunless %}
-
-        {% unless settings.featured_content_page == blank or template contains "index" %}
-          <div class="sixteen columns">
-            <div class="section clearfix featured_content">
-              {{ pages[settings.featured_content_page].content }}
-            </div>
-          </div>
-        {% endunless %}
-
-        {% if template contains 'list-collections' %}
-          {% include 'collection-listing' %}
-        {% else %}
-          {{ content_for_layout }}
-        {% endif %}
-
-        </div>
-        <div class="sub-footer">
-          <div class="container">
-
-            <div class="four columns">
-              {% if settings.footer_linklist_1 != blank %}
-                <h6 class="title">{{ linklists[settings.footer_linklist_1].title }}</h6>
-                <ul class="footer_menu">
-                  {% for link in linklists[settings.footer_linklist_1].links %}
-                    <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
-
-            <div class="four columns">
-              {% if settings.footer_linklist_2 != blank %}
-                <h6 class="title">{{ linklists[settings.footer_linklist_2].title }}</h6>
-                <ul class="footer_menu">
-                  {% for link in linklists[settings.footer_linklist_2].links %}
-                    <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
-
-            <div class="four columns">
-              {% if settings.footer_content_page != blank %}
-                <h6 class="title">{{ pages[settings.footer_content_page].title }}</h6>
-                {{ pages[settings.footer_content_page].content }}
-              {% endif %}
-
-              {% if settings.social_icons_footer %}
-              <h6 class="title">
-              <ul class="social_icons">
-                {% if settings.twitter_link != '' %}
-                  <li><a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" rel="me" target="_blank" class="icon-twitter"></a></li>
-                {% endif %}
-
-                {% if settings.facebook_link != '' %}
-                  <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
-                {% endif %}
-
-                {% if settings.google_link != '' %}
-                  <li><a href="{{ settings.google_link }}" title="{{ shop.name }} on Google+" rel="publisher" target="_blank" class="icon-google-plus"></a></li>
-                {% endif %}
-
-                {% if settings.youtube_link != '' %}
-                  <li><a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank" class="icon-youtube"></a></li>
-                {% endif %}
-
-                {% if settings.vimeo_link != '' %}
-                  <li><a href="{{ settings.vimeo_link }}" title="{{ shop.name }} on Vimeo" rel="me" target="_blank" class="icon-vimeo-2"></a></li>
-                {% endif %}
-
-                {% if settings.pinterest_link != '' %}
-                  <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest"></a></li>
-                {% endif %}
-
-                {% if settings.tumblr_link != '' %}
-                  <li><a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" rel="me" target="_blank" class="icon-tumblr"></a></li>
-                {% endif %}
-
-                {% if settings.linkedin_link != '' %}
-                  <li><a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank" class="icon-linkedin"></a></li>
-                {% endif %}
-
-                {% if settings.flickr_link != '' %}
-                  <li><a href="{{ settings.flickr_link }}" title="{{ shop.name }} on Flickr" rel="me" target="_blank" class="icon-flickr"></a></li>
-                {% endif %}
-
-                {% if settings.instagram_link != '' %}
-                  <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
-                {% endif %}
-
-                {% if settings.email_link != '' %}
-                  <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" target="_blank" class="icon-mail"></a></li>
-                {% endif %}
-              </ul>
-              </h6>
-              {% endif %}
-            </div>
-
-            <div class="four columns">
-              {% if settings.newsletter_enabled %}
-                <h6 class="title">{{ settings.newsletter_text }}</h6>
-                {% comment %}{% if settings.newsletter_description != blank %}
-                  <p>{{ settings.newsletter_description }}</p>
-                {% endif %}{% endcomment %}
-              <!-- OptInMonster -->
-              <div id="om-fly1wfpp1vtyfx8x-holder"></div>
-
-              {% comment %}
-                {% include 'newsletter' %}{% endcomment %}
-              {% endif %}
-            </div>
-
-            <div class="sixteen columns mobile_only">
-              <p class="mobile_only">
-                {% if settings.show_multiple_currencies %}
-                  <label for="currencies">Pick a currency: </label>
-                  {% include 'currencies-switcher' %}
-                {% endif %}
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="container">
 
 
+          {% include 'header-logo' %}
 
-        <div id="search">
-          <div class="container">
-            <div class="ten columns offset-by-three center">
-              <div class="right search-close">
-                  X
-              </div>
-              <form action="/search">
-                {% if settings.search_option != 'everything' %}
-                  <input type="hidden" name="type" value="product" />
-                {% endif %}
-                <span class="icon-search search-submit"></span>
-                <input type="text" name="q" placeholder="Search {{ shop.name }}..." value="{% if search and search.results.first.price %}{{ search.terms }}{% endif %}" autocapitalize="off" autocomplete="off" autocorrect="off" />
-              </form>
-            </div>
-          </div>
+          {% include 'header-navigation' %}
+
         </div>
       </div>
-      {% include 'newsletter-popup' %}
-      {% include 'currencies' %}
 
 
-    <!-- BEEKETINGSCRIPT CODE START -->
-      {% include 'bk-tracking' %}
-    <!-- BEEKETINGSCRIPT CODE END --></body>
-  </html>
+      {% unless template contains "index" and settings.slideshow_enabled %}
+        <div class="container main content">
+      {% endunless %}
+
+      {% unless settings.featured_content_page == blank or template contains "index" %}
+        <div class="sixteen columns">
+          <div class="section clearfix featured_content">
+            {{ pages[settings.featured_content_page].content }}
+          </div>
+        </div>
+      {% endunless %}
+
+      {% if template contains 'list-collections' %}
+        {% include 'collection-listing' %}
+      {% else %}
+        {{ content_for_layout }}
+      {% endif %}
+
+      </div>
+
+      {% include 'snippet-sub_footer' %}
+
+      {% include 'snippet-search' %}
+
+    </div>
+
+    {% include 'newsletter-popup' %}
+
+    {% include 'currencies' %}
 
 
+  <!-- BEEKETINGSCRIPT CODE START -->
+    {% include 'bk-tracking' %}
+  <!-- BEEKETINGSCRIPT CODE END --></body>
 
-
-  <style>
-
-    h4, .h4, h4.title a, h6.title { font-size: 22px; line-height: 32px; margin: 0 0 1em 0; padding: 0; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; padding: 7px 0; color: #42a4b4 ;}
-
-
-  </style>
+</html>
