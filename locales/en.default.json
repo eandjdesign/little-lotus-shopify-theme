@@ -1,11 +1,11 @@
 {
-	"shopify": {
-		"checkout": {
-			"order_summary": {
-				"discount_title": "Promo",
-				"discount_label": "Promo",
-				"discount_placeholder": "Promo"
-			}
-		}
-	}
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "discount_title": "Promo",
+        "discount_label": "Promo",
+        "discount_placeholder": "Promo"
+      }
+    }
+  }
 }
