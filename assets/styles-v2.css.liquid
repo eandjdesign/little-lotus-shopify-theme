@@ -75,7 +75,11 @@ picture,img { max-width: 100%; }
  */
 .promo-banner {
   background-color: rgba(135, 209, 210, 1);
-  padding: 5px 10px;
+  padding: 0 10px;
+}
+.promo-banner div.container {
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 .promo-text {
   margin: 0;
@@ -83,7 +87,29 @@ picture,img { max-width: 100%; }
   color: #fff;
   font-weight: normal;
   text-transform: uppercase;
+  font-size: 13px;
 }
+
+
+
+/**/
+.promo-banner .nav {
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+.promo-banner .nav ul.menu li {
+  padding: 0 5px;
+}
+.promo-banner .nav ul li .cart-button {
+  background-color: transparent;
+  padding: 0;
+}
+.promo-banner .nav a.icon-cart span,
+.index .header .promo-banner .nav a {
+  color: #fff;
+}
+
 
 /**
  * Homepage - Helping Hand

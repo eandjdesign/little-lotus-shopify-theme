@@ -95,16 +95,13 @@
       {% endif %}
     {% endif %}
 
-    <!--
-      <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
-      <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
-    -->
-
+    {% comment %}
     {% if shop.customer_accounts_enabled %}
       <li>
         <a href="/account" title="My Account {% if customer %}({{ customer.email }}){% endif %}" class="icon-user"></a>
       </li>
     {% endif %}
+    {% endcomment %}
     {% if settings.search_enabled %}
       <li>
         <a href="/search" title="Search" class="icon-search" id="search-toggle"></a>
@@ -115,8 +112,10 @@
         {% include 'currencies-switcher' %}
       </li>
     {% endif %}
+    {% comment %}
     <li>
       <a href="#cart" class="icon-cart cart-button">{% if cart.item_count > 0 %}<div class="cart_count">{{ cart.item_count }}</div>{% endif %} <span>Cart</span></a>
     </li>
+    {% endcomment %}
   </ul>
 </div>

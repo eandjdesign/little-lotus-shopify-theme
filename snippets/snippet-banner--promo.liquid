@@ -1,5 +1,17 @@
 <div class="promo-banner">
   <div class="container">
     <p class="promo-text">10% off all Orders! | Code: <strong>TAKE10</strong> | Limited time only</p>
+    <div class="nav mobile_hidden">
+      <ul class="menu">
+        {% if shop.customer_accounts_enabled %}
+          <li>
+            <a href="/account" title="My Account {% if customer %}({{ customer.email }}){% endif %}" class="icon-user"></a>
+          </li>
+        {% endif %}
+        <li>
+          <a href="#cart" class="icon-cart cart-button">{% if cart.item_count > 0 %}<div class="cart_count">{{ cart.item_count }}</div>{% endif %} <span>Cart</span></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
