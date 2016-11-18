@@ -111,6 +111,69 @@ picture,img { max-width: 100%; }
 }
 
 
+/**/
+
+.logo_and_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.header ul.social_icons {
+  text-align: right;
+}
+.header ul.social_icons li { padding: 0 7px; }
+.header ul.social_icons a { color: #8a8c8f !important; }
+.header ul.social_icons li:last-child { padding-right: 0; }
+.social-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row nowrap;
+}
+.social-nav .menu { text-align: center; }
+.nav ul.menu li { padding: 0; }
+.nav .social-nav ul.menu li a {
+  color: #8a8c8f !important;
+  display: block;
+  padding: 10px;
+  margin: 0;
+  height: 100%;
+}
+.nav .social-nav ul.menu li a:hover { color: #ff8b81 !important; }
+
+.nav ul li:hover a.sub-menu {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.dropdown {
+  background-color: #fff;
+  border-color: transparent;
+  min-width: 550px;
+  padding: 25px 50px;
+  left: calc(50% - 200px);
+  top: 26px;
+}
+.nav ul.menu ul {
+  width: 22%;
+  margin-left: 3%;
+}
+.nav ul.menu ul:first-child {
+  margin-left: 0;
+}
+.index .header .nav ul.menu ul li a.sub-link {
+  padding: 0 0 5px 0;
+}
+.menu ul a, .menu li:hover > ul a,
+.index .header .nav ul.menu ul li a {
+  color: #8a8c8f;
+  padding: 16px 0 5px 0;
+  white-space: normal;
+}
+
 /**
  * Homepage - Helping Hand
  */
@@ -154,22 +217,14 @@ picture,img { max-width: 100%; }
   content: "";
   z-index: -1;
   border: 5px solid transparent;
-  -webkit-border-image-source: url('svg-icon--x_border.svg?20161113');
-  -moz-border-image-source: url('svg-icon--x_border.svg?20161113');
-  -ms-border-image-source: url('svg-icon--x_border.svg?20161113');
-  -o-border-image-source: url('svg-icon--x_border.svg?20161113');
-  border-image-source: url('svg-icon--x_border.svg?20161113');
-  -webkit-border-image-repeat: round;
-  -moz-border-image-repeat: round;
-  -ms-border-image-repeat: round;
-  -o-border-image-repeat: round;
-  border-image-repeat: round;
-  -webkit-border-image-slice: 60;
-  -moz-border-image-slice: 60;
-  -ms-border-image-slice: 60;
-  -o-border-image-slice: 60;
-  border-image-slice: 60;
   opacity: .75;
+
+  -webkit-border-image: url('svg-icon--x_border.svg?20161114') 60 round;
+  -moz-border-image: url('svg-icon--x_border.svg?20161114') 60 round;
+  -ms-border-image: url('svg-icon--x_border.svg?20161114') 60 round;
+  -o-border-image: url('svg-icon--x_border.svg?20161114') 60 round;
+  border-image: url('svg-icon--x_border.svg?20161114') 60 round;
+
 }
 .section-homepage--helping_hand .section-image:before {
   top: -15px;
@@ -491,7 +546,7 @@ picture,img { max-width: 100%; }
 
 /**/
 .sub-footer {
-  background-color: transparent;
+background-color: transparent;
 }
 
 .sub-footer .section-title--lede {

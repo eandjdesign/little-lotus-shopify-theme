@@ -437,10 +437,10 @@
       "footer_linklist_2": "main-menu",
       "display_designed_by": true,
       "customer_layout": "theme",
-      "dropdown_column_links": "10"
+      "dropdown_column_links": "1"
     },
     "Melbourne": {
-      "dropdown_column_links": "10",
+      "dropdown_column_links": "1",
       "menu_top_padding": "5",
       "content_top_padding": "95",
       "link_color": "#47139f",
@@ -714,7 +714,7 @@
     },
     "Amsterdam": {
       "customer_layout": "theme",
-      "dropdown_column_links": "10",
+      "dropdown_column_links": "1",
       "menu_top_padding": "4",
       "content_top_padding": "95",
       "twitter_link": "",
@@ -1002,14 +1002,14 @@
     "use_logo": true,
     "use_logo_home": true,
     "main_linklist": "menu-menu-v2-0",
-    "dropdown_column_links": "3",
+    "dropdown_column_links": "2",
     "logo_top_padding": "0",
     "menu_top_padding": "5",
     "content_top_padding": "80",
     "search_enabled": false,
     "search_option": "products",
     "featured_content_page": "",
-    "social_icons_enabled": false,
+    "social_icons_enabled": true,
     "twitter_link": "https:\/\/twitter.com\/littlelotusbaby",
     "facebook_link": "https:\/\/www.facebook.com\/lotusbaby",
     "google_link": "",
