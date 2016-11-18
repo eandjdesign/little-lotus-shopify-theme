@@ -297,6 +297,16 @@ picture,img { max-width: 100%; }
 }
 
 @media only screen and (max-width: 767px) {
+  .section-homepage--helping_hand {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .section-homepage--helping_hand div:first-child { order: 2; }
+  .section-homepage--helping_hand div:last-child {
+    order: 1;
+    margin-bottom: 50px;
+    margin-top: -60px;
+  }
   .section-homepage--helping_hand > div { text-align: center; }
   .section-homepage--helping_hand .section-image:before,
   .section-homepage--helping_hand .section-image:after {
