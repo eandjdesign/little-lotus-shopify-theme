@@ -26,6 +26,7 @@
     {% endif %}
   {% endcapture %}
 
+{% comment %}{% endcomment %}
   <div id="homepage_slider" class="flexslider">
     <ul class="slides">
       {% if settings.video_position == '1' %}{{ video_slide }}{% endif %}
@@ -156,6 +157,7 @@
       {% endif %}
     </ul>
 	</div>
+{% comment %}{% endcomment %}
 
   {% if settings.slideshow_width_narrow %}
     </div>

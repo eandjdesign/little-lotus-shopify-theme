@@ -606,6 +606,11 @@
           {
             "value": "Vibur",
             "label": "Vibur"
+          },
+          {
+            "value": "Poppins",
+            "label": "Poppins",
+            "group": "My added fonts"
           }
         ]
       },
@@ -828,6 +833,11 @@
           {
             "value": "Vibur",
             "label": "Vibur"
+          },
+          {
+            "value": "Poppins",
+            "label": "Poppins",
+            "group": "My added fonts"
           }
         ]
       },
@@ -1147,6 +1157,11 @@
           {
             "value": "Vibur",
             "label": "Vibur"
+          },
+          {
+            "value": "Poppins",
+            "label": "Poppins",
+            "group": "My added fonts"
           }
         ]
       },
@@ -1457,6 +1472,11 @@
           {
             "value": "Vibur",
             "label": "Vibur"
+          },
+          {
+            "value": "Poppins",
+            "label": "Poppins",
+            "group": "My added fonts"
           }
         ]
       },

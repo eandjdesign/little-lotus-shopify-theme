@@ -12,13 +12,13 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
-	-webkit-transition: all 300ms ease-out;  
-    -moz-transition: all 300ms ease-out;  
-    -o-transition: all 300ms ease-out;  
-    -ms-transition: all 300ms ease-out;  
-    transition: all 300ms ease-out;  
-    opacity: 0;  
-    width: 100%;  
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 100%;
     height: 98.3%;
     padding: 40px;
     box-sizing: border-box;
@@ -233,7 +233,7 @@ ul.footer_menu li:first-child{
 	font-size: 35px;
       text-align: center;
 
-  
+
 }
 
 
@@ -429,7 +429,7 @@ p.bcorp{
 	font-weight: lighter;
   	margin-left: 15% ;
       margin-right: 15% ;
-      margin-bottom: 3% ; 
+      margin-bottom: 3% ;
 }
 
 button#featured_artisan_btn{
@@ -461,7 +461,7 @@ button#featured_artisan_btn{
 	.featured_artisan_teaser h1{
 		line-height: 80px;
 	}
-  
+
 }
 
 
@@ -492,7 +492,7 @@ button#featured_artisan_btn{
 	}
 
 	#impact_one, #impact_two, #impact_three, #impact_four, #impact_five, #impact_six{
-		padding: 20px;	
+		padding: 20px;
 	}
 
 	.grey_bg img{
@@ -524,7 +524,7 @@ button#featured_artisan_btn{
   width: 85%;
   text-align: left;
 }
-  
+
   ul#impact_pointers li img {
       max-width: 80px;
   }
@@ -539,13 +539,13 @@ button#featured_artisan_btn{
 	#impact_six{
 		padding: 4% 12%;
 	}
-  
+
   .featured_artisan_teaser p {
     font-size: 28px;
-    
-    
+
+
   }
-  
+
     h1, .h1, h1.home, h2.title, .collection_title { font-size: 35px;  line-height: 1.5em; margin: 0 auto 15px; clear:both; font-weight: lighter;padding-top: 5%;}
 }
 
@@ -569,9 +569,9 @@ button#featured_artisan_btn{
 		max-width: 100%;
 		margin: 0 auto;
 	}
-  
+
   p.subtitle {
-   display:none; 
+   display:none;
   }
 
 	.grey_bg p{
@@ -670,26 +670,26 @@ button#featured_artisan_btn{
   .top_bar_search{
     text-align: center;
   }
-    
+
   .momvideo {
     display:none;}
-  
+
     #featured_artisan_section {
           background-size: cover;
     min-height: 300px;
     max-width: 100%;
-    
+
   }
-  
+
   #featured_artisan_section2 {
   background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/embrace-baby.png?10635759370313862998') no-repeat center center;
     background-size: cover;
     min-height: 300px;
     max-width: 100%;
-    
+
   }
-  
-  
+
+
 
 #featured_artisan_section3{
 	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/scissor.png?13019520266043769606') no-repeat center center;
@@ -697,8 +697,8 @@ button#featured_artisan_btn{
     min-height: 300px;
     max-width: 100%;
 }
-  
-  
+
+
   h1, .h1, h1.home, h2.title, .collection_title {
     font-size: 18px;
     line-height: 1.5em;
@@ -707,12 +707,12 @@ button#featured_artisan_btn{
     font-weight: lighter;
     padding-top: 3%;
 }
-  
+
   .featured_artisan_teaser h1 {
     color: #fff;
     font-size: 57px;
 }
-  
+
   .featured_artisan_teaser {
     float: right;
     width: 100%;
@@ -720,27 +720,27 @@ button#featured_artisan_btn{
     color: #fff;
     margin-top: 50px;
 }
-  
+
   .top_bar ul{
     display: inline-block;
   }
-  
+
   .mission-quote{
     width: 90%;
   }
-  
+
   ul#tag_list{
     display: none;
   }
-  
+
   .slicknav_menu li.tag_category_filter_heading{
     display: none;
   }
-  
+
   #tFilter{
     text-align: center;
   }
-  
+
   .paginate span.page a, .paginate span.current, .paginate span.deco, .paginate span.next a, .paginate span.prev a{
     font-size: 16px;
   }
@@ -752,10 +752,10 @@ button#featured_artisan_btn{
 		max-width: 100%;
 	}
 
-  
+
   .momvideo {
     display:none;}
-    
+
 	#impact_six{
 		display: block !important;
 	}
@@ -767,21 +767,20 @@ button#featured_artisan_btn{
 	.featured_artisan_teaser{
 		margin-top: 70px;
 	}
-  
+
 
   .rhome-inline-block {
   font-size: 31px; }
-  
+
   .logo { padding-bottom:20px;}
 
   .shipping {
-  
+
       font-family: "Open Sans";
     font-weight: normal;
     font-size: 11px;
-  
 }
-  
+
   .featured_artisan_teaser h1 {
     color: #fff;
     font-size: 34px;
@@ -790,26 +789,26 @@ button#featured_artisan_btn{
           background-size: cover;
     min-height: 200px;
     max-width: 100%;
-    
+
   }
-  
+
   #featured_artisan_section2 {
   background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/embrace-baby.png?10635759370313862998') no-repeat center center;
     background-size: cover;
     min-height: 200px;
     max-width: 100%;
-    
+
   }
-  
+
   #featured_artisan_section3{
 	background: url('https://cdn.shopify.com/s/files/1/1039/4208/files/scissor.png?13019520266043769606') no-repeat center center;
 	background-size: cover;
     min-height: 200px;
     max-width: 100%;
 }
-  
-  
-  
+
+
+
   h1, .h1, h1.home, h2.title, .collection_title {
     font-size: 18px;
     line-height: 1.5em;
@@ -818,16 +817,13 @@ button#featured_artisan_btn{
     font-weight: lighter;
     padding-top: 3%;
 }
-  
-  div.content {
-    padding-top: 0px;
-}
+
   
   .featured_artisan_teaser h1 {
     color: #fff;
     font-size: 30px;
 }
-  
+
   .featured_artisan_teaser {
     float: right;
     width: 100%;
@@ -835,24 +831,29 @@ button#featured_artisan_btn{
     color: #fff;
     margin-top: 30px;
 }
-  
-  
+
+
   .featured_artisan_teaser p {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px; }
-  
+
   h1, .h1, h1.home, h2.title, .title a { margin: 0 auto 5px;}
 
   div.section {
      margin: 5px 0;
   }
-  
+
 .action_button:hover, input.action_button[type="submit"]:hover, input.action_button[type="button"]:hover, .action_button:focus {
     background: #685452;
     border-color: #685452 !important;
     outline: none;
 }
+.section-homepage--shop_now{
+  margin-top: 20px;
+}
+  
+  
 }
 
 .collection-review {font-size: 15px; color: rgb(225,84,134);}
