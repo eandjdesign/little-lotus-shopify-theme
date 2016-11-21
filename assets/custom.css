@@ -570,10 +570,6 @@ button#featured_artisan_btn{
 		margin: 0 auto;
 	}
 
-  p.subtitle {
-   display:none;
-  }
-
 	.grey_bg p{
 		float: none;
 		margin: 0 auto;
@@ -818,7 +814,7 @@ button#featured_artisan_btn{
     padding-top: 3%;
 }
 
-  
+
   .featured_artisan_teaser h1 {
     color: #fff;
     font-size: 30px;
@@ -852,8 +848,8 @@ button#featured_artisan_btn{
 .section-homepage--shop_now{
   margin-top: 20px;
 }
-  
-  
+
+
 }
 
 .collection-review {font-size: 15px; color: rgb(225,84,134);}

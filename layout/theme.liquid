@@ -88,7 +88,9 @@
 
       <div class="header mm-fixed-top {% unless template contains "index" %}header_bar{% endunless %}">
 
-        {% include 'snippet-banner--promo' %}
+        <div class="mobile_hidden">
+          {% include 'snippet-banner--promo' %}
+        </div>
 
         <div class="container">
           <div class="logo_and_nav">

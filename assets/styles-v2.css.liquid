@@ -33,8 +33,18 @@ picture,img { max-width: 100%; }
     padding-top: 12px;
     padding-bottom: 12px;
   }
+  #header img { margin-top: 5px; }
 }
-
+@media only screen and (max-width: 767px) {
+  #header .promo-banner {
+    margin-top: 40px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  .header div.container {
+    padding-top: 25px;
+  }
+}
 /**
  * Typography helpers
  */
@@ -45,13 +55,15 @@ picture,img { max-width: 100%; }
 }
 
 .section-homepage--helping_hand .section-title--hed,
+.section-homepage--helping_hand .section-title--dek,
 .section-homepage--testimonials .section-title--hed,
 .section-homepage--testimonials .section-title--dek,
 .section-homepage--testimonials .testimonial-quote,
 .section-homepage--testimonials .testimonial-title,
 .section-homepage--products .section-title--hed,
 .section-homepage--products .info,
-.section-homepage--module_two_column .section-title--hed { color: #8a8c8f; }
+.section-homepage--module_two_column .section-title--hed,
+.section-title--background_flourish span { color: #8a8c8f; }
 
 .section-homepage--testimonials .testimonial-author,
 .section-homepage--helping_hand .section-title--hed span,
@@ -73,10 +85,10 @@ picture,img { max-width: 100%; }
   font-weight: 400;
   font-size: 18px;
 }
-.btn-primary:visited {
-  color: #fff;
+.btn-primary:hover,
+.btn-primary:hover:visited {
+  color: #87d1d1;
 }
-
 
 /**
  * promo banners!
@@ -256,7 +268,6 @@ picture,img { max-width: 100%; }
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
 .section-homepage--helping_hand .section-title--hed span {
   padding: 0;
   margin: -16px 0 0 50px;
@@ -331,7 +342,18 @@ picture,img { max-width: 100%; }
     text-align: center;
   }
 }
+@media only screen and (max-width: 479px) {
+  .section-homepage--helping_hand .section-title--hed {
+    text-align: left;
+  }
+  .section-homepage--helping_hand .section-title--hed span {
+    font-size: 86px;
+  }
+}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .section-homepage--helping_hand .section-title--hed span {
+    font-size: 86px;
+  }
   .section-homepage--helping_hand .section-image {
     max-width: 80%;
     margin-left: auto;
@@ -358,6 +380,9 @@ picture,img { max-width: 100%; }
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .section-homepage--helping_hand .section-title--hed span {
+    font-size: 86px;
+  }
   .section-homepage--helping_hand .section-image:before,
   .section-homepage--helping_hand .section-image:after {
     max-width: 360px;
@@ -378,6 +403,9 @@ picture,img { max-width: 100%; }
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .section-homepage--helping_hand .section-title--hed span {
+    font-size: 105px;
+  }
   .section-homepage--helping_hand .section-image:before,
   .section-homepage--helping_hand .section-image:after {
     max-width: 360px;
@@ -536,6 +564,10 @@ picture,img { max-width: 100%; }
   text-align: center;
   font-size: 15px;
 }
+.section-homepage--products a:hover .info {
+  color: #87d1d1;
+}
+
 .section-homepage--products .price {
   display: none;
 }
@@ -647,6 +679,10 @@ picture,img { max-width: 100%; }
   color: #8a8c8f;
   font-weight: normal;
 }
+.section-homepage--module_two_column .content-box:hover .section-title--dek {
+  color: #87d1d1;
+  border-bottom-color: #87d1d1;
+}
 
 @media only screen and (max-width: 767px) {
   .section-homepage--module_two_column .section-homepage--module {
@@ -675,7 +711,7 @@ picture,img { max-width: 100%; }
 }
 .section-homepage--featured_in a {
   display: block;
-  margin: 0 auto 80px;
+  margin: 20px auto 0;
   text-align: center;
 }
 .section-homepage--featured_in div.content {
@@ -694,6 +730,9 @@ picture,img { max-width: 100%; }
 /**/
 .sub-footer {
   background-color: transparent;
+  border-top: 1px solid #8a8c8f;
+  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .sub-footer a,
@@ -740,6 +779,9 @@ picture,img { max-width: 100%; }
 html .sub-footer div#om-fly1wfpp1vtyfx8x [class*="arlington"] {
   text-align: left;
   padding-left: 0 !important;
+}
+html .sub-footer div#om-fly1wfpp1vtyfx8x [class*="arlington"] span {
+  font-family: 'Poppins' !important;
 }
 
 @media only screen and (max-width: 767px) {

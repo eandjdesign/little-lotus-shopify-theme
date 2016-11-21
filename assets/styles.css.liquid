@@ -195,7 +195,7 @@ div.section.collection_description {
 
 /* #Links
 ================================================== */
-  a, a:visited { color: {{ settings.link_color }}; text-decoration: none; outline: 0; -webkit-transition: color .1s linear; -moz-transition: color .1s linear; -o-transition: color .1s linear; -ms-transition: color .1s linear; transition: color .1s linear; }
+  a { color: {{ settings.link_color }}; text-decoration: none; outline: 0; -webkit-transition: color .1s linear; -moz-transition: color .1s linear; -o-transition: color .1s linear; -ms-transition: color .1s linear; transition: color .1s linear; }
 a:hover, a:focus { color: {{ settings.link_hover_color }}; }
 /* #Lists
 ================================================== */
@@ -373,10 +373,10 @@ div#header a span {
   -moz-transform: translateY(10px);
   transform: translateY(10px);
 }
-.index .nav ul li a.active::after,
+<!-- .index .nav ul li a.active::after,
 .index .nav ul li a.top-link::after {
   background-color: {{ settings.nav_color_home }};
-}
+} -->
 
 .index .header_bar .nav ul li a.active::after,
 .index .header_bar .nav ul li a.top-link::after {
@@ -390,9 +390,6 @@ div#header a span {
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   transform: translateY(0px);
-}
-.nav ul li:hover a.sub-menu::after {
-  background-color: transparent;
 }
 .nav ul li a.sub-menu {
   padding: 10px 4px 10px 4px;
