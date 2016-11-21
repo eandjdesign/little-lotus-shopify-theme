@@ -245,8 +245,8 @@ picture,img { max-width: 100%; }
  * Homepage - Helping Hand
  */
 
-.container.section-homepage--helping_hand {
-  padding: 75px 20px;
+.section-homepage--helping_hand {
+  padding: 0 20px 75px;
   width: calc(100% - 40px);
 }
 
@@ -303,16 +303,17 @@ picture,img { max-width: 100%; }
 }
 
 @media only screen and (max-width: 767px) {
-  .section-homepage--helping_hand {
+  .section-homepage--helping_hand .container {
     display: flex;
     flex-flow: column nowrap;
+    padding-top: 75px;
   }
-  .section-homepage--helping_hand div:first-child {
+  .section-homepage--helping_hand .container div:first-child {
     order: 2;
     margin-left: auto;
     margin-right: auto;
   }
-  .section-homepage--helping_hand div:last-child {
+  .section-homepage--helping_hand .container div:last-child {
     order: 1;
     margin: -60px auto 50px auto;
   }
