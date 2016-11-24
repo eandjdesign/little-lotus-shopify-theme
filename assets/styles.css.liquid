@@ -3354,7 +3354,7 @@ p.subtitle { margin-bottom: 1.5em;}
   width: 40px;
   height: 1px;
   display: block;
-  opacity: 0.3;
+  opacity: 0.5;
   cursor: pointer;
   text-indent: -9999em;
   border: 3px solid #fff;
@@ -3363,7 +3363,7 @@ p.subtitle { margin-bottom: 1.5em;}
   -webkit-border-radius: 1px; -moz-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px;
 }
 .flex-control-nav li a.flex-active {
-  opacity: 0.8;
+  opacity: 1;
   cursor: default;
 }
 
@@ -3885,7 +3885,7 @@ div.cloudzoom-ajax-loader {
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container { width: 300px; }
+        .container { width: 100%; margin-left: auto; margin-right: auto; }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -3907,7 +3907,13 @@ div.cloudzoom-ajax-loader {
         .container .fifteen.columns,
         .container .sixteen.columns,
         .container .one-third.column,
-        .container .two-thirds.column { width: 300px; }
+        .container .two-thirds.column {
+          width: calc(100% - 40px);
+          margin-left: auto;
+          margin-right: auto;
+          float: none;
+          display: block;
+        }
         .container .one-fifth.column  { width: 140px; }
         .container .one-fifth.column:nth-child(2n)  { margin-left: 20px }
         .flexslider {position: relative; zoom: 1; clear:both; overflow: hidden;margin-top: 0px;}
@@ -3940,7 +3946,6 @@ div.cloudzoom-ajax-loader {
 
         img.callout{ max-width: 100%;  }
         .mobile-title h1.product_name {display:block; font-size: 24px;}
-     	div.container.main.content {padding-top: 0px;}
 
         .container .thumbnail.even, .container .thumbnail.odd {width: 100% !important;}
         .container div.thumbnail.odd {margin-left: 0px;}
