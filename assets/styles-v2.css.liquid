@@ -737,18 +737,18 @@ picture,img { max-width: 100%; }
 }
 .section-homepage--module_two_column .content-box:after {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
   content: "";
 
   background-image: url('svg-border-pink.svg');
   background-repeat: no-repeat;
-  background-position: top left;
-  background-size: calc(100% - 20px);
+  background-position: center;
+  background-size: contain;
 
 }
 .section-homepage--module_two_column .section-title--hed {
@@ -787,6 +787,8 @@ picture,img { max-width: 100%; }
     display: block;
     margin-right: 50px;
     float: left;
+    width: 185px;
+    min-width: 0;
   }
 
   .section-homepage--module_two_column .container,
