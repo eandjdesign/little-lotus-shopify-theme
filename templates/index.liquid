@@ -27,50 +27,50 @@
 <script>
 // Define JavaScript for each page variation of this experiment.
 // Note, without Javascript, placeholder images are loaded
-var pageVariations = [
-  function() {    // Original Hero and 1-2-1 model
-  document.getElementById('Hero1_H1').innerHTML = 'Perfect temperature, better sleep';
-    document.getElementById('Hero1_P').innerHTML = 'Little Lotus swaddles and sleeping bags use NASA inspired fabric to regulate your baby\’s temperature so they can sleep better';
-    document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_Mom.jpg?11843814886528925136';
-    document.getElementById('Hero1_Button').innerHTML = 'Shop now →';
-    document.getElementById('Hero2_H1').innerHTML = 'Help save a vulnerable baby';
-    document.getElementById('Hero2_P').innerHTML = 'Each purchase helps to save a baby in the developing world with the Embrace incubator';
-    document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_121.jpg?11843814886528925136';
-    document.getElementById('Hero2_Button').innerHTML = 'Learn more →';
-  },
-  function() {    // Variation 1: Hero Copy
-    document.getElementById('Hero1_H1').innerHTML = 'Perfect Temperature, Better Sleep';
-    document.getElementById('Hero1_P').innerHTML = 'Crafted from NASA Inspired Fabric to regulate your baby\'s temperature so they can sleep better';
-    document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_New_Swaddle.jpg?12555944080764285304';
-    document.getElementById('Hero1_Button').innerHTML = 'Shop Swaddles →';
-    document.getElementById('Hero2_H1').innerHTML = 'New Designs! Comfort In All Seasons';
-    document.getElementById('Hero2_P').innerHTML = 'Easy Transition from swaddling for longer sleep all night';
-    document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_New_Designs.jpg?6259678758836912850';
-    document.getElementById('Hero2_Button').innerHTML = 'Shop Sleeping Bags →';
-    // Redirect button clicks, change button width if needed
-    document.getElementById('Hero1_Button').style.width = "170px";
-    document.getElementById('Hero2_Button').style.width = "170px";
-    document.getElementById('Hero1_Href').href = "/products/swaddle";
-    document.getElementById('Hero2_Href').href = "/collections/swaddles-sleeping-bags";
-  },
-  function() {    // Variation 2: Original Hero and About page
-  document.getElementById('Hero1_H1').innerHTML = 'Perfect temperature, better sleep';
-    document.getElementById('Hero1_P').innerHTML = 'Little Lotus swaddles and sleeping bags use NASA inspired fabric to regulate your baby\’s temperature so they can sleep better';
-    document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_Mom.jpg?11843814886528925136';
-    document.getElementById('Hero1_Button').innerHTML = 'Learn more →';
-    document.getElementById('Hero2_H1').innerHTML = 'Help save a vulnerable baby';
-    document.getElementById('Hero2_P').innerHTML = 'Each purchase helps to save a baby in the developing world with the Embrace incubator';
-    document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_121.jpg?11843814886528925136';
-    document.getElementById('Hero2_Button').innerHTML = 'Learn more →';
-    document.getElementById('Hero1_Href').href = "/pages/technology";
-  }
-];
-
-// Wait for the DOM to load, then execute the view for the chosen variation.
- $(document).ready(
-  // Execute the chosen view
-  pageVariations[chosenVariation]
-);
+// var pageVariations = [
+//   function() {    // Original Hero and 1-2-1 model
+//   document.getElementById('Hero1_H1').innerHTML = 'Perfect temperature, better sleep';
+//     document.getElementById('Hero1_P').innerHTML = 'Little Lotus swaddles and sleeping bags use NASA inspired fabric to regulate your baby\’s temperature so they can sleep better';
+//     document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_Mom.jpg?11843814886528925136';
+//     document.getElementById('Hero1_Button').innerHTML = 'Shop now →';
+//     document.getElementById('Hero2_H1').innerHTML = 'Help save a vulnerable baby';
+//     document.getElementById('Hero2_P').innerHTML = 'Each purchase helps to save a baby in the developing world with the Embrace incubator';
+//     document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_121.jpg?11843814886528925136';
+//     document.getElementById('Hero2_Button').innerHTML = 'Learn more →';
+//   },
+//   function() {    // Variation 1: Hero Copy
+//     document.getElementById('Hero1_H1').innerHTML = 'Perfect Temperature, Better Sleep';
+//     document.getElementById('Hero1_P').innerHTML = 'Crafted from NASA Inspired Fabric to regulate your baby\'s temperature so they can sleep better';
+//     document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_New_Swaddle.jpg?12555944080764285304';
+//     document.getElementById('Hero1_Button').innerHTML = 'Shop Swaddles →';
+//     document.getElementById('Hero2_H1').innerHTML = 'New Designs! Comfort In All Seasons';
+//     document.getElementById('Hero2_P').innerHTML = 'Easy Transition from swaddling for longer sleep all night';
+//     document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_New_Designs.jpg?6259678758836912850';
+//     document.getElementById('Hero2_Button').innerHTML = 'Shop Sleeping Bags →';
+//     // Redirect button clicks, change button width if needed
+//     document.getElementById('Hero1_Button').style.width = "170px";
+//     document.getElementById('Hero2_Button').style.width = "170px";
+//     document.getElementById('Hero1_Href').href = "/products/swaddle";
+//     document.getElementById('Hero2_Href').href = "/collections/swaddles-sleeping-bags";
+//   },
+//   function() {    // Variation 2: Original Hero and About page
+//   document.getElementById('Hero1_H1').innerHTML = 'Perfect temperature, better sleep';
+//     document.getElementById('Hero1_P').innerHTML = 'Little Lotus swaddles and sleeping bags use NASA inspired fabric to regulate your baby\’s temperature so they can sleep better';
+//     document.getElementById('Hero1_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_Mom.jpg?11843814886528925136';
+//     document.getElementById('Hero1_Button').innerHTML = 'Learn more →';
+//     document.getElementById('Hero2_H1').innerHTML = 'Help save a vulnerable baby';
+//     document.getElementById('Hero2_P').innerHTML = 'Each purchase helps to save a baby in the developing world with the Embrace incubator';
+//     document.getElementById('Hero2_Img').src = 'https://cdn.shopify.com/s/files/1/1039/4208/files/LL_AB_Hero_121.jpg?11843814886528925136';
+//     document.getElementById('Hero2_Button').innerHTML = 'Learn more →';
+//     document.getElementById('Hero1_Href').href = "/pages/technology";
+//   }
+// ];
+//
+// // Wait for the DOM to load, then execute the view for the chosen variation.
+//  $(document).ready(
+//   // Execute the chosen view
+//   pageVariations[chosenVariation]
+// );
 </script>
 
 
