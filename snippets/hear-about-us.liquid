@@ -33,13 +33,13 @@ jQuery(function($) {
   $('[name="checkout"], [name="goto_pp"], [name="goto_gc"]').click(function() {
     var validated = true;
     if ($('#how-did-you-hear-about-us').val() == '') {
-      validated = false;    
+      validated = false;
     }
     else if ($('#how-did-you-hear-about-us').val() == 'Other') {
       if ($('#how-did-you-hear-about-us-other').val() == '') {
-        validated = false; 
+        validated = false;
         $('#how-did-you-hear-about-us-other').addClass('error');
-      } 
+      }
     }
     if(validated){
       $(this).submit();

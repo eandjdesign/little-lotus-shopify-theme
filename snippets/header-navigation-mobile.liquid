@@ -1,0 +1,89 @@
+<div class="hidden">
+  <div id="nav">
+    <ul>
+      {% for link in linklists[settings.main_linklist].links %}
+        {% if linklists[link.handle] == empty %}
+          <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+        {% else %}
+          <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+            <ul>
+              {% for link in linklists[link.handle].links %}
+                {% if linklists[link.handle] == empty %}
+                  <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                {% else %}
+                <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                  <ul>
+                    {% for link in linklists[link.handle].links %}
+                      <li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+      {% endfor %}
+      {% if shop.customer_accounts_enabled %}
+        <li>
+          <a href="/account" title="My Account {% if customer %}({{ customer.email }}){% endif %}">My Account</a>
+        </li>
+        {% if customer %}
+          <li>
+            {{ "Logout" | customer_logout_link }}
+          </li>
+        {% endif %}
+      {% endif %}
+    </ul>
+  </div>
+
+  <div id="cart">
+    <ul>
+      <li class="mm-subtitle"><a class="mm-subclose continue" href="#cart">Continue Shopping</a></li>
+
+      {% if cart.item_count == 0 %}
+        <li class="Label">Your Cart is Empty</li>
+      {% else %}
+        {% if settings.side_cart_button_position == "top" %}
+          <li class="mm-selected">
+            <em class="mm-counter">{{ cart.total_price | money_with_currency }}</em>
+            <a href="/cart">
+              <strong>Subtotal</strong>
+            </a>
+          </li>
+
+          <li class="mm-subtitle clearfix">
+            <a href="/checkout" class="action_button right">Checkout</a>
+            <a href="/cart" class="action_button edit_cart left">Edit Cart</a>
+            <br class="clear" />
+            <br class="clear" />
+          </li>
+        {% endif %}
+        {% for item in cart.items %}
+          <li class="cart_item">
+            <a href="{{ item.url }}">
+              <div class="cart_image">
+                <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}" />
+              </div>
+              <div><strong>{{ item.quantity }} x</strong> {{ item.title }}</div>
+              <strong class="price">{{ item.price | money }}</strong>
+            </a>
+          </li>
+        {% endfor %}
+        {% if settings.side_cart_button_position == "bottom" %}
+          <li class="mm-selected">
+            <em class="mm-counter">{{ cart.total_price | money_with_currency }}</em>
+            <a href="/cart">
+              <strong>Subtotal</strong>
+            </a>
+          </li>
+
+          <li class="mm-subtitle clearfix">
+            <a href="/checkout" class="action_button right">Checkout</a>
+            <a href="/cart" class="action_button edit_cart left">Edit Cart</a>
+          </li>
+        {% endif %}
+      {% endif %}
+    </ul>
+  </div>
+</div>

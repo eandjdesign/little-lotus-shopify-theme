@@ -11,7 +11,7 @@
   {% if cart.item_count == 0 %}
     <div class="sixteen columns">
       <div class="section clearfix">
-        <p class="quote">There are no items in your cart. <a href="/collections/all">Continue Shopping &rarr;</a></p>    
+        <p class="quote">There are no items in your cart. <a href="/collections/all">Continue Shopping &rarr;</a></p>
         <br class="clear" />
 
         {% assign collection = '' %}
@@ -22,7 +22,7 @@
     </div>
   {% else %}
 
-  <form action="/cart" method="post" id="cart_form">     
+  <form action="/cart" method="post" id="cart_form">
     <script>
 (function() {
 /* If the length of sessionStorage "discount" is NOT 0 then add our sessionStorage value to the end of our Checkout link */
@@ -32,13 +32,13 @@ if (sessionStorage.getItem("discount").length != 0) {
 };
 }());
 </script>
-    <div class="section clearfix">  
+    <div class="section clearfix">
       <div class="ten columns cart_items">
         <h4 class="title">Products</h4>
 
         {% for item in cart.items %}
           <div class="five columns alpha mcart">
-            <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">       
+            <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
               <img src="{{ 'loader.gif' | asset_url }}" data-src="{{ item | img_url: 'medium' }}" data-src-retina="{{ item | img_url: 'grande' }}" alt="{{ item.title | escape }}" />
             </a>
           </div>
@@ -46,8 +46,8 @@ if (sessionStorage.getItem("discount").length != 0) {
           <div class="five columns omega mcart">
             <p>
               <a href="{{ item.url }}" title="{{ item.title | escape }}">{{ item.title }}</a>
-            </p> 
-            
+            </p>
+
             {% if item.properties %}
               <p>
               {% for p in item.properties %}
@@ -69,13 +69,13 @@ if (sessionStorage.getItem("discount").length != 0) {
             <p class="remove_item">
               <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" title="Remove Item">Remove</a>
             </p>
-            
+
             <p id="quantity_{{ forloop.index }}">
               <label for="updates_{{ item.id }}" class="quantity_label">Quantity:</label>
               <input type="number" min="0" size="3" maxlength="3" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" />
             </p>
 
-            
+
           </div>
           <br class="clear" />
           <br class="clear" />
@@ -88,7 +88,7 @@ if (sessionStorage.getItem("discount").length != 0) {
         </h4>
 
         <p class="subtotal_amount">
-          <strong>{{ cart.total_price | money_with_currency }}</strong> 
+          <strong>{{ cart.total_price | money_with_currency }}</strong>
           <small id="estimated-shipping" style="display:none">+ <em>{{ 0 | money }} estimated shipping</em></small>
 
           {% unless settings.tax_included %}
@@ -104,9 +104,9 @@ if (sessionStorage.getItem("discount").length != 0) {
           </p>
         {% endif %}
 
-        {% if settings.display_special_instructions %} 
+        {% if settings.display_special_instructions %}
           <label for="note">Add a gift note to your order (optional):</label>
-          <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>        
+          <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
         {% endif %}
 
         <p>
@@ -115,7 +115,7 @@ if (sessionStorage.getItem("discount").length != 0) {
         <p>
           <input type="submit" class="action_button add_to_cart" id="checkout" name="checkout" value="Checkout" />
         </p>
-        
+
         {% if settings.display_additional_checkout and additional_checkout_buttons %}
           <p class="center">
             {{ content_for_additional_checkout_buttons | google_button_options: 'transparent' }}
@@ -124,7 +124,7 @@ if (sessionStorage.getItem("discount").length != 0) {
       </div>
     </div>
   </form>
-  
+
   {% include 'cart-shipping-calculator' %}
   <br class="clear" />
   <br class="clear" />

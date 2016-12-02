@@ -1,4 +1,4 @@
-{% if settings.newsletter_popup %}   
+{% if settings.newsletter_popup %}
 	<a id="newsletter" href="#target"></a>
 	<div style="display: none;">
 	 <div id="target">
@@ -6,7 +6,7 @@
       {% include 'newsletter' %}
     {% endif %}
 	  </div>
-	</div>    
+	</div>
 
   <script type="text/javascript">
     function openNewsletterPopup() {
@@ -14,11 +14,11 @@
         $.get("/pages/{{ settings.newsletter_popup_page }}.json", function(data) {
         $("#target").prepend("<h1>" + data["page"]["title"] + "</h1>" + data["page"]["body_html"]);
         });
-      {% endif %}    
+      {% endif %}
       setTimeout( function() {
         $('#newsletter').fancybox({maxWidth: {% if settings.newsletter_popup_max_width != blank %}{{ settings.newsletter_popup_max_width }}{% else %}600{% endif %}});
-        $('#newsletter').trigger('click'); 
-      }, 
+        $('#newsletter').trigger('click');
+      },
       {% if settings.newsletter_popup_seconds != blank %}{{ settings.newsletter_popup_seconds }}{% else %}2{% endif %}*1000);
     }
 
@@ -37,4 +37,3 @@
     });
   </script>
 {% endif %}
-

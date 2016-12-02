@@ -8,22 +8,22 @@
       <li>
         {{ search.results_count }} {{ search.results_count | pluralize: 'result', 'results' }} for <strong>"{{search.terms | escape}}"</strong>
       </li>
-    </ul>    
+    </ul>
   {% endif %}
 </div>
 
 {% if search.performed %}
-  
-  {% if search.results == empty %}    
+
+  {% if search.results == empty %}
     <br class="clear" />
     <br class="clear" />
-    <div class="clearfix">    
-      <p class="quote">Your search for <strong>"{{ search.terms | escape }}"</strong> did not match any results.</p>         
+    <div class="clearfix">
+      <p class="quote">Your search for <strong>"{{ search.terms | escape }}"</strong> did not match any results.</p>
     </div>
 
     <br class="clear" />
     <br class="clear" />
-  {% else %}  
+  {% else %}
 
  {% if settings.search_option == 'everything' or search.results.first.price == blank %}
 
@@ -36,32 +36,32 @@
 
     {% for item in search.results %}
       <div class="product_row">
-  
+
         {% if item.featured_image %}
           <div class="four columns alpha">
              <a href="{{ item.url }}" title="{{ item.title | escape }}">
                <img src="{{ item.featured_image | product_img_url: 'large' }}"  alt="{{ item.title | escape }}" />
              </a>
-          </div> 
+          </div>
         {% endif %}
-        
+
         {% if settings.collection_sidebar %}
           <div class="{% if item.featured_image %}eight{% else %}twelve{% endif %} columns omega align_left">
         {% else %}
           <div class="{% if item.featured_image %}twelve{% else %}sixteen{% endif %} columns omega align_left">
-        {% endif %}        
+        {% endif %}
 
           <p>
             <a href="{{item.url }}" title="{{ item.title | escape }}">{{ item.title }}</a>
-          </p> 
+          </p>
 
           {% if item.price %}
-             <div class="info">                                              
+             <div class="info">
                 <span class="price">
                   {% if item.compare_at_price_max > item.price %}
                     <span class="was_price">{{ item.compare_at_price_max | money }}</span>
                   {% endif %}
-                    
+
                   {% if item.available %}
                     {% if item.price_varies %}
                       {% if item.compare_at_price_max > item.price %}
@@ -76,14 +76,14 @@
                 </span>
             </div>
           {% endif %}
-          
+
           <p>
             {{ item.content | strip_html | truncatewords: 40 | highlight: search.terms | replace: 'Description', '' | replace: 'Specs', '' | replace: 'Shipping', '' }}
-          </p>         
+          </p>
         </div>
-      </div>  
-    <hr />  
-   {% endfor %}  
+      </div>
+    <hr />
+   {% endfor %}
   </div>
 
  {% else %}
@@ -102,12 +102,12 @@
     {% endif %}
   {% endif %}
 
-  {% include 'pagination' %}    
+  {% include 'pagination' %}
 
 {% else %}
-  <div class="clearfix search_page">  
+  <div class="clearfix search_page">
     <br class="clear" />
-    <br class="clear" />   
+    <br class="clear" />
       <form class="search" action="/search">
         <div class="eight offset-by-three columns center">
           {% if settings.search_option != 'everything' %}

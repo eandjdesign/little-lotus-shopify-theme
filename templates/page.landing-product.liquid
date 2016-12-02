@@ -26,10 +26,10 @@
   <h1>What's unique about Little Lotus?</h1>
     <div class="container">{% include 'homepage-featured' %}</div>
 </div>
- 
-<div class="container content" style="padding-top: 30px; padding-bottom: 30px"> 
 
-<!-- 3 Feature Images (Template -->  
+<div class="container content" style="padding-top: 30px; padding-bottom: 30px">
+
+<!-- 3 Feature Images (Template -->
 <div class="container content" style="padding-top: 20px">
 {% if settings.featured_links %}
   <div class="sixteen columns featured_links">
@@ -76,7 +76,7 @@
 </div>
 </div>
 </div>
-  
+
 <!-- Product Range -->
 {% if settings.frontpage_collection != blank %}
   <div class="container content" style="padding-top: 0px; padding-bottom: 0px">
@@ -98,7 +98,7 @@
     {% assign products_per_row = settings.frontpage_products_per_row %}
     {% include 'lw-product-loop' with settings.homepage_sidebar %}
   </div>
-  </div>  
+  </div>
 <script>
 $(document).ready(function(){
   $('.responsive_slick').slick({
@@ -135,12 +135,12 @@ $(document).ready(function(){
 });
 });
   </script>
-{% endif %} 
+{% endif %}
 
 
 <!-- Injected Page content -->
 {% if settings.homepage2 != blank %}
-  </div>  
+  </div>
   <div class="homepage_content clearfix">
     <div class="container">
       <div class="sixteen columns">
@@ -192,15 +192,15 @@ $(document).ready(function(){
   <div><p style="width: 90%; padding-left: 10%; margin-top: 20%;">“My little one loves her Little Lotus Sleep Sac! Gorgeous print, so well made and so easy to use. She settles down as soon as I wrap her in it and sleeps so peacefully. Happiness for baby and mommy!”<br>
   <strong style="color:#ee5555;">Diana &amp; Baby Esme</strong></p>
 </div>
-  
-  
-  
-  
-  
+
+
+
+
+
 
 </div>
 </div>
-  
+
 <!-- Reviews Stripe
 <H4 style="text-align: center;"><a href="/pages/moms-feedback"><span class="spr-badge" id="spr_badge_4080629574" data-rating="5.0">
   <span style="color: #ff6666" class="spr-starrating spr-badge-starrating">
@@ -210,7 +210,7 @@ $(document).ready(function(){
     <i class="spr-icon spr-icon-star" style=""></i>
     <i class="spr-icon spr-icon-star" style=""></i></span>
   <span class="spr-badge-caption">View our Reviews</span>
-  </span></a></H4>    
+  </span></a></H4>
 -->
 
 <!-- Community Section -->
@@ -218,34 +218,34 @@ $(document).ready(function(){
 	<h4 style="text-align:center;">Join our community</h4>
   	<p style="text-align:center; padding-left: 10px; padding-right: 10px;">Follow Little Lotus to get recommendations and advice from other Little Lotus Parents</p>
     <div class="two columns community offset-by-four ">
-   		<a href="https://www.facebook.com/lotusbaby" target="_blank">   
+   		<a href="https://www.facebook.com/lotusbaby" target="_blank">
      	<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-one.png?11232755633868861340">
     	<div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/fb.png?11743834068282923941"></div>
       	</a></div>
     <div class="two columns community">
-    	<a href="http://instagram.com/littlelotusbaby" target="_blank">   
+    	<a href="http://instagram.com/littlelotusbaby" target="_blank">
 		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-two.png?1130064062019156062">
         <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/ig.png?11743834068282923941"></div>
         </a></div>
     <div class="two columns community">
-      	<a href="https://www.pinterest.com/littlelotusbaby/" target="_blank">   
+      	<a href="https://www.pinterest.com/littlelotusbaby/" target="_blank">
 		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-three.png?1608571264368976440">
         <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/pin.png?11743834068282923941"></div>
         </a></div>
     <div class="two columns community ">
-    	<a href="https://twitter.com/littlelotusbaby" target="_blank">   
+    	<a href="https://twitter.com/littlelotusbaby" target="_blank">
 		<img src="https://cdn.shopify.com/s/files/1/1039/4208/t/3/assets/social-four.png?8389418677596590910">
         <div class="ss-icon"><img src="https://cdn.shopify.com/s/files/1/1039/4208/files/twet.png?11743834068282923941"></div>
       	</a></div>
 </div>
-  
- 
-  
-</div>
-  
+
+
 
 </div>
-       
+
+
+</div>
+
 <!-- Press references -->
 <div class="crafted">
   <div class="container content" style="padding-top:0">
@@ -272,7 +272,7 @@ $(document).ready(function(){
             <a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title }}</a>
           </h5>
           <p class="meta"><span class="label">{{ article.published_at | date: "%B %d, %Y" }}</span></p>
-            
+
           {% if article.excerpt != blank %}
             {{ article.excerpt }}
           {% else %}
@@ -308,7 +308,7 @@ $(document).ready(function(){
         {% endif %}
       </h4>
     </div>
-    
+
     <div id="instafeed" data-tag-name="{{ settings.instagram_tag_name }}" data-client-id="{{ settings.instagram_client_id }}" data-count="{{ settings.instagram_count }}">
       <em>Tag your Instagram photos with #{{ settings.instagram_tag_name }}</em>
     </div>

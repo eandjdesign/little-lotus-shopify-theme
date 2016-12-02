@@ -10,7 +10,7 @@
   	  <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter your email address..." />
   	  <input type="submit" value="Sign Up" name="subscribe" class="action_button sign_up" />
     </form>
-  {% else %}    
+  {% else %}
     {% form 'customer' %}
       {% if form.posted_successfully? %}
         <p><em>Thank you for joining our mailing list!</em></p>

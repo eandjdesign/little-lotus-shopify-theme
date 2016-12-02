@@ -2,36 +2,36 @@
 
   <div class="sixteen columns breadcrumb clearfix">
    <!-- <div class="eight columns breadcrumb_text alpha">
-      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
+      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span>
       &nbsp; / &nbsp;
-      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>       
+      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>
       {% if current_tags %}
         {% for tag in current_tags %}
           &nbsp; / &nbsp;
-          <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>       
+          <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>
         {% endfor %}
       {% endif %}
-    
-      {% if paginate.pages != 0 %}      
+
+      {% if paginate.pages != 0 %}
         &nbsp; / &nbsp; Page {{ paginate.current_page }} of {{ paginate.pages }}
       {% endif %}
     </div> -->
 
     {% if collection.handle != blank and collection.products_count > 0 %}
-      {% if settings.collection_tags %}        
+      {% if settings.collection_tags %}
         <div class="four columns section_select {% unless settings.collection_sort %}offset-by-four omega{% endunless %}">
           {% for tag in collection.all_tags %}
             {% if forloop.first %}
-              <label for="tag_filter" class="inline">Filter by: </label> 
+              <label for="tag_filter" class="inline">Filter by: </label>
               <select name="tag_filter" id="tag_filter">
                 <optgroup label="Filter {{ collection.title }}">
                   <option {% unless current_tags %}selected="selected"{% endunless %} value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}">All {{ collection.title }}</option>
-            {% endif %}          
-              
+            {% endif %}
+
             {% unless tag contains 'meta-related-collection-' %}
               <option {% if current_tags contains tag %}selected="selected"{% endif %} value="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}">{{ tag }}</option>
             {% endunless %}
-            
+
             {% if forloop.last %}
                 </optgroup>
               </select>
@@ -42,7 +42,7 @@
 
      {% if settings.collection_sort %}
         <div class="four columns section_select omega {% unless settings.collection_tags %}offset-by-four{% endunless %}">
-          <label for="sort-by" class="inline">Sort by: </label> 
+          <label for="sort-by" class="inline">Sort by: </label>
           <select id="sort-by">
             <optgroup label="Sort {{ collection.title }}">
             <option value="manual">Featured</option>
@@ -55,7 +55,7 @@
             <option value="best-selling">Best Selling</option>
           </select>
           <script type="text/javascript">
-            // <![CDATA[  
+            // <![CDATA[
               $('#sort-by')
                 .val('{{ collection.sort_by | default: collection.default_sort_by  }}')
                 .bind('change', function() {
@@ -80,10 +80,10 @@
       <h1>{{ collection.title }}</h1>
     {% endif %}
 
-   
+
 
     {% if collection.products.size == 0 %}
-      <div class="section clearfix">     
+      <div class="section clearfix">
         <p class="quote">No products found in this collection.</p>
       </div>
     {% else %}
@@ -91,9 +91,9 @@
       {% assign products_per_row = settings.products_per_row %}
       {% include 'product-loop' with settings.collection_sidebar %}
     {% endif %}
-      
+
        {% if collection.description != blank %}
-      <div class="section clearfix collection_description">    
+      <div class="section clearfix collection_description">
         {{ collection.description }}
       </div>
     {% endif %}

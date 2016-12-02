@@ -1,7 +1,7 @@
 {% paginate article.comments by 100 %}
   <div class="sixteen columns">
     <div class="clearfix breadcrumb">
-      <div class="right mobile_hidden">       
+      <div class="right mobile_hidden">
         {% if blog.previous_article %}
           <a href="{{ blog.previous_article }}" title="Previous Article">&larr; Prev</a>
           {% if blog.next_article %}&nbsp; | &nbsp;{% endif %}
@@ -13,9 +13,9 @@
       </div>
 
       <div class="breadcrumb">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
+        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span>
         &nbsp; / &nbsp;
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ blog.url }}" title="{{ blog.title | escape }}" itemprop="url"><span itemprop="title">{{ blog.title }}</span></a></span>       
+        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ blog.url }}" title="{{ blog.title | escape }}" itemprop="url"><span itemprop="title">{{ blog.title }}</span></a></span>
         &nbsp; / &nbsp;
         <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">{{ article.title }}</span>
       </div>
@@ -43,11 +43,11 @@
       {% endif %}
 
       <hr />
-     
+
       {% include "social-buttons" with "article" %}
 
       {% if settings.display_recent_articles %}
-        
+
         <h4 class="sidebar_title" style="margin-top:10px">Recent Articles</h4>
         <ul class="none recent_articles">
           {% for article in blog.articles limit:5 %}
@@ -110,12 +110,12 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       {% endif %}
-      
-      
+
+
       {% if blog.comments_enabled? %}
         {% if article.comments_count > 0 %}
-          <h4>{{ article.comments.size }} {{ article.comments.size | pluralize: 'Comment', 'Comments' }}</h4> 
-      
+          <h4>{{ article.comments.size }} {{ article.comments.size | pluralize: 'Comment', 'Comments' }}</h4>
+
           {% for comment in article.comments %}
             <div id="comment-{{ comment.id }}" class="comment clearfix">
               <div class="gravatar two columns alpha center" data-email="{{ comment.email }}">
@@ -132,10 +132,10 @@
             </div>
           {% endfor %}
         {% endif %}
-        
+
         {% if comment and comment.created_at %}
           {% if article.comments_count == 0 %}
-            <h4>{{ article.comments.size | pluralize: 'Comment', 'Comments' }}</h4> 
+            <h4>{{ article.comments.size | pluralize: 'Comment', 'Comments' }}</h4>
           {% endif %}
           <div id="comment-{{ comment.id }}" class="comment clearfix">
             <div class="gravatar two columns alpha center" data-email="{{ comment.email }}">
@@ -151,12 +151,12 @@
             </div>
           </div>
         {% endif %}
-        
+
         {% include 'pagination' with 'sidebar' %}
 
         <div class="clear" id="new-comment"></div>
         <h4>Leave a comment</h4>
-      
+
         {% form article %}
           {% if form.posted_successfully? %}
             {% if blog.moderated? %}
@@ -176,17 +176,17 @@
           </div>
 
           <div class="five columns omega">
-            <label for="comment_email">Email <span class="red">*</span></label>      
+            <label for="comment_email">Email <span class="red">*</span></label>
             <input type="text" id="comment_email" name="comment[email]" value="{{ form.email }}" />
           </div>
 
-          <label for="comment_email">Comment</label>      
+          <label for="comment_email">Comment</label>
           <textarea id="comment_body" name="comment[body]" rows="5">{{ form.body }}</textarea>
 
           {% if blog.moderated? %}
             <p><em>Comments will be approved before showing up.</em></p>
           {% endif %}
-        
+
           <input type="submit" value="Post Comment" id="comment-submit" class="action_button" />
         {% endform %}
       {% endif %}
@@ -195,12 +195,12 @@
   </div>
 
   <script type="text/javascript">
-    // <![CDATA[  
-      $(function() {    
+    // <![CDATA[
+      $(function() {
         if(window.location.pathname.indexOf('/comments') != -1) {
           $('html,body').animate({scrollTop: $("#new-comment").offset().top-110},'slow');
         }
       });
     // ]]>
   </script>
-{% endpaginate %}  
+{% endpaginate %}

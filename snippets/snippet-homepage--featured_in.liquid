@@ -1,0 +1,18 @@
+{% include 'picture-media_queries' %}
+
+<div class="section-homepage--featured_in">
+  <h1 class="section-title--hed section-title--background_flourish"><span>Featured In</span></h1>
+  <div class="container content featured-in">
+    <div class="sixteen columns">
+      <a href="/pages/press">
+        <picture class="featured-image">
+          <source srcset="{{ 'logos-white--mobile.jpg' | asset_url }}" media="{{ mediaQuery__mobile }}">
+          <source srcset="{{ 'logos-white--tablet.jpg' | asset_url }}" media="{{ mediaQuery__tablet }}">
+          <source srcset="{{ 'logos-white--laptop.jpg' | asset_url }}" media="{{ mediaQuery__laptop }}">
+          <source srcset="{{ 'logos-white--desktop.jpg' | asset_url }}" media="{{ mediaQuery__desktop }}">
+          <img src="{{ 'logos-white--desktop.jpg' | asset_url }}" alt="Little Lotus Featured In">
+        </picture>
+      </a>
+    </div>
+  </div>
+</div>

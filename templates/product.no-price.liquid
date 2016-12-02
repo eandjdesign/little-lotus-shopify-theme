@@ -14,16 +14,16 @@
     </div>
 
   <!--  <div class="breadcrumb_text">
-      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
+      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span>
       &nbsp; / &nbsp;
       <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         {% if collection %}
           <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }}</a>
         {% else %}
-          <a href="/collections/all" title="{{ collections.all.title }}">{{ collections.all.title }}</a>     
+          <a href="/collections/all" title="{{ collections.all.title }}">{{ collections.all.title }}</a>
         {% endif %}
       </span>
-      &nbsp; / &nbsp; 
+      &nbsp; / &nbsp;
       {{ product.title }}
     </div> -->
   </div>
@@ -47,8 +47,8 @@
 
 
 	<div class="section product_section clearfix">
-	  
-  	 {% if settings.product_images_position == 'left' %}             
+
+  	 {% if settings.product_images_position == 'left' %}
        <div class="{% if settings.product_sidebar %}seven{% else %}eight{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">
          {% include 'product-images' %}
         </div>
@@ -58,7 +58,7 @@
        <h1 style="text-align: center;" class="product_name" itemprop="name">{{ product.title }}</h1>
        <a style="font-weight: 800; text-align: center;" href="#0" class="review-see-all"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></a>
        <!-- <p style="text-align: center;">From {{ product.price_min | money_with_currency }}</p> -->
-       <meta itemprop="image" src="https:{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.title}} | Little Lotus Baby Swaddles and Sleep Sacks" />       
+       <meta itemprop="image" src="https:{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.title}} | Little Lotus Baby Swaddles and Sleep Sacks" />
        {% if settings.display_vendor %}
           <p class="vendor">
             <span class="label">by:</span> <span itemprop="brand">{{ product.vendor | link_to_vendor }}</span>
@@ -66,8 +66,8 @@
        {% endif %}
 
       {% assign variant = product.selected_or_first_available_variant %}
-      
-     
+
+
       {% include 'product-notify-me' %}
 
        {% if settings.product_description_position == "top" %}
@@ -92,37 +92,37 @@
       {% if settings.display_collections or settings.display_tags or settings.display_type %}
        <hr />
       {% endif %}
-     
+
        <div class="meta">
          {% if settings.display_collections %}
            <p>
-             <span class="label">Collections:</span> 
+             <span class="label">Collections:</span>
              <span>
               {% for col in product.collections %}
                 {% if col.handle != "all" %}
-                  <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %} 
+                  <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
                 {% endif %}
               {% endfor %}
             </span>
           </p>
          {% endif %}
-       
+
          {% if settings.display_tags %}
             <p>
               {% for tag in product.tags %}
                 {% if forloop.first %}
-                  <span class="label">Category:</span> 
+                  <span class="label">Category:</span>
                 {% endif %}
 
                 {% unless tag contains 'meta-related-collection-' %}
                   <span>
-                      <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="Products tagged {{ tag | escape}}">{{ tag }}</a>{% unless forloop.last %},{% endunless %} 
+                      <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="Products tagged {{ tag | escape}}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
                   </span>
-                {% endunless %} 
+                {% endunless %}
               {% endfor %}
             </p>
          {% endif %}
-       
+
         {% if settings.display_type %}
            <p>
              <span class="label">Type:</span> <span itemprop="category">{{ product.type | link_to_type }}</span>
@@ -130,18 +130,18 @@
         {% endif %}
        </div>
 
-       <span>Each purchase helps to save a baby in a developing country with the Embrace infant warmer through our 1:1 Model</span>  
-       
+       <span>Each purchase helps to save a baby in a developing country with the Embrace infant warmer through our 1:1 Model</span>
+
        <a href="#0" class="review-see-all" style="font-weight: 800; text-align: center;"><p>View reviews</p></a>
-       <!-- {% include "social-buttons" with "product" %}  -->   
+       <!-- {% include "social-buttons" with "product" %}  -->
     </div>
-    
- 
-      
-      
-      
-    {% if settings.product_images_position == 'right' %}   
-      <div class="{% if settings.product_sidebar %}six{% else %}eight{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">          
+
+
+
+
+
+    {% if settings.product_images_position == 'right' %}
+      <div class="{% if settings.product_sidebar %}six{% else %}eight{% endif %} columns {% if product-images == blank %}{% if settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}{% endif %}">
         {% include 'product-images' %}
         <!-- {% include "social-buttons" with "product" %} -->
       </div>
@@ -174,7 +174,7 @@
         {% capture limit %}{{ collection.products_count | plus: 1 }}{% endcapture %}
       {% endif %}
     {% endfor %}
-      
+
     {% if col and collections[col].all_products_count > 0 %}
       <br class="clear" />
       <br class="clear" />
@@ -187,21 +187,21 @@
     {% endif %}
   {% endif %}
     <!-- <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div> -->
-   
-   
+
+
     <h4 style="text-align: center;">LEARN ABOUT OUR SWADDLE & SLEEPING BAG DESIGN</h4>
 
         <img class="callout"  src="https://cdn.shopify.com/s/files/1/1039/4208/files/Swaddle_Open_Detailed_V6.png?1116653058175486111">
-   
+
 </div>
 
-{% include 'reviews-all' %}     
-      
+{% include 'reviews-all' %}
+
 <style>
-  
+
   h4, .h4, h4.title a, h6.title { font-size: 22px; line-height: 32px; margin: 0 0 1em 0; padding: 0; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; padding: 7px 0; color: #42a4b4 ;}
   span.spr-starrating.spr-badge-starrating {color: rgb(225,84,134);}
-  
+
 </style>
 
 <script>
@@ -224,18 +224,18 @@ jQuery(document).ready(function($){
 	//open the testimonials modal page
 	$('.cd-see-all').on('click', function(){
 		$('.cd-testimonials-all').addClass('is-visible');
-        
+
       if (screen.width > 400) {$('.header_bar').hide();}
 		else {$('.mm-fixed-top').hide();}
 	});
 
   	$('.review-see-all').on('click', function(){
 		$('.cd-testimonials-all').addClass('is-visible');
-        
+
       if (screen.width > 400) {$('.header_bar').hide();}
 		else {$('.mm-fixed-top').hide();}
 	});
-  
+
 	//close the testimonials modal page
 	$('.cd-testimonials-all .close-btn').on('click', function(){
 		$('.cd-testimonials-all').removeClass('is-visible');
@@ -250,7 +250,7 @@ jQuery(document).ready(function($){
 		else {$('.mm-fixed-top').show();}
 	    }
     });
-    
+
 	//build the grid for the testimonials modal page
 	$('.cd-testimonials-all-wrapper').children('ul').masonry({
   		itemSelector: '.cd-testimonials-item'
